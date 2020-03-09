@@ -1,0 +1,56 @@
+;
+;	File 'sys1.top' was generated
+;	By user: wei-tse (1000)
+;	On host: castlepeak
+;	At date: Mon Mar  9 12:47:08 2020
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                    :-) GROMACS - gmx pdb2gmx, 2018.1 (-:
+;	
+;	Executable:   /usr/bin/gmx
+;	Data prefix:  /usr
+;	Working dir:  /home/wei-tse/Documents/MetaD_EXE/test_systems/sys1
+;	Command line:
+;	  gmx pdb2gmx -f sys1_box.gro -o sys1_top.gro -p sys1.top
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "gromos54a7.ff/forcefield.itp"
+
+[ moleculetype ]
+; Name            nrexcl
+Ar               3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+; residue   1 Ar  rtp AR   q  0.0
+     1         AR      1     Ar     Ar      1          0     39.948   ; qtot 0
+
+; Include Position restraint file
+#ifdef POSRES
+#include "posre.itp"
+#endif
+
+; Include water topology
+#include "gromos54a7.ff/spc.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "gromos54a7.ff/ions.itp"
+
+[ system ]
+; Name
+An argon in a water box
+
+[ molecules ]
+; Compound        #mols
+Ar               1
