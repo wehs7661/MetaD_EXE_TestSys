@@ -2,16 +2,16 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: wei-tse (1000)
 ;	On host: castlepeak
-;	At date: Mon Mar  9 14:57:00 2020
+;	At date: Tue Mar 10 10:30:13 2020
 ;
 ;	Created by:
-;	                     :-) GROMACS - gmx grompp, 2018.1 (-:
+;	                     :-) GROMACS - gmx grompp, 2020.1 (-:
 ;	
-;	Executable:   /usr/bin/gmx
-;	Data prefix:  /usr
+;	Executable:   /usr/local/gromacs/bin/gmx
+;	Data prefix:  /usr/local/gromacs
 ;	Working dir:  /home/wei-tse/Documents/MetaD_EXE_TestSys/sys1/Test_1
 ;	Command line:
-;	  gmx grompp -f sys1_expanded.mdp -c sys1.gro -p sys1.top -o sys1.tpr
+;	  gmx grompp -f sys1_expanded.mdp -c sys1.gro -p sys1.top -o sys1.tpr -maxwarn 1
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -77,12 +77,10 @@ compressed-x-grps        =
 energygrps               = 
 
 ; NEIGHBORSEARCHING PARAMETERS
-; cut-off scheme (Verlet: particle based cut-offs, group: using charge groups)
+; cut-off scheme (Verlet: particle based cut-offs)
 cutoff-scheme            = verlet
 ; nblist update frequency
 nstlist                  = 10
-; ns algorithm (simple or grid)
-ns_type                  = grid
 ; Periodic boundary conditions: xyz, no, xy
 pbc                      = xyz
 periodic-molecules       = no
@@ -127,31 +125,7 @@ ewald-rtol-lj            = 0.001
 lj-pme-comb-rule         = Geometric
 ewald_geometry           = 3d
 epsilon_surface          = 0
-
-; IMPLICIT SOLVENT ALGORITHM
-implicit-solvent         = No
-
-; GENERALIZED BORN ELECTROSTATICS
-; Algorithm for calculating Born radii
-gb-algorithm             = Still
-; Frequency of calculating the Born radii inside rlist
-nstgbradii               = 1
-; Cutoff for Born radii calculation; the contribution from atoms
-; between rlist and rgbradii is updated every nstlist steps
-rgbradii                 = 1
-; Dielectric coefficient of the implicit solvent
-gb-epsilon-solvent       = 80
-; Salt concentration in M for Generalized Born models
-gb-saltconc              = 0
-; Scaling factors used in the OBC GB model. Default values are OBC(II)
-gb-obc-alpha             = 1
-gb-obc-beta              = 0.8
-gb-obc-gamma             = 4.85
-gb-dielectric-offset     = 0.009
-sa-algorithm             = Ace-approximation
-; Surface tension (kJ/mol/nm^2) for the SA (nonpolar surface) part of GBSA
-; The value -1 will set default value for Still/HCT/OBC GB-models.
-sa-surface-tension       = -1
+implicit-solvent         = no
 
 ; OPTIONS FOR WEAK COUPLING ALGORITHMS
 ; Temperature coupling  
@@ -295,8 +269,8 @@ delta-lambda             = 0
 nstdhdl                  = 1000
 fep-lambdas              = 
 mass-lambdas             = 
-coul-lambdas             = 0.00   0.20   0.40   0.60   0.80   1.00   1.00   1.00   1.00   1.00   1.00
-vdw-lambdas              = 0.00   0.00   0.00   0.00   0.00   0.00   0.20   0.40   0.60   0.80   1.00
+coul-lambdas             = 
+vdw-lambdas              = 0.00   0.20   0.40   0.60   0.80   1.00
 bonded-lambdas           = 
 restraint-lambdas        = 
 temperature-lambdas      = 
@@ -377,3 +351,6 @@ userreal4                = 0
 electric-field-x         = 0 0 0 0
 electric-field-y         = 0 0 0 0
 electric-field-z         = 0 0 0 0
+
+; Density guided simulation
+density-guided-simulation-active = false
