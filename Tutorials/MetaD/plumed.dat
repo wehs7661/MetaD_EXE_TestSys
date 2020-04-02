@@ -1,0 +1,23 @@
+center1: CENTER ATOMS=1-40                        # geometric center of the smaller ring
+center2: CENTER ATOMS=57-112,116-121,123-128      # geometric center of the bigger ring
+center: CENTER ATOMS=center1,center2 WEIGHTS=2,3  # center of the sphere
+
+water_group: GROUP ATOMS=217-7974:3         # oxygen atom of the water molecules
+
+n: COORDINATION GROUPA=center GROUPB=water_group R_0=0.5 NN=1 MM=25   # unit of length: nm
+
+METAD ...
+   ARG=n
+   SIGMA=0.02
+   HEIGHT=0.3
+   PACE=500
+   BIASFACTOR=10
+   TEMP=298
+   LABEL=metad
+   GRID_MIN=0.0
+   GRID_MAX=6.0
+   GRID_BIN=600
+   FILE=HILLS_COORDN
+... METAD
+
+PRINT STRIDE=10 ARG=n,metad.bias FILE=COLVAR

@@ -1,0 +1,13 @@
+com1: COM ATOMS=1-40                        # COM of the smaller ring
+com2: COM ATOMS=57-112,116-121,123-128      # COM of the bigger ring
+
+com_r1: COM ATOMS=88-93                     # endpoint of the bigger radius of the bigger ring
+com_r2: COM ATOMS=57-62                     # endpoint of the smaller radius of the bigger ring
+com_r3: COM ATOMS=5-11,1                    # endpoint of the smaller ring
+
+d1: DISTANCE ATOMS=com1,com2                # distance between centers of mass
+d2: DISTANCE ATOMS=com1,com_r1              # bigger radius of the bigger ring
+d3: DISTANCE ATOMS=com1,com_r2              # smaller radius of the bigger ring
+d4: DISTANCE ATOMS=com2,com_r3              # radius of the smaller ring
+
+PRINT ARG=d1,d2,d3,d4 STRIDE=10 FILE=dist.dat

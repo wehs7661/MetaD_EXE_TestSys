@@ -1,0 +1,23 @@
+# Set up two variabls for the centers of mass of the two structure (c1: host (1HST) and c2: guest(2GST))
+# Note that this is an file-version of multiple walker metadynamics
+c1: COM ATOMS=1-184
+c2: COM ATOMS=185-201
+d: DISTANCE ATOMS=c1,c2
+
+METAD ...
+   ARG=d 
+   SIGMA=0.05 
+   HEIGHT=0.3 
+   PACE=500
+   BIASFACTOR=10 
+   TEMP=298.15
+   LABEL=metad
+   FILE=HILLS_H2O
+   WALKERS_N=4
+   WALKERS_ID=0
+   WALKERS_DIR=./HILLS
+   WALKERS_RSTRIDE=100
+... METAD
+
+PRINT STRIDE=10 ARG=d,metad.bias FILE=COLVAR
+
