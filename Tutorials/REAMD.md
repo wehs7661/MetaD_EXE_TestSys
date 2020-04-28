@@ -1,4 +1,4 @@
-A quick tutorial of PLUMED
+A quick tutorial about the basics of PLUMED
 ============================
 ## 1. Post-simulation data analysis
 Using `plumed driver`, we can perform post-simulation data analysis on an MD simulation, no matter if PLUMED was used to run the simulation. Specifically, in folder `Analysis`, there are the following files:
