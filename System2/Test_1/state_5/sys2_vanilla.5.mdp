@@ -74,7 +74,7 @@ lincs-order              = 12
 lincs-iter               = 2
 
 ; Free energy calculation
-free_energy              = no
+free_energy              = yes
 calc-lambda-neighbors    = -1
 sc-alpha                 = 0.5
 couple-moltype           = LIG
