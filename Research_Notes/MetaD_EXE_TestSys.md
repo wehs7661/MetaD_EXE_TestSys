@@ -1,6 +1,6 @@
 # Test systems for the development of MetaD-EXE sampling method
 
-###### tags: `ResearchNotes`
+###### tags: `MetaD-EXE-TestSys`
 This is a documentation for the details of the test systems preparation and the data analsysis of the corresponding simulations for the developement of alchemical metadynmics (MetaD-EXE). Except that the Test system 1 was prepared using GROMACS 2018.1 (which should have no influence on the results), all other preparations and the simulations were performed using GROMACS 2020.1 or 2020.2. All the files relevant to this document are hosted in [MetaD_EXE_TestSys](https://github.com/wehs7661/MetaD_EXE_TestSys.git) on GitHub.
 
 ## Equivalence between expanded ensemble (EXE) and alchemical metadynamics (MetaD-EXE)
@@ -20,32 +20,6 @@ Alchemical metadynamics biases the alchemical variable as a configurational coll
 $$\gamma = \frac{T + \Delta T}{T},\;W(k\tau)=W_{0} \exp (-\frac{V(\vec{s}(q(k\tau)), k\tau)}{k_{B}\Delta T})$$
 Therefore, the exponential term of $W(k\tau)$ can be regarded as the effective scale factor $s_{eff}$ in metadynamics. Practically, we control $\Delta T$ by specifying the value of $\gamma$, so here we express $s_{eff}$ as a function of $\gamma$ instead of $\Delta T$:
 $$s_{eff} = \exp (-\frac{V(\vec{s}(q(k\tau)), k\tau)}{k_{B}(\gamma T - T)})$$ where $T$ is the simulation temperature. However, we should note that $s$ and $s_{eff}$ are analogous but not equivalent to each other, since the the height of the Gaussians is updated periodically, while the Wang-Landau incrementor is only updated when the histogram is considered flat and is therefore non-periodic. 
-
-**Some additional notes**:
-In the current implementation, which only works for the case of standard alchemical metadynamics, we have to specify parameters for alchemical calculations in the PLUMED input file and turn on the parameters related to expanded ensemble at the same time. While this way of specifying parameters works for the standard alchemical metadynamics, it might be hard for the case of well-tempered metadynamics. Based on the following reasons, I think it might be better to only specify all the parameters for alchemical metadynamics in the PLUMED input file instead of both in the PLUMED input file and the GROMACS `.mdp` file. (This means that we should turn off the parameters related to expanded ensemble (or at least turn of the ones related to the Wang-Landau algorithm) in the GROMACS `.mdp` file.)
-- As mentioned above, there is no deterministic equation relating `wl-scale` in GROMACS and `BIASFACTOR` in PLUMED. It might not be feasible to specify `wl-scale` if we want to run well-tempered alchemical metadynamics.
-- Through the tests that I have conducted, I found the introduction of alchemical metadynamics was extremely expensive. The expanded ensemble simulation for test 1 in the first test sytem (only about 600 atoms) takes less than 20 minutes. However, with `-plumed` flag and the same `.tpr` file, it took 6 to 8 hours to complete the same length of alchemical metadynamics (5 ns). There might be some other reasons involved, but it might be worthy to check if some calculates were repeptitive as we specify parameters both in PLUMED and GROMACS.
-- In the current implementation, the way of specifying parameters might make the examination of the functionalities of MetaD-EXE harder. Specifically, if the results we get from alchemical metadynamics are similar to those obtained in expanded ensemble, it is hard to tell  if the reasonable outcome is actually a result of turning on expande ensemble options (like if the results from metadynamics were not dominated by the expanded ensemble parameters in the .mdp file). 
-    - **Question**: What is the difference between  the work done by the EXE parameters in .mdp and the work done by the parameters defined in PLUMED input file in alchemical metadynamics?
-    - Part of the answer to the question above have been addressed in the bullet point related to `PACE`. But yes, we still need to think about how we can make sure that the outputs of alchemical metadynamics are all resulted from the parameters specified in PLUMED instead of dominated by the ones in the GROMACS `.mdp` file.
-    - Note that `wl-scale` is ignored if PLUMED metadynamics is used.  
-    - The only parameter that currently needs to match is nstexpanded and PACE which have a trivial dependency. We also require expanded ensemble to be turned on. Finally, we use the lmc-mc-move method defined in the mdp to attempt the lambda moves. All Wang-Landau related parameters are ignored. We should certainly think about a more elegant solution to how we turn things on or off, but there shouldn't be the need complicated parameter equivalence. (Weights update is done by metadynamics, MC moves by GROMACS. We just need to make sure they agree on the stride. )
-    
-## Additional questions for the meeting on 06.05.2020
-- Note that these question are about the initial implementation of MetaD-EXE.
-- The current implementation of alchemical metadynamics requires the expanded ensemble parameters in the .mdp file to be turned on. However, if the results we get from alchemical metadynamics are similar to those obtained in expanded ensemble, how can we tell if the results from metadynamics were not dominated by the expanded ensemble parameters in the .mdp file? Specifically, what’s the difference between the work done by the EXE parameters in .mdp and the work done by the parameters defined in PLUMED input file in alchemical metadynamics?
-- We know that the alchemical metadynamics can be equivalent to expanded ensemble in the sense that the Gaussian biasing potentials are almost as narrow as a delta function in the alchemical direction. Not considering the random factor in the simulation (could simply fixing the random seed work?), will the alchemical metadynamics produces exactly the same results as the expanded ensemble?
-- In Test system 1, we only scaled the van der Waals interactions, so there is only one alchemical variable. In the future, we will need to scale different kinds of intermolecular interactions and restraints at the same time. In this case, do we need multi-dimensional alchemical variables (each of them ranges from 0 to 1) or just one-dimensional alchemical variable concatenating all the components in the alchemical vector (like 0, 0.1, 0.2, …. , 0.9, 1.0, 0.0, 0.2, 0.4, …., 0.8, 1.0, 0.0, 0.1, 0.2, …, 0.9, 1.0). 
-What is the difference (advantages/disadvantages) between these two methods?
-It might be easier to get the free energy difference between the coupled state and the uncoupled state if the one-dimensional alchemical variable is used, but would it be harder to apply biases? 
-- Scope of the testing/development
-    - Standard alchemical metadynamics
-    - Well-tempered alchemical metadynamics
-    - Multiple walkers alchemical metadynamics?
-    - Lambda dynamics?
-
-
-
 
 ## Test system 1: An argon atom in a water box
 As a system containing only 661 atoms, Test system 1 serves as a simple toy model for us to examine the functionalities of MetaD-EXE in the easiest way. Here, we take advantages of the equivalence between expanded ensemble and alchemical metadynamics. Specifically, in the first test, we compare the expanded ensemble with weights fixed at 0 with standard alchemical metadynamics. Since the weights are 0 throught the expanded ensemble simulation, the results should be similar to what we get from the standard metadynamics with `HEIGHT` being 0. Then, in the second test and the third test, we compare expanded ensemble with updating weights with standard MetaD-EXE and well-tempered MetaD-EXE, respeictively. The following table summarizes these three system:
@@ -425,6 +399,7 @@ As mentioned above, we fix the weights at 0 in the expanded ensemble (Simulation
       decision to remove physically incorrect algorithms can be found at
       https://doi.org/10.26434/chemrxiv.11474583.v1 .
     ```
+- As a result, it took about 16.5 minutes to finish the simulation. 
 
 #### 2-2. Simulation 2: Alchemical metadynamics with `HEIGHT` being 0
 - Path in the repository: `MetaD_EXE_TestSys/System1/Test_1/MetaD_EXE`
@@ -438,6 +413,9 @@ As mentioned above, we fix the weights at 0 in the expanded ensemble (Simulation
   SIGMA=0.01     # small SIGMA ensure that the Gaussian approaximate a delta function
   HEIGHT=0       # In this case, the wegiths in EXE_fixed are fixed, meaning no biasing potentials added
   PACE=10        # should be equal to nstexpanded
+  GRID_MIN=0     # index of alchemical states starts from 0
+  GRID_MAX=5     # we have 6 states in total
+  GRID_SPACING=1 # so that the values of CV should be 0, 1, 2, 3, 4, 5
   LABEL=metad    # it's not clear how GRID parameters will have influences here
   FILE=HILLS_LAMBDA
   ... METAD
@@ -445,12 +423,14 @@ As mentioned above, we fix the weights at 0 in the expanded ensemble (Simulation
   PRINT STRIDE=10 ARG=lambda,metad.bias FILE=COLVAR
   ```
 - Note that in this test system, we only scale the van der Waals interaction with the following vector: $[0,\;0.2,\;0.4,\;0.6,\;0.8,\;1.0]$. Since the spacing in the values of $\lambda_{vdw}$ between neighboring state i constant here, one small enough `SIGMA` should be able to ensure the similarly between the Gaussian biasing potential annd the delta function. Specifically, with `SIGMA` as 0.01 in this case, the addition at a neighboring state would be negligible:$$W(t)\cdot \exp\left[-\sum_{i=1}^{d} \frac{\left(s_{g,i}−s_i(t)\right)^2}{2\sigma^2_i}\right] = W(t)\cdot \exp\left[-\frac{\left(0.2\right)^2}{2\cdot0.01^2}\right] = W(t)\cdot e^{-200} $$
-- Command 
+- Note that it is recommended to specify parameters related to "GRID" in the PLUMEd input file, including `GRID_MIN`, `GRID_MAX`, and `GRID_SPACING`. According to [the documentation of PLUMED](https://www.plumed.org/doc-v2.6/user-doc/html/_m_e_t_a_d.html), in the simplest possible implementation of a metadynamics calculation (without `GRID_*` paramters), the expense of a metadynamics calculation increases with the length of the simulation, since one has to, at every step, evaluate the values of a larger and larger number of Gaussian kernels. To avoid this issue, we store the bias on a grid. As a comparison, with `GRID_*` parameters, it takes about 8.5 hours to finish the simulation, while it takes about only 15 minutes if `GRID_*` parameters are specified. Such a difference is generally case-specific.
+- Command </br>
 With the same `.tpr` file as Simulation 1, execute `gmx mdrun -s sys1.tpr -x sys1.xtc -c sys1_output.gro -e sys1.edr -dhdl sys1_dhdl.xvg -g sys1.log -plumed`.
+- As a result, it took about 18.4 minutes to finish the simulation.
 
 #### 2-3. Comparison of the results between the simulations
-- The final histogram
-    The final counts of Simulation 1 is:
+- The final histogram </br>
+  According to the `.log` file, the final counts of Simulation 1 is:
   ```
               MC-lambda information
   N   VdwL    Count   G(in kT)  dG(in kT)
@@ -462,26 +442,27 @@ With the same `.tpr` file as Simulation 1, execute `gmx mdrun -s sys1.tpr -x sys
   6  1.000   146505    0.00000    0.00000 <<
   ```
   And the final counts of Simulation 2 is:
+
   ```
-              MC-lambda information
+  MC-lambda information
   N   VdwL    Count   G(in kT)  dG(in kT)
-  1  0.000     5780    0.00000   -0.00000
-  2  0.200     4723   -0.00000    0.00000
-  3  0.400     5151   -0.00000    0.00000
-  4  0.600    11054   -0.00000    0.00000
-  5  0.800    76697   -0.00000    0.00000
-  6  1.000   146595   -0.00000    0.00000 <<
+  1  0.000     5546    0.00000   -0.00000
+  2  0.200     4817   -0.00000    0.00000
+  3  0.400     5235   -0.00000    0.00000 <<
+  4  0.600    11241   -0.00000    0.00000
+  5  0.800    76502   -0.00000    0.00000
+  6  1.000   146659   -0.00000    0.00000
   ```
-  
   Plotting the data above, we can get a histogram of Simultion 1 (left) and 2 (right) as shown below. Apparently, the final counts of both simulations are pretty similar (hence the histogram).Since no weights were added in both simulations, the histograms were not flattened, but certainly, the system was still able to sample all the intermediate states.
-    <center><img src=https://i.imgur.com/kPR7nND.png width=330><img src=https://i.imgur.com/pkTPRCX.png width=330></center>
+    <center><img src=https://i.imgur.com/kPR7nND.png width=330><img src=https://i.imgur.com/v3gj80O.png width=330></center>
     
-- Exploration of state as a function of time
+- Exploration of state as a function of time</br>
 As shown below, even if the weights/biases are 0, 6 intermediate states are enough for the system to sample the coupled and uncoupled state back and forth for multiple times in a single simulation. Again, both plots from different simulations exhibit similar patterns.
-<center><img src=https://i.imgur.com/OeplLSR.png width=330><img src=https://i.imgur.com/JKSC54N.png width=330></center>
+<center><img src=https://i.imgur.com/OeplLSR.png width=330><img src=https://i.imgur.com/f3bAIxj.png width=330></center>
 
-
-- Free energy difference
+- Data analysis using `COLVAR`</br>
+  Note that in addition to the `.log` file, we can also use PLUMED output file, `COLVAR` to plot the histogram and the state as a function of time as shown above. As a result, the figures obtained from the `COLVAR` file are exactly the same as the ones generated from the `.log` file. (Note that the time step in `COLVAR` is 100 smaller than the one in the `.log` file. This does not influence the result of the histogram, but we have to adopt the data point every 100 time frames to reproduce state as a function of time based on the `.log` file.) 
+- Free energy difference</br>
 Lasly, we compare the energy differences between the coupled and the uncoupled state calculated from Simulation 1 and Simulation 2. The following are the results from Simulation 1:
   ```
   ====== Results ======
@@ -489,16 +470,14 @@ Lasly, we compare the energy differences between the coupled and the uncoupled s
   BAR: -3.296481230788155 +/- unknown kT
   MBAR: -3.2702770673303796 +/- 0.23341820696574522 kT
   ```
-  Typically, when running metadynamics, we can use the PLUMED method `sum_hills` to add up all th biasing potential to get the free energy profile (as well as the free energy difference). However, this method won't work in Simulation 2 in our case here, since there was no biasing potential added. Therefore, we analyze the `.dhdl` file instead and the results are shown as follows: 
+  Typically, when running metadynamics, we can use the PLUMED method `sum_hills` (`lumed sum_hills --hills HILLS_LAMBDA`) to add up all th biasing potential to get the free energy profile (as well as the free energy difference). However, this method won't work in Simulation 2 in our case here, since there was no biasing potential added. Therefore, we analyze the `.dhdl` file instead and the results are shown as follows: 
   ```
   ====== Results ======
-  TI: -2.5403626837712663 +/- 0.4301955314712552 kT
-  BAR: -2.9584992928997886 +/- unknown kT
-  MBAR: -2.91444580766801 +/- 0.24524052664924262 kT
+  TI: -2.5880824249128374 +/- 0.3005642544961182 kT
+  BAR: -2.756222320576275 +/- unknown kT
+  MBAR: -2.967642698869592 +/- 0.20164515882903628 kT
   ```
   As shown in the results above, there was a difference of 0.35 kT between results of the two simulations analyzed by MBAR. Note that the uncertainty is somehow large but the results are still statistically consistent as the difference between the results obtained by same method based on different simulations are roughtly around the standard deviation. The uncertainty is large here because of the infrequency of visiting the first state. If the simulation is extended such that we have sufficient samples for all intermediate states (note that the counts in state 1 will still be significantly less than the counts in state 6.), then the uncertainy will be smaller.
-- Potential issue
-In the PLUMED output files, including `COLVAR` and `HILLS_LAMBDA`, the values of the variable `lambda` range from 0 to 5 rather than 0 to 1. The values in `COLVAR` are all integers (from 0 to 5), showing that the values recorded were not actually the values of the alchemical variable ($\lambda_{vdW}$), but the indices of the alchemical states. (Since we have 6 states, the indices range from 0 to 5.) Same thing happens in Simulation 2 in Test 2 and the free energy difference between the coupled and the uncoupled state seems wrong (it was a vary large difference). It might be worthy to check if PLUMED biased correctly, since the collective variable should be the alchemical variable $\lambda_{vdW}$, rather than the index of the states.
 
 ### 3. Test 2: Examination of biasing potentials in standard MetaD-EXE 
 As mentioned above, in the second test, we want to really bias the alchemical variable with the standard metadynamics, in which the height of the Gaussian biasing potential remain constant throughout the simulation. To compare the results of this simulation, we specify `init-wl-delta` used in the expanded ensemble (Simulation 1) as the same value of `HEIGHT` used in alchemical metadynamics (Simulation 2) and set `wl-scale = 1` in Simulation 1 to make the Wang-Landau incrementor a constant. With these parameters, the results obtained from the two simulations, including the final histogram, the state as a function of time and the free energy difference, should be similar. 
@@ -511,6 +490,7 @@ As mentioned above, in the second test, we want to really bias the alchemical va
 - Commands
     - `gmx grompp -f sys1_expanded.mdp -c sys1.gro -p sys1.top -o sys1.tpr -maxwarn 1`
     - `gmx mdrun -s sys1.tpr -x sys1.xtc -c sys1.gro -e sys1.edr -dhdl sys1_dhdl.xvg -g sys1.log`
+- As a result, it took about 16.3 minutes to finish the simulation.
     
 #### 3-2. Simulation 2: Standard alchemical metadynamics (constant Gaussian height)
 - Path in the repository: `MetaD_EXE_TestSys/System1/Test_2/MetaD_EXE`
@@ -532,56 +512,10 @@ As mentioned above, in the second test, we want to really bias the alchemical va
   The only difference between the PLUMED input file used here and the one used previously in Simulation 2 in Test 1 is that now `HEIGHT` is non-zero and equal to `init-wl-delta` specified in the GROMACS `.mdp` file.
 - Command
 With exactly the same `.tpr` file as Simulation 1 in Test 2, execute `gmx mdrun -s sys1.tpr -x sys1.xtc -c sys1_output.gro -e sys1.edr -dhdl sys1_dhdl.xvg -g sys1.log -plumed`.
+- As a reulst, it took about 18.2 minutes to finish the simulation if `GRID_*` parameters are used.
 
 #### 3-3. Comparison of the results between the simulations
-
-- Fatal error in Simulation 2 (alchemical metadynamics)
-  ```
-  Fatal error:
-  Something wrong in choosing new lambda state with a Gibbs move -- probably
-  underflow in weight determination.
-  Denominator is:   0 1.0000000000e+00
-    i                dE        numerator          weights
-    0 -4.3389062500e+02 0.0000000000e+00-7.9695000000e+03
-    1 -1.0062548828e+02 1.9618178501e-44-7.9690000000e+03
-    2 -5.1916992188e+01 2.8361995012e-23-7.9685000000e+03
-    3 -3.8954101562e+01 1.2090621908e-17-7.9695000000e+03
-    4 -3.6776855469e+01 1.0666319960e-16-7.9720000000e+03
-    5  0.0000000000e+00 1.0000000000e+00-7.9370000000e+03
-    ```
-    The following are the counts right before the error occure (See the `.log` file in the repository for more details.):
-    ```
-                 Step           Time
-              1912000     3824.00000
-
-               MC-lambda information
-    N   VdwL    Count   G(in kT)  dG(in kT)
-    1  0.000    31878 -7969.50000    0.50000
-    2  0.200    31878 -7969.00000    0.50000
-    3  0.400    31877 -7968.50000   -1.00000
-    4  0.600    31879 -7969.50000    0.00000 <<
-    5  0.800    31879 -7969.50000   -2.50000
-    6  1.000    31809 -7972.00000    0.00000 
-    ```
-    - I'm not sure exactly why or how this happened. Maybe it's related to wrong weights calculations as a result of the introduction of calculations by PLUMED.
-    - Another potential issue that I found here is that the value of `init-wl-delta` might influence the accuracy of the result of free energy difference when the standard alchemical metadynamics. As shown above, the smallest units for the weights is 0.5, which might lead to an inaccurate estimation of free energy by MBAR. (This is somehow just my instinct though, I need to think more about this.) Typically, when running an expanded ensemble simulation, we start with `init-wl-delta = 0.5` so that it is not too difficult for the system to generate a flat histogram at the beginning. Since the Wang-Landau incrementor will be updated, it is fine to start with a "large" (aroud 0.5 to 1) Wang-Landau incrementor. (We never use a large `wl-scale` like 0.999999, we typically use 0.6 to 0.8.) However, if the Wang-Landau incrementor has to be fixed to resemble the standard alchemical metadynamics, then the weights are not very precise (as shown above). Altough we generally also start with `HEIGHT` of the same oder in standard metadynamics, the Gaussian biasing potential spreads out and influence the bias for multiple states in one addition. In our case, the Gaussians are more like spikes and barely influence the neighboring states, so `HEIGHT` as 0.5 will directly influence the precision of the free energy profile. (We compute the free energy profile/free energy difference from metadynamics only from adding up all the Gaussians, which is the negative image of the free energy profile.) I don't have a good sense about solving this issue now. I also need to think more about this.
-- Simulation 2 crashed due to the following error:
-  ```
-  Fatal error:
-  Something wrong in choosing new lambda state with a Gibbs move -- probably
-  underflow in weight determination.
-  Denominator is:   0 1.0000000000e+00
-  i                dE        numerator          weights
-  0 -4.3389062500e+02 0.0000000000e+00-7.9695000000e+03
-  1 -1.0062548828e+02 1.9618178501e-44-7.9690000000e+03
-  2 -5.1916992188e+01 2.8361995012e-23-7.9685000000e+03
-  3 -3.8954101562e+01 1.2090621908e-17-7.9695000000e+03
-  4 -3.6776855469e+01 1.0666319960e-16-7.9720000000e+03
-  5  0.0000000000e+00 1.0000000000e+00-7.9370000000e+03
-  ```
-  As shown in the `.log` file, the weight of the first state was not shifted to 0. (Note that we didn't see this issue in Test 1 because that the weights were not adjusted at all in the simulation.) This might be related to this error. Pascal will look into this in the near future. 
-
-- The final histogram
+- The final histogram </br>
 The final histogram of Simulation 1 is:
   ```
              MC-lambda information
@@ -595,9 +529,23 @@ The final histogram of Simulation 1 is:
   6  1.000       36  -24.45815    0.00000 <<
   ```
   As shown above, the first two states do not have any counts and the number of counts for all the states are quite low. This is just a result of the very high frequency of updating the Wang-Landau incrementor. As shown below, the time required to sample all the states is very short (only dozens of samples), making the histogram flat within a very short time as well. (1 ps corresponds to 50 counts since `nstexpanded = 10` and `dt = 0.002`.) Once the histogram is considered flat, the Wang-Landau incrementor is scaled by 0.999999 and the counts are reset to 0. Therefore, in this case, there is actually no points to compare the final histogram of the two simulations. <center><img src=https://i.imgur.com/MYrJcom.png width=500></center>
-  
+  However, we can stil check the final counts of the states of Simulation 2:
+  ```
+             MC-lambda information
+  N   VdwL    Count   G(in kT)  dG(in kT)
+  1  0.000       19   -4.50000    9.00000
+  2  0.200    10856    4.50000    0.00000
+  3  0.400    12107    4.50000    0.00000
+  4  0.600    27799    4.50000    0.00000
+  5  0.800   199193    4.50000  -12.50000 <<
+  6  1.000       26   -8.00000    0.00000
+  ```
+  As a result, the weights calculated by the alchemical metadynamics are quite different from the ones calculated by the expanded ensemble. From the final counts of the states, it is obvious that the weights are problematic. In addition, the weight of the first state was not shifted to 0 at the beginning of the simulation, which is the problem that we have to look into. 
 
 - Exploration of state as a function of time
+<center><img src=https://i.imgur.com/PyqenR1.png width=330><img src=https://i.imgur.com/YzsgXnf.png width=330></center>
+As shown above, the figure on the left is the result from Simulation 1, while the one on the right is the result from Simulation 2. Apparently, due to incorrect weights, in Simulation 2, the system was not able to sample all the states frequently as Simulation 1.
+
 - Free energy difference
 The following is the result of free energy difference obtained from Simulation 1:
   ```
@@ -606,7 +554,8 @@ The following is the result of free energy difference obtained from Simulation 1
   BAR: -3.7597286154906557 +/- unknown kT
   MBAR: -2.4840745041533205 +/- 0.11515090177248248 kT
   ```
-<center><img src=https://i.imgur.com/CP63Ko6.png width=500></center>
+  As for Simulation 2, since the sampling for state 0 and 5 are not sufficient, we are not able to estimate the free energy difference. 
+  **Question**: The big difference in the free energy difference between different methods in Simulation 1.
 
 ### 4. Test 3: Examination of biasing potentials in well-temeperd MetaD-EXE 
 **Note: The content in this section has not been updated. (05.31)**
