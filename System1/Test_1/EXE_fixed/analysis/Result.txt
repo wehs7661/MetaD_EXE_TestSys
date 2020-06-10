@@ -10,12 +10,16 @@ Performing free energy calculations ...
 Fitting TI on dHdl ...
 Fitting BAR on u_nk ...
 Fitting MBAR on u_nk ...
+
 ====== Results ======
+Statistical inefficiency of dHdl: 1.1017882823944092
+Statistical inefficiency of u_nk: 1.0
+
 TI: -3.399674527732527 +/- 0.5036968922133107 kT
 BAR: -3.296481230788155 +/- unknown kT
-MBAR: -3.2702770673303796 +/- 0.23341820696574522 kT
+MBAR: -3.2702770673303796 +/- 0.2334182069657454 kT
 
 Calculating Wang-Landau weights for expanded ensemble using TI ...
-i=0
-i=1
-i=2
+
+Computing and visualizing the overlap matrix ...
+Time elapsed: 2.694732189178467 seconds.
