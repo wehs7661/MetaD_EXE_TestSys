@@ -1,0 +1,125 @@
+Started on Thu Jun 11 17:32:06 2020
+Command line was: /usr/local/bin/alchemical_analysis -t 298 -v -p sys1 -x -u kBT
+
+Checking for corrupted xvg files....
+No corrupt lines found, no data was removed from ./sys1_dhdl.xvg
+Reading metadata from ./sys1_dhdl.xvg...
+Temperature is 298 K.
+First 0 ps (0 snapshots) will be discarded due to equilibration from file ./sys1_dhdl.xvg...
+Loading in data from ./sys1_dhdl.xvg (all states) ...
+
+
+Number of correlated and uncorrelated samples:
+
+ State            N          N_k        N/N_k
+
+     0           56           56         1.00
+WARNING: Only 48 uncorrelated samples found at lambda number 1; proceeding with analysis using correlated samples...
+     1           48           50         1.05
+WARNING: Only 36 uncorrelated samples found at lambda number 2; proceeding with analysis using correlated samples...
+     2           36           47         1.30
+     3           96           96         1.14
+     4          750          750         1.00
+     5         1489         1489         1.00
+
+Estimating the free energy change with MBAR...
+K (total states) = 6, total samples = 2488
+N_k = 
+[  56   50   47   96  750 1489]
+There are 6 states with samples.
+Initial dimensionless free energies with method BAR
+f_k = 
+[ 0.          0.07107439  0.07998214 -0.5204604  -2.41818675 -3.06618931]
+Final dimensionless free energies
+f_k = 
+[ 0.          0.11078262  0.06798447 -0.61792983 -2.52131741 -3.16637195]
+MBAR initialization complete.
+Matrix of free energy differences
+Deltaf_ij:
+[[ 0.          0.11078262  0.06798447 -0.61792983 -2.52131741 -3.16637195]
+ [-0.11078262  0.         -0.04279815 -0.72871246 -2.63210004 -3.27715457]
+ [-0.06798447  0.04279815  0.         -0.68591431 -2.58930188 -3.23435642]
+ [ 0.61792983  0.72871246  0.68591431  0.         -1.90338758 -2.54844211]
+ [ 2.52131741  2.63210004  2.58930188  1.90338758  0.         -0.64505453]
+ [ 3.16637195  3.27715457  3.23435642  2.54844211  0.64505453  0.        ]]
+dDeltaf_ij:
+[[0.         0.06325643 0.12008323 0.17648017 0.20482123 0.20761547]
+ [0.06325643 0.         0.0673409  0.13879219 0.17302193 0.1763231 ]
+ [0.12008323 0.0673409  0.         0.08867855 0.13254146 0.1368002 ]
+ [0.17648017 0.13879219 0.08867855 0.         0.05713816 0.06430934]
+ [0.20482123 0.17302193 0.13254146 0.05713816 0.         0.01076516]
+ [0.20761547 0.1763231  0.1368002  0.06430934 0.01076516 0.        ]]
+Estimating the free energy change with TI, TI-CUBIC, DEXP, IEXP, BAR...
+relative_change =        1.000
+iteration     0 : DeltaF =            0.071
+relative_change =        0.000
+iteration     1 : DeltaF =            0.071
+relative_change =        0.000
+iteration     2 : DeltaF =            0.071
+Convergence achieved.
+Converged to tolerance of 1.000000e-15 in 3 iterations (6 function evaluations)
+DeltaF =    0.071 +-    0.096
+relative_change =        1.000
+iteration     0 : DeltaF =            0.009
+relative_change =        0.025
+iteration     1 : DeltaF =            0.009
+relative_change =        0.000
+iteration     2 : DeltaF =            0.009
+relative_change =        0.000
+iteration     3 : DeltaF =            0.009
+relative_change =        0.000
+Convergence achieved.
+Converged to tolerance of 7.490326e-11 in 4 iterations (7 function evaluations)
+DeltaF =    0.009 +-    0.089
+Initial brackets did not actually bracket, widening them
+Initial brackets did not actually bracket, widening them
+relative_change =        1.000
+iteration     0 : DeltaF =           -0.601
+relative_change =        0.000
+iteration     1 : DeltaF =           -0.600
+relative_change =        0.000
+iteration     2 : DeltaF =           -0.600
+relative_change =        0.000
+Convergence achieved.
+Converged to tolerance of 7.396032e-16 in 3 iterations (10 function evaluations)
+DeltaF =   -0.600 +-    0.117
+relative_change =        1.000
+iteration     0 : DeltaF =           -1.897
+relative_change =        0.000
+iteration     1 : DeltaF =           -1.898
+relative_change =        0.000
+iteration     2 : DeltaF =           -1.898
+relative_change =        0.000
+Convergence achieved.
+Converged to tolerance of 7.411415e-11 in 3 iterations (6 function evaluations)
+DeltaF =   -1.898 +-    0.068
+relative_change =        1.000
+iteration     0 : DeltaF =           -0.648
+relative_change =        0.000
+iteration     1 : DeltaF =           -0.648
+relative_change =        0.000
+Convergence achieved.
+Converged to tolerance of 8.223842e-15 in 2 iterations (5 function evaluations)
+DeltaF =   -0.648 +-    0.011
+No Coulomb transformation present.
+------------ --------------------- --------------------- --------------------- --------------------- --------------------- --------------------- 
+   States           TI (k_BT)       TI-CUBIC (k_BT)           DEXP (k_BT)           IEXP (k_BT)            BAR (k_BT)           MBAR (k_BT)      
+------------ --------------------- --------------------- --------------------- --------------------- --------------------- --------------------- 
+   0 -- 1         0.077  +-  0.092      0.008  +-  0.111      0.306  +-  0.125     -0.016  +-  0.115      0.071  +-  0.096      0.111  +-  0.063 
+   1 -- 2        -0.088  +-  0.124     -0.029  +-  0.140     -0.155  +-  0.167      0.127  +-  0.102      0.009  +-  0.089     -0.043  +-  0.067 
+   2 -- 3        -0.670  +-  0.140     -0.630  +-  0.159     -0.795  +-  0.618     -0.736  +-  0.134     -0.600  +-  0.117     -0.686  +-  0.089 
+   3 -- 4        -1.370  +-  0.101     -1.532  +-  0.117     -1.460  +-  0.204     -1.957  +-  0.084     -1.898  +-  0.068     -1.903  +-  0.057 
+   4 -- 5        -0.709  +-  0.016     -0.782  +-  0.030     -0.642  +-  0.019     -0.650  +-  0.015     -0.648  +-  0.011     -0.645  +-  0.011 
+------------ --------------------- --------------------- --------------------- --------------------- --------------------- --------------------- 
+    TOTAL:       -2.760  +-  0.324     -2.965  +-  0.326     -2.746  +-  0.684     -3.232  +-  0.221     -3.066  +-  0.188     -3.166  +-  0.208 
+
+************************************************************************************************************************************************
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII   The above table has been stored in   IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII             ./results.txt              IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII     while the full-precision data      IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII (along with the simulation profile) in IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII            ./results.pickle            IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+************************************************************************************************************************************************
+
+Time spent: 0 hours, 0 minutes, and 0.11 seconds.
+Finished on Thu Jun 11 17:32:07 2020
