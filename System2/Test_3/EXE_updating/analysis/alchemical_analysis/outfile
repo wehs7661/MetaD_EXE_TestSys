@@ -1,0 +1,207 @@
+Started on Sat Jun 13 00:55:41 2020
+Command line was: /usr/local/bin/alchemical_analysis -t 298 -v -p sys2 -x -u kBT
+
+Checking for corrupted xvg files....
+No corrupt lines found, no data was removed from ./sys2_dhdl.xvg
+Reading metadata from ./sys2_dhdl.xvg...
+Temperature is 298 K.
+First 0 ps (0 snapshots) will be discarded due to equilibration from file ./sys2_dhdl.xvg...
+Loading in data from ./sys2_dhdl.xvg (all states) ...
+
+
+Number of correlated and uncorrelated samples:
+
+ State            N          N_k        N/N_k
+
+     0          288          288         1.00
+     1          236          236         1.24
+     2          261          261         1.04
+     3          279          279         1.00
+     4          287          287         1.00
+     5          296          296         1.00
+     6          317          317         1.00
+     7          161          161         1.40
+     8          245          245         1.00
+
+Estimating the free energy change with MBAR...
+K (total states) = 9, total samples = 2370
+N_k = 
+[288 236 261 279 287 296 317 161 245]
+There are 9 states with samples.
+Initial dimensionless free energies with method BAR
+f_k = 
+[ 0.          7.83621697 13.98066157 16.91739277 18.935934   20.43404038
+ 21.11298141 19.16051065 16.58871704]
+Final dimensionless free energies
+f_k = 
+[ 0.          7.83969223 13.96213416 16.87248119 18.88108978 20.40544311
+ 21.11263275 19.18810209 16.6134922 ]
+MBAR initialization complete.
+Matrix of free energy differences
+Deltaf_ij:
+[[  0.           7.83969223  13.96213416  16.87248119  18.88108978
+   20.40544311  21.11263275  19.18810209  16.6134922 ]
+ [ -7.83969223   0.           6.12244193   9.03278896  11.04139755
+   12.56575088  13.27294052  11.34840986   8.77379998]
+ [-13.96213416  -6.12244193   0.           2.91034703   4.91895563
+    6.44330895   7.1504986    5.22596793   2.65135805]
+ [-16.87248119  -9.03278896  -2.91034703   0.           2.00860859
+    3.53296192   4.24015156   2.3156209   -0.25898898]
+ [-18.88108978 -11.04139755  -4.91895563  -2.00860859   0.
+    1.52435333   2.23154297   0.30701231  -2.26759758]
+ [-20.40544311 -12.56575088  -6.44330895  -3.53296192  -1.52435333
+    0.           0.70718964  -1.21734102  -3.7919509 ]
+ [-21.11263275 -13.27294052  -7.1504986   -4.24015156  -2.23154297
+   -0.70718964   0.          -1.92453066  -4.49914055]
+ [-19.18810209 -11.34840986  -5.22596793  -2.3156209   -0.30701231
+    1.21734102   1.92453066   0.          -2.57460989]
+ [-16.6134922   -8.77379998  -2.65135805   0.25898898   2.26759758
+    3.7919509    4.49914055   2.57460989   0.        ]]
+dDeltaf_ij:
+[[0.         0.0867599  0.17048154 0.21464794 0.21818127 0.23316511
+  0.25809577 0.36279426 0.38923565]
+ [0.0867599  0.         0.11988753 0.17707183 0.18133359 0.19910707
+  0.22779599 0.34190242 0.36984047]
+ [0.17048154 0.11988753 0.         0.10258722 0.11028539 0.13786903
+  0.17680808 0.31026973 0.34081083]
+ [0.21464794 0.17707183 0.10258722 0.         0.05030835 0.09881298
+  0.14843191 0.29502221 0.32699055]
+ [0.21818127 0.18133359 0.11028539 0.05030835 0.         0.06598716
+  0.12823898 0.28539902 0.31833522]
+ [0.23316511 0.19910707 0.13786903 0.09881298 0.06598716 0.
+  0.09011913 0.27037085 0.30493471]
+ [0.25809577 0.22779599 0.17680808 0.14843191 0.12823898 0.09011913
+  0.         0.24343857 0.28132819]
+ [0.36279426 0.34190242 0.31026973 0.29502221 0.28539902 0.27037085
+  0.24343857 0.         0.08912532]
+ [0.38923565 0.36984047 0.34081083 0.32699055 0.31833522 0.30493471
+  0.28132819 0.08912532 0.        ]]
+Estimating the free energy change with TI, TI-CUBIC, DEXP, IEXP, BAR...
+Initial brackets did not actually bracket, widening them
+Initial brackets did not actually bracket, widening them
+Initial brackets did not actually bracket, widening them
+relative_change =        1.000
+iteration     0 : DeltaF =            7.835
+relative_change =        0.000
+iteration     1 : DeltaF =            7.836
+relative_change =        0.000
+iteration     2 : DeltaF =            7.836
+relative_change =        0.000
+iteration     3 : DeltaF =            7.836
+relative_change =        0.000
+Convergence achieved.
+Converged to tolerance of 7.221067e-13 in 4 iterations (13 function evaluations)
+DeltaF =    7.836 +-    0.087
+Initial brackets did not actually bracket, widening them
+Initial brackets did not actually bracket, widening them
+relative_change =        1.000
+iteration     0 : DeltaF =            6.144
+relative_change =        0.000
+iteration     1 : DeltaF =            6.144
+relative_change =        0.000
+iteration     2 : DeltaF =            6.144
+relative_change =        0.000
+Convergence achieved.
+Converged to tolerance of 3.123433e-12 in 3 iterations (10 function evaluations)
+DeltaF =    6.144 +-    0.122
+relative_change =        1.000
+iteration     0 : DeltaF =            2.936
+relative_change =        0.000
+iteration     1 : DeltaF =            2.937
+relative_change =        0.000
+iteration     2 : DeltaF =            2.937
+relative_change =        0.000
+Convergence achieved.
+Converged to tolerance of 2.610809e-11 in 3 iterations (6 function evaluations)
+DeltaF =    2.937 +-    0.120
+Initial brackets did not actually bracket, widening them
+Initial brackets did not actually bracket, widening them
+relative_change =        1.000
+iteration     0 : DeltaF =            2.019
+relative_change =        0.000
+iteration     1 : DeltaF =            2.019
+relative_change =        0.000
+Convergence achieved.
+Converged to tolerance of 6.883297e-11 in 2 iterations (9 function evaluations)
+DeltaF =    2.019 +-    0.057
+relative_change =        1.000
+iteration     0 : DeltaF =            1.498
+relative_change =        0.000
+iteration     1 : DeltaF =            1.498
+relative_change =        0.000
+iteration     2 : DeltaF =            1.498
+Convergence achieved.
+Converged to tolerance of 1.000000e-15 in 3 iterations (6 function evaluations)
+DeltaF =    1.498 +-    0.072
+relative_change =        1.000
+iteration     0 : DeltaF =            0.679
+relative_change =        0.000
+iteration     1 : DeltaF =            0.679
+relative_change =        0.000
+iteration     2 : DeltaF =            0.679
+Convergence achieved.
+Converged to tolerance of 1.000000e-15 in 3 iterations (6 function evaluations)
+DeltaF =    0.679 +-    0.091
+relative_change =        1.000
+iteration     0 : DeltaF =           -1.990
+relative_change =        0.019
+iteration     1 : DeltaF =           -1.953
+relative_change =        0.000
+iteration     2 : DeltaF =           -1.952
+relative_change =        0.000
+iteration     3 : DeltaF =           -1.952
+relative_change =        0.000
+iteration     4 : DeltaF =           -1.952
+relative_change =        0.000
+iteration     5 : DeltaF =           -1.952
+relative_change =        0.000
+Convergence achieved.
+Converged to tolerance of 2.229805e-12 in 6 iterations (9 function evaluations)
+DeltaF =   -1.952 +-    0.247
+Initial brackets did not actually bracket, widening them
+Initial brackets did not actually bracket, widening them
+relative_change =        1.000
+iteration     0 : DeltaF =           -2.570
+relative_change =        0.001
+iteration     1 : DeltaF =           -2.572
+relative_change =        0.000
+iteration     2 : DeltaF =           -2.572
+relative_change =        0.000
+iteration     3 : DeltaF =           -2.572
+relative_change =        0.000
+Convergence achieved.
+Converged to tolerance of 2.123407e-12 in 4 iterations (11 function evaluations)
+DeltaF =   -2.572 +-    0.089
+------------ --------------------- --------------------- --------------------- --------------------- --------------------- --------------------- 
+   States           TI (k_BT)       TI-CUBIC (k_BT)           DEXP (k_BT)           IEXP (k_BT)            BAR (k_BT)           MBAR (k_BT)      
+------------ --------------------- --------------------- --------------------- --------------------- --------------------- --------------------- 
+   0 -- 1         7.802  +-  0.082      7.754  +-  0.087      7.589  +-  0.249      7.555  +-  0.190      7.836  +-  0.087      7.840  +-  0.087 
+   1 -- 2         6.463  +-  0.108      6.188  +-  0.129      5.580  +-  0.339      5.829  +-  0.237      6.144  +-  0.122      6.122  +-  0.120 
+   2 -- 3         3.326  +-  0.121      2.811  +-  0.179      3.140  +-  0.227      2.583  +-  0.266      2.937  +-  0.120      2.910  +-  0.103 
+   3 -- 4         2.004  +-  0.058      2.057  +-  0.067      2.192  +-  0.095      2.056  +-  0.078      2.019  +-  0.057      2.009  +-  0.050 
+   4 -- 5         1.495  +-  0.070      1.468  +-  0.080      2.026  +-  0.095      1.478  +-  0.103      1.498  +-  0.072      1.524  +-  0.066 
+   5 -- 6         0.498  +-  0.095      0.799  +-  0.109      0.638  +-  0.416      0.862  +-  0.134      0.679  +-  0.091      0.707  +-  0.090 
+   6 -- 7        -2.309  +-  0.150     -2.581  +-  0.166     -4.009  +-  0.957     -0.782  +-  0.551     -1.952  +-  0.247     -1.925  +-  0.243 
+   7 -- 8        -2.239  +-  0.132     -2.893  +-  0.171     -2.452  +-  0.143     -2.215  +-  0.300     -2.572  +-  0.089     -2.575  +-  0.089 
+------------ --------------------- --------------------- --------------------- --------------------- --------------------- --------------------- 
+  Coulomb:       17.591  +-  0.236     16.754  +-  0.247     16.310  +-  0.477     15.968  +-  0.404     16.917  +-  0.192     16.872  +-  0.215 
+  vdWaals:       -0.552  +-  0.335     -1.150  +-  0.361     -1.605  +-  1.062      1.401  +-  0.655     -0.329  +-  0.293     -0.259  +-  0.325 
+    TOTAL:       17.039  +-  0.410     15.604  +-  0.438     14.705  +-  1.164     17.368  +-  0.769     16.589  +-  0.351     16.613  +-  0.389 
+                                                                                                                                                
+                                               A remark on the energy components interpretation:                                                
+                                              'vdWaals' is computed as 'TOTAL' - 'Coulomb', where                                               
+                                              'Coulomb' is found as the free energy change between                                              
+                                              the states defined by the lambda vectors (0,0,...,0)                                              
+                                               and (1,0,...,0), the only varying vector component                                               
+                                                  being either 'coul-lambda' or 'fep-lambda'.                                                   
+
+************************************************************************************************************************************************
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII   The above table has been stored in   IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII             ./results.txt              IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII     while the full-precision data      IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII (along with the simulation profile) in IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII            ./results.pickle            IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+************************************************************************************************************************************************
+
+Time spent: 0 hours, 0 minutes, and 0.15 seconds.
+Finished on Sat Jun 13 00:55:41 2020
