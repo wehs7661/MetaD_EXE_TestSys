@@ -30,7 +30,7 @@ As a system containing only 661 atoms, Test system 1 serves as a simple toy mode
 | ---------------- | ------------------ | ------------------------------------------------ | ---------------------------------- |
 | Type of EXE in Simulation 1      | Weights fixed at 0 (no biasing potential) | Weights updated by the WL algorithm                                 | Weights updated by the WL algorithm                  |
 | Type of Meta-EXE in Simulation 2| standard           | standard                                         | well-tempered                      |
-| Parameters       | `HEIGHT = 0`       | `HEIGHT` = `init-wl-delta`, `wl-scale` =0.999999 | `wl-scale = 0.8`, `BIASFACTOR = ?` |
+| Parameters       | `HEIGHT = 0`       | `HEIGHT` = `init-wl-delta`, `wl-scale` =0.999999 | `HEIGHT` = `init-wl-delta`, `wl-scale` = 0.8, `BIASFACTOR` = ? |
 
 Below we start with the preparation of the simulation input files for all these tests. All the input files can be found in `Prep/Final_inputs`.
 
@@ -461,21 +461,27 @@ As shown below, even if the weights/biases are 0, 6 intermediate states are enou
 <center><img src=https://i.imgur.com/OeplLSR.png width=330><img src=https://i.imgur.com/f3bAIxj.png width=330></center>
 
 - Data analysis using `COLVAR`</br>
-  Note that in addition to the `.log` file, we can also use PLUMED output file, `COLVAR` to plot the histogram and the state as a function of time as shown above. As a result, the figures obtained from the `COLVAR` file are exactly the same as the ones generated from the `.log` file. (Note that the time step in `COLVAR` is 100 smaller than the one in the `.log` file. This does not influence the result of the histogram, but we have to adopt the data point every 100 time frames to reproduce state as a function of time based on the `.log` file.) 
+  Note that in addition to the `.log` file, we can also use PLUMED output file, `COLVAR` to plot the histogram and the state as a function of time as shown above. As a result, the figures obtained from the `COLVAR` file are exactly the same as the ones generated from the `.log` file. (Note that the time step in `COLVAR` is 100 smaller than the one in the `.log` file. This does not influence the result of the histogram, but we have to adopt the data point every 100 time frames if we want to reproduce state as a function of time based on the `.log` file. Currently the figure generated from `COLVAR` in the repository adopted all the data points.) 
 - Free energy difference</br>
 Lasly, we compare the energy differences between the coupled and the uncoupled state calculated from Simulation 1 and Simulation 2. The following are the results from Simulation 1:
   ```
   ====== Results ======
+  Statistical inefficiency of dHdl: 1.1017882823944092
+  Statistical inefficiency of u_nk: 1.0
+  
   TI: -3.399674527732527 +/- 0.5036968922133107 kT
   BAR: -3.296481230788155 +/- unknown kT
-  MBAR: -3.2702770673303796 +/- 0.23341820696574522 kT
+  MBAR: -3.2702770673303796 +/- 0.2334182069657454 kT
   ```
   Typically, when running metadynamics, we can use the PLUMED method `sum_hills` (`lumed sum_hills --hills HILLS_LAMBDA`) to add up all th biasing potential to get the free energy profile (as well as the free energy difference). However, this method won't work in Simulation 2 in our case here, since there was no biasing potential added. Therefore, we analyze the `.dhdl` file instead and the results are shown as follows: 
   ```
   ====== Results ======
+  Statistical inefficiency of dHdl: 1.0295928716659546
+  Statistical inefficiency of u_nk: 1.0
+
   TI: -2.5880824249128374 +/- 0.3005642544961182 kT
   BAR: -2.756222320576275 +/- unknown kT
-  MBAR: -2.967642698869592 +/- 0.20164515882903628 kT
+  MBAR: -2.9676426988695743 +/- 0.20164515882905815 kT
   ```
   As shown in the results above, there was a difference of 0.35 kT between results of the two simulations analyzed by MBAR. Note that the uncertainty is somehow large but the results are still statistically consistent as the difference between the results obtained by same method based on different simulations are roughtly around the standard deviation. The uncertainty is large here because of the infrequency of visiting the first state. If the simulation is extended such that we have sufficient samples for all intermediate states (note that the counts in state 1 will still be significantly less than the counts in state 6.), then the uncertainy will be smaller.
 
@@ -533,29 +539,47 @@ The final histogram of Simulation 1 is:
   ```
              MC-lambda information
   N   VdwL    Count   G(in kT)  dG(in kT)
-  1  0.000       19   -4.50000    9.00000
-  2  0.200    10856    4.50000    0.00000
-  3  0.400    12107    4.50000    0.00000
-  4  0.600    27799    4.50000    0.00000
-  5  0.800   199193    4.50000  -12.50000 <<
-  6  1.000       26   -8.00000    0.00000
+  1  0.000    41665 -10416.00000   -1.00000
+  2  0.200    41667 -10417.00000    0.00000 <<
+  3  0.400    41667 -10417.00000    0.50000
+  4  0.600    41666 -10416.50000   -2.50000
+  5  0.800    41666 -10419.00000   -1.50000
+  6  1.000    41669 -10420.50000    0.00000
   ```
-  As a result, the weights calculated by the alchemical metadynamics are quite different from the ones calculated by the expanded ensemble. From the final counts of the states, it is obvious that the weights are problematic. In addition, the weight of the first state was not shifted to 0 at the beginning of the simulation, which is the problem that we have to look into. 
+  As shown above, the weights esitmated by alchemical metadynamics ensure pretty flat histogram. In the current implementation, the weight of the first state was not shifted to 0 though, which is the problem we have to solve in the near future.
+- Exploration of state as a function of time</br>
+As shown below, the figure on the left is the result from Simulation 1, while the one on the right is the result from Simulation 2 (based on the `.log` file). All the states are well sampled in both simulations.
+<center><img src=https://i.imgur.com/PyqenR1.png width=330><img src=https://i.imgur.com/QiJYqHN.png width=330></center> 
 
-- Exploration of state as a function of time
-<center><img src=https://i.imgur.com/PyqenR1.png width=330><img src=https://i.imgur.com/YzsgXnf.png width=330></center>
-As shown above, the figure on the left is the result from Simulation 1, while the one on the right is the result from Simulation 2. Apparently, due to incorrect weights, in Simulation 2, the system was not able to sample all the states frequently as Simulation 1.
-
-- Free energy difference
+- Free energy difference </br>
 The following is the result of free energy difference obtained from Simulation 1:
   ```
   ====== Results ======
+  Statistical inefficiency of dHdl: 1.0
+  Statistical inefficiency of u_nk: 1.0
+
   TI: -5.850162263194646 +/- 0.34724561859436376 kT
   BAR: -3.7597286154906557 +/- unknown kT
-  MBAR: -2.4840745041533205 +/- 0.11515090177248248 kT
+  MBAR: -2.4840745041533205 +/- 0.11515090177248272 kT
   ```
-  As for Simulation 2, since the sampling for state 0 and 5 are not sufficient, we are not able to estimate the free energy difference. 
+  On the other hand, the following is the result obtained from Simulation 2. 
   **Question**: The big difference in the free energy difference between different methods in Simulation 1.
+  ```
+  ====== Results ======
+  Statistical inefficiency of dHdl: 1.0
+  Statistical inefficiency of u_nk: 1.0
+
+  TI: -5.027747585564408 +/- 0.2994803758956154 kT
+  BAR: -3.715886270966177 +/- unknown kT
+  MBAR: -3.012397511069156 +/- 0.12457272629404113 kT
+  ```
+
+- Overlap matrix</br>
+If the sampling is sufficient, the overlap matrix should be at least tridiagonal. As shown below, both matrices meet this requirement and the overlap between states is significant. 
+<center><img src=https://i.imgur.com/NCFypph.png width=330><img src=https://i.imgur.com/uCC98nd.png width=330></center> 
+
+
+
 
 ### 4. Test 3: Examination of biasing potentials in well-temeperd MetaD-EXE 
 **Note: The content in this section has not been updated. (05.31)**
@@ -603,6 +627,17 @@ To calculate the solvation free energy with currently existing methods, we can e
 <center>
 <img src=https://i.imgur.com/WMOFDIg.png width=250><img src=https://i.imgur.com/IQmy1bn.png width=250>
 </center>
+
+Specifically, regarding this test system, the following tests will be performed (Note that Simulation 1 is the control group):
+
+
+| -            | Test 1                                              | Test 2                                                       |
+| ------------ | --------------------------------------------------- | ------------------------------------------------------------ |
+| Simulaion 1  | Vanilla MD simulations at </br> different $\lambda$ values | Expanded ensemble with </br> updating weights                      |
+| Simulation 2 | Standard alchemical metadynamics                    | Well-tempered </br> alchemical metadynamics                                   |
+| Parameters   | `HEIGHT=0`                                          | `HEIGHT` = `init-wl-delta`</br>, `wl-scale` = 0.8, `BIASFACTOR`=? |
+
+
 
 ### 1. Preparation of the input files
 - Initial configuration
@@ -793,15 +828,18 @@ To calculate the solvation free energy with currently existing methods, we can e
   cp ../system.top sys2.top
   ```
 
-### 2. Test 1: Vanilla simulations at different $\lambda$ values
-To goal of this section, is to calculate the solvation free energy of lactic acid from vanilla simulations at 9 different intermediate states. The length of each simulation is 5 ns.
-- As demonstrated in the [tutorial provided by Alchemistry](http://www.alchemistry.org/wiki/GROMACS_4.6_example:_Direct_ethanol_solvation_free_energy), here we also define 9 intermediate alchemical states. In the section, we will run 9 different simulations, with the same `.gro` and `.top` files but different `.mdp` files. The `.mdp` files are only different by one line, ` init-lambda-state = X`, where `X` ranges from 0 to 8.
-- To begin with, copy the input files in `Prep/Final_inputs` to the working directory (say `Test_1`), then copy `Test1/sys1_expanded.mdp` of Test syste 1 and adapt it into `sys2.0.mdp` with the following changes made:
+### 2. Test 1: Comparison between vanilla simulations and alchemical metadynamics
+As mentioned above, Test 1 is more like a sanity as Test 1 of Test system 1. In Test 1 here, we run a series of vanilla MD simultions at different $\lambda$ values in Simulation 1. This simulation is analogous to Simulation 1 in Test 1 of Test system 1 in the sense that the simulation is not biased. The only difference is that the former requires 9 simulations, while the latter simulates 9 alchemical states serially in just one expanded ensemble simulation. On the other hand, in Simulation 2, we set `HEIGHT` as 0 so that both simulations are not biase and should generat similar results. Compared to the first test system, 
+
+#### Section 2-1. Simulation 1: Vanilla simulations at different $\lambda$ values 
+- Path in the repository: `MetaD_EXE_TestSys/System2/Test_1/Vanilla`
+- As demonstrated in the [tutorial provided by Alchemistry](http://www.alchemistry.org/wiki/GROMACS_4.6_example:_Direct_ethanol_solvation_free_energy), here we also define 9 intermediate alchemical states. In the section, we will run 9 different simulations (5 ns for each), with the same `.gro` and `.top` files but different `.mdp` files. The `.mdp` files are only different by one line, ` init-lambda-state = X`, where `X` ranges from 0 to 8.
+- To begin with, copy the input files in `Prep/Final_inputs` to the working directory (`Test_1`), then copy `Test1/EXE_fixed/sys1_expanded.mdp` of Test syste 1 and adapt it into `sys2.0.mdp` with the following changes made:
   - Set `couple-moltype = LIG`, which is defined in `.top` file
   - Set `couple-intramol = no`
   - Set `init-lambda = 0` for different `.mdp` files
   - Turn off options relevant to expanded ensemble, as shown below:
-    ```
+    ```=1
     ; Seed for Monte Carlo in lambda space
     ; lmc-seed                 = 1000
     ; lmc-gibbsdelta           = -1
@@ -820,7 +858,7 @@ To goal of this section, is to calculate the solvation free energy of lactic aci
     ; weight-equil-wl-delta    = 0.0001
     ```
   - Define the alchemical states as follows:
-    ```
+    ```=1
     ; lambda-states          = 1      2      3      4      5      6      7      8      9
     coul-lambdas             = 0.00   0.20   0.50   1.00   1.00   1.00   1.00   1.00   1.00
     vdw-lambdas              = 0.00   0.00   0.00   0.00   0.20   0.40   0.60   0.80   1.00
@@ -832,7 +870,7 @@ To goal of this section, is to calculate the solvation free energy of lactic aci
   sys2.gro  sys2_prep_test1.sh  sys2.top  sys2_vanilla.0.mdp
   ```
   Here, we will create a folder (`state_X`) for each alchemical state and run each simulation. To do this, execute `bash sys2_test1_run.sh`, whose content is as follows:
-  ```bash
+  ```bash=1
   #!/bin/sh
 
   for (( i=0; i<9; i=i+1 ))
@@ -858,8 +896,58 @@ To goal of this section, is to calculate the solvation free energy of lactic aci
   ```
 - Specifically, what `sys2_test1_run.sh` does, is to copy the simulation input files (`.gro`, `.mdp`, `.mdp`) to each newly created folder `state_X`, modify the `.mdp` file, generate a `.tpr` and execute `gmx mdrun` to run the simulation for each state.
 - As a result, for each alchemical state, it took about an hour to finish a vanilla simulation (with `free-energy = no`) of 5 ns.
-- To gather `.dhdl` files of each replica, we execute the following bash script (`bash get_dhdl.sh`):
-  ```bash
+
+#### 2-2. Simulation 2: Stadard alchemical metadynamics (no biases)
+- Path in the repository: `/MetaD_EXE_TestSys/System2/Test_1/MetaD_EXE`
+- To get started, copy the input files: `cp ../../Prep/Final_inputs/*` in `MetaD_EXE`. (Also copy the `.mdp` file of Test 1: `cp ../Vanilla/state_0/sys2_vanilla.0.mdp sys2.mdp` in `MetaD_EXE`.)
+- Modify `sys2.mdp` such that the options relevant to expanded ensemble are turned on, but `lmc-stats` remains `no` so that no biases will be added. Specifically, the part of the `.mdp` file corresponding to Section 2-1 is shown below:
+  ```=1
+  ; Seed for Monte Carlo in lambda space
+  lmc-seed                 = 1000
+  lmc-gibbsdelta           = -1
+  lmc-forced-nstart        = 0
+  symmetrized-transition-matrix = yes
+  nst-transition-matrix    = 100000
+  ; wl-scale                 = 0.8
+  ; wl-ratio                 = 0.6 ; keep this low, because the generations are short
+  ; init-wl-delta            = 0.5 ; '20' to start, read from the logfile for restarts.
+
+  ; expanded ensemble variables
+  nstexpanded              = 10
+  lmc-stats                = no
+  lmc-move                 = metropolized-gibbs
+  ;lmc-weights-equil        = wl-delta
+  ;weight-equil-wl-delta    = 0.0001
+  ```
+  In addition, change `free_energy` from `yes` to `expanded` such that GROMACS is able to recognize the parameters above. 
+- Copy the PLUMED input file from Test 1 (Simulation 2: MetaD_EXE) of Test System 1: `cp ../../../System1/Test_1/MetaD_EXE/plumed.dat .`. Specify both `GRID_MAX` and `GRID_BIN` as 8. (No `GRID_SPACING` is required.) Specifically, the content of the input PLUMED file is as below:
+  ```=1
+  lambda: EXTRACV NAME=lambda
+
+  METAD ...
+  ARG=lambda
+  SIGMA=0.01     # small SIGMA ensure that the Gaussian approaximate a delta function
+  HEIGHT=0       # In this case, the wegiths in EXE_fixed are fixed, meaning no biasing potentials added        
+  PACE=10        # should be nstexpanded
+  GRID_MIN=0     # index of alchemical states starts from 0
+  GRID_MAX=8     # we have 6 states in total
+  # GRID_SPACING=1 # so that the values of CV should be 0, 1, 2, 3, 4, 5
+  GRID_BIN=8
+  LABEL=metad    # it's not clear how GRID parameters will have influences here
+  FILE=HILLS_LAMBDA
+  ... METAD
+
+  PRINT STRIDE=10 ARG=lambda,metad.bias FILE=COLVAR
+  ```
+- Commands
+    - `gmx grompp -f sys2.mdp -c sys2.gro -p sys2.top -o sys2.tpr`
+    - `gmx mdrun -s sys2.tpr -x sys2.xtc -c sys2_output.gro -e sys2.edr -dhdl sys2_dhdl.xvg -g sys2.log -plumed`
+- As a result, it took about 50 minutes to finish the simulation.
+
+#### 2-3. Comparison of the results between the simulations
+- Preprocessing of Simulation 1 </br>
+To gather `.dhdl` files of each replica, we execute the following bash script (`bash get_dhdl.sh`):
+  ```bash=1
   #!/bin/sh
   echo This shell script copy the *dhdl.xvg file from each folder to a newly made folder called dhdl_files and rename all the *dhdl.xvg files.
 
@@ -884,19 +972,105 @@ To goal of this section, is to calculate the solvation free energy of lactic aci
 
   echo Complete!
   ```
-- Then, simply executing `REMD_free_energy` in `dhdl_files`, we can get the result of the solvation energy of the lactic acid:
+- Data analysis of Simulation 1:
+  - Solvation free energy </br>
+For Simulation 1, simply executing `REMD_free_energy` in `dhdl_files`, we can get the result of the solvation energy of the lactic acid:
+    ```
+    ====== Results ======
+    TI: 16.4492006355138 +/- 0.1771749689051801 kT
+    BAR: 15.683426266545636 +/- unknown kT
+    MBAR: 15.734086413484784 +/- 0.15214548962351204 kT
+    ```
+    (Note that in our case here, the vanilla simulations are pretty similar Hamiltonian replica exchange except that there was no exchange between alchemical states, so we can simply use `REMD_free_energy` to analyze the data here.) 
+  - Overlap matrix </br>
+In addition, there is good overlap between adjacent alchemical states, indicating that the intermediate states we defined here should be sufficient to give a reasonable estimate.
+- Data analysis of Simulation 2 </br>
+As a result, without biases added in the simulation, the system in Simulation 2 was only able to sample the first two states, which means that there is no overlap except for between the first two states. Also, free energy different can not be estimated accurately due to the lack of probability overlap. 
+- Additional test: Simulation 3  
+  In Test 1, we've also conducted an addition simulation, which is an expanded ensemble simulation with fixed fixed at 0. However, similarly, the system was only able to sample the first two states. In fact, what happend in Simulation 2 and 3 was not surprising, since Test system 2 is more complicated than Test system 1 and biases are therefore needed for sufficient sampling. 
+  
+  
+### 3. Test 2: Comparison between expanded ensemble and standard alchemical metadynamics
+As mentioned, in Test 2, Simulation 1 is an expanded ensemble simulation with weights updated by the Wang-Landau algorithm (`wl_scale`= 0.999999), while Simulation 2 is a standard alchemical metadynamics. 
+
+#### 3-1. Simulation 1: Expanded ensemble simulation with updating weights
+- Path in the repository: `MetaD_EXE_TestSys/System2/Test_2/EXE_updating`
+- First copy the input `.gro` and `.top` files: `cp ../../Prep/Final_inputs/* .`, then copy the `.mdp` file from Test 1: `cp ../../Test_1/Vanilla/Init/sys2_vanilla.0.mdp .` and make sure the options related to expande ensemble are set up as below:
+  ```=1
+  ; Seed for Monte Carlo in lambda space
+  lmc-seed                 = 1000
+  lmc-gibbsdelta           = -1
+  lmc-forced-nstart        = 0
+  symmetrized-transition-matrix = yes
+  nst-transition-matrix    = 100000
+  wl-scale                 = 0.999999
+  wl-ratio                 = 0.8
+  init-wl-delta            = 0.5
+
+  ; expanded ensemble variables
+  nstexpanded              = 10
+  lmc-stats                = wang-landau
+  lmc-move                 = metropolized-gibbs
+  lmc-weights-equil        = wl-delta
+  weight-equil-wl-delta    = 0.0001
+
+  ; lambda-states          = 1      2      3      4      5      6      7      8      9
+  coul-lambdas             = 0.00   0.20   0.50   1.00   1.00   1.00   1.00   1.00   1.00
+  vdw-lambdas              = 0.00   0.00   0.00   0.00   0.20   0.40   0.60   0.80   1.00
+  ```
+- Commands
+    - `gmx grompp -f sys2.mdp -c sys2.gro -p sys2.top -o sys2.tpr`
+    - `gmx mdrun -s sys2.tpr -x sys2.xtc -c sys2_output.gro -e sys2.edr -dhdl sys2_dhdl.xvg -g sys2.log`
+    
+#### Section 3-2. Standard alchemical metadynamics
+- Path in the repository: `/MetaD_EXE_TestSys/System2/Test_2/MetaD_EXE`
+- Here we use the same `.tpr` file as Simulation 1 (hence the same GROMACS parameters). Similarly, we the same PLUMED input file as Simulation 2 in Test 2 except that the `HEIGHT` is specified as 0.5 instead of 0. 
+- Commands
+    - `gmx grompp -f sys2.mdp -c sys2.gro -p sys2.top -o sys2.tpr`
+    - `gmx mdrun -s sys2.tpr -x sys2.xtc -c sys2_output.gro -e sys2.edr -dhdl sys2_dhdl.xvg -g sys2.log -plumed`
+
+#### Section 3-3. Comparison of the results between the simulations
+- Data analysis of Simulation 1
+  - Final histogram
+![](https://i.imgur.com/LFQzI6A.png)
+  - Exploration of state as a function of time
+  ![](https://i.imgur.com/mXJe6wK.png)
+  - Solvation free energy
   ```
   ====== Results ======
-  TI: 16.4492006355138 +/- 0.1771749689051801 kT
-  BAR: 15.683426266545636 +/- unknown kT
-  MBAR: 15.734086413484784 +/- 0.15214548962351204 kT
-  ```
-  In addition, there is good overlap between adjacent alchemical states, indicating that the intermediate states we defined here should be sufficient to give a reasonable estimate. (Note that in our case here, the vanilla simulations are pretty similar Hamiltonian replica exchange except that there was no exchange between alchemical states, so we can simply use `REMD_free_energy` to analyze the data here.)
-  
-  
-  
+  Statistical inefficiency of dHdl: 1.0
+  Statistical inefficiency of u_nk: 1.0
 
-### 3. Test 2: Expanded ensemble 
+  TI: 11.605293494125881 +/- 1.028956867629661 kT
+  BAR: 15.185090765179924 +/- unknown kT
+  MBAR: 16.377046914318374 +/- 0.3286438123153898 kT
+  ```
+  - Overlap matrix
+  ![](https://i.imgur.com/xll06SL.png)
+  
+- Data analysis of Simulation 2 </br>
+In Simulation 2, an underflow happened at 0.162 ns as follows:
+  ```
+  Fatal error:
+  Something wrong in choosing new lambda state with a Gibbs move -- probably
+  underflow in weight determination.
+  Denominator is:   0 1.0000000000e+00
+    i                dE        numerator          weights
+    0 -4.5607214355e+02 0.0000000000e+00-2.3800000000e+02
+    1 -4.4794921875e+02 0.0000000000e+00-2.3050000000e+02
+    2 -4.4151489258e+02 0.0000000000e+00-2.2500000000e+02
+    3 -4.3795764160e+02 0.0000000000e+00-2.2300000000e+02
+    4 -6.2703781128e+01 5.8626487139e-28-2.2050000000e+02
+    5 -3.5630508423e+01 3.3563466130e-16-2.1850000000e+02
+    6  0.0000000000e+00 1.0000000000e+00-1.8650000000e+02
+    7 -3.5623397827e+01 3.3802972637e-16-2.2000000000e+02
+    8 -3.9293258667e+01 8.6130024118e-18-2.2050000000e+02
+  ```
+  This is an issue that we are currently looking into.
+
+
+
+### 4. Test 3: Comparison between expanded ensemble and well-tempered alchemical metadynamics 
 In the second test of the lactic system, we want to use expanded ensemble simulation to estimate the solvation free energy. Here, we use exactly the same 9 itermediate states defined in Test 1, but we only have to run one simulation, which requires only one `.gro`, `.top` and `.mdp` file, respectively. In the expanded ensemble, we will start from 0 weights and use Wang-Landau algorithm to update the weights.
 - To get started, copy the simulation input files from `Prep/Final_inputs` to the working directory, then copy `Test_2/sys1_expanded.mdp` of Test system 1 and make the following changes:
   - Set `couple-moltype           = LIG`
