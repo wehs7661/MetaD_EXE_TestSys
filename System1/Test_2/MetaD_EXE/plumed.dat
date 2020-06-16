@@ -8,7 +8,6 @@ PACE=10        # should be nstexpanded
 GRID_MIN=0     # index of alchemical states starts from 0
 GRID_MAX=5     # we have 6 states in total
 GRID_BIN=5     # we need 5 bins between 6 points
-#GRID_SPACING=1 # so that the values of CV should be 0, 1, 2, 3, 4, 5
 LABEL=metad    # it's not clear how GRID parameters will have influences here
 FILE=HILLS_LAMBDA
 ... METAD
