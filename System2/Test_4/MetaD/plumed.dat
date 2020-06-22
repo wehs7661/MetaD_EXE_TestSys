@@ -1,0 +1,15 @@
+theta: TORSION ATOMS=1,2,4,5
+
+METAD ...
+ARG=theta 
+SIGMA=0.01     # small SIGMA ensure that the Gaussian approaximate a delta function
+HEIGHT=0.5     # In this case, the wegiths in EXE_fixed are fixed, meaning no biasing potentials added
+PACE=10        # should be nstexpanded
+GRID_MIN=-pi   # index of alchemical states starts from 0
+GRID_MAX=pi    # we have 6 states in total
+GRID_SPACING=0.1
+LABEL=metad    
+FILE=HILLS
+... METAD
+
+PRINT STRIDE=10 ARG=theta,metad.bias FILE=COLVAR
