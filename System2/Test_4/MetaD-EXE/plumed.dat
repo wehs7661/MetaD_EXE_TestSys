@@ -9,8 +9,8 @@ PACE=10        # should be nstexpanded
 GRID_MIN=-pi,0   # index of alchemical states starts from 0
 GRID_MAX=pi,8    # we have 6 states in total
 GRID_BIN=100,8
-TEMP=298
-BIASFACTOR=20
+#TEMP=298
+#BIASFACTOR=20
 LABEL=metad    
 FILE=HILLS_2D
 ... METAD
