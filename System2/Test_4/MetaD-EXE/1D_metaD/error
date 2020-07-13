@@ -1,0 +1,16 @@
+-------------------------------------------------------
+Program:     gmx mdrun, version 2020.2-MODIFIED
+
+Unknown exception:
+(exception type: N4PLMD14ExceptionErrorE)
+
++++ PLUMED error
++++ at PlumedMain.cpp:513, function virtual void PLMD::PlumedMain::cmd(const
+string&, void*)
++++ assertion failed: initialized
++++ message follows +++
+cmd("isEnergyNeeded") should be only used after plumed initialization
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------

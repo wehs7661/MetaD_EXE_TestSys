@@ -1,0 +1,18 @@
+theta: TORSION ATOMS=1,2,4,5
+lambda: EXTRACV NAME=lambda
+
+METAD ...
+ARG=theta,lambda 
+SIGMA=0.01,0.01     # small SIGMA ensure that the Gaussian approaximate a delta function
+HEIGHT=0.5     # In this case, the wegiths in EXE_fixed are fixed, meaning no biasing potentials added
+PACE=10        # should be nstexpanded
+GRID_MIN=-pi,0   # index of alchemical states starts from 0
+GRID_MAX=pi,8    # we have 6 states in total
+GRID_BIN=100,8
+#TEMP=298
+#BIASFACTOR=20
+LABEL=metad    
+FILE=HILLS_2D
+... METAD
+
+PRINT STRIDE=10 ARG=theta,lambda,metad.bias FILE=COLVAR
