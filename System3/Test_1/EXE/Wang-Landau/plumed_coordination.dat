@@ -1,0 +1,5 @@
+center: CENTER ATOMS=1-144            # geometric center of the host molecule
+water_group: GROUP ATOMS=207-6656:3   # oxygen atom of the water molecules
+n: COORDINATION GROUPA=center GROUPB=water_group R_0=0.6  # radius: 0.6 nm
+
+PRINT ARG=n, STRIDE=10
