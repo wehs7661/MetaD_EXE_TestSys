@@ -3,7 +3,7 @@ lambda: EXTRACV NAME=lambda
 METAD ...
 ARG=lambda 
 SIGMA=0.01     # small SIGMA ensure that the Gaussian approaximate a delta function
-HEIGHT=0.5    
+HEIGHT=2    
 PACE=10        # should be nstexpanded
 GRID_MIN=0     # index of alchemical states starts from 0
 GRID_MAX=39     # we have 40 states in total
