@@ -2,14 +2,14 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: wei-tse (1000)
 ;	On host: castlepeak
-;	At date: Thu Jul  9 23:14:48 2020
+;	At date: Sun Jul 19 16:15:09 2020
 ;
 ;	Created by:
 ;	                :-) GROMACS - gmx grompp, 2020.2-MODIFIED (-:
 ;	
 ;	Executable:   /usr/local/gromacs/bin/gmx
 ;	Data prefix:  /usr/local/gromacs
-;	Working dir:  /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_1/MetaD-EXE
+;	Working dir:  /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/rerun
 ;	Command line:
 ;	  gmx grompp -f expanded.mdp -c sys3.gro -p sys3.top -o sys3.tpr
 
@@ -259,7 +259,7 @@ pull-coord1-start        = yes
 pull-coord1-init         = 0
 pull-coord1-rate         = 0
 pull-coord1-k            = 0
-pull-coord1-kB           = 1000
+pull-coord1-kB           = 2500
 
 ; AWH biasing          
 awh                      = no
@@ -306,7 +306,7 @@ mass-lambdas             =
 coul-lambdas             = 0.0    0.05   0.1    0.15   0.2    0.25   0.3    0.35   0.4    0.45   0.5    0.55   0.6    0.65   0.7    0.75   0.8    0.85   0.9    0.95   1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.00   1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0
 vdw_lambdas              = 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0   0.0     0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.1    0.2    0.3    0.4    0.45   0.5    0.55   0.6    0.63   0.66   0.69   0.72   0.75   0.78   0.81   0.84   0.88   0.92   1.0
 bonded-lambdas           = 
-restraint-lambdas        = 0.0   0.00   0.0    0.0    0.0    0.0    0.01   0.05   0.1    0.2    0.3    0.4   0.5     0.6    0.7    0.8    0.9    0.95   1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.00   1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0
+restraint-lambdas        = 0.0   0.0005 0.0010  0.0025 0.0050 0.0075 0.01   0.05   0.1    0.2    0.3    0.4   0.5     0.6    0.7    0.8    0.9    0.95   1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.00   1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0
 temperature-lambdas      = 
 calc-lambda-neighbors    = -1
 init-lambda-weights      = 0.0   0.00   0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0     0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0
