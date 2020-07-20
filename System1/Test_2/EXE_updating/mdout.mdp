@@ -2,14 +2,14 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: wei-tse (1000)
 ;	On host: castlepeak
-;	At date: Sun May 31 22:59:56 2020
+;	At date: Mon Jul 20 14:18:22 2020
 ;
 ;	Created by:
 ;	                :-) GROMACS - gmx grompp, 2020.2-MODIFIED (-:
 ;	
 ;	Executable:   /usr/local/gromacs/bin/gmx
 ;	Data prefix:  /usr/local/gromacs
-;	Working dir:  /home/wei-tse/Documents/MetaD_EXE_TestSys/System1/Test_2/EXE_updating
+;	Working dir:  /home/wei-tse/Documents/MetaD_EXE_TestSys/System1/Test_2/EXE_updating/rerun
 ;	Command line:
 ;	  gmx grompp -f sys1_expanded.mdp -c sys1.gro -p sys1.top -o sys1.tpr -maxwarn 1
 
@@ -322,8 +322,8 @@ symmetrized-transition-matrix = yes
 nst-transition-matrix    = 100000
 mininum-var-min          = 100
 weight-c-range           = 0
-wl-scale                 = 0.999999
-wl-ratio                 = 0.8
+wl-scale                 = 0.9999999
+wl-ratio                 = 0.9999999
 init-wl-delta            = 0.5
 wl-oneovert              = no
 

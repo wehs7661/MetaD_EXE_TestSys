@@ -92,8 +92,8 @@ lmc-gibbsdelta           = -1
 lmc-forced-nstart        = 0
 symmetrized-transition-matrix = yes
 nst-transition-matrix    = 100000
-wl-scale                 = 0.999999
-wl-ratio                 = 0.8 
+wl-scale                 = 0.9999999
+wl-ratio                 = 0.9999999
 init-wl-delta            = 0.5 
 
 ; expanded ensemble variables
