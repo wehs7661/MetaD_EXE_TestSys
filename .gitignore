@@ -1,6 +1,7 @@
 # We ignore the following files:
 # 1. Any file that is larger than 100 MB.
 # 2. Any file that is smaler than 100 MB, but is larger than 20 MB and is a binary file. For example, all binary trajectory files (.trr and .xtc) in System 2 and 3 are ignored. 
+System2/Benchmark/sys2.xtc
 System2/Test_4/MetaD-EXE/height_0.1/sys2.trr
 System3/Test_1/EXE/Fixed/sys3.xtc
 System3/Test_1/EXE/Wang-Landau/sys3.xtc
@@ -8,3 +9,5 @@ System3/Test_1/MetaD-EXE/sys3.xtc
 System3/Test_1/MetaD-EXE/HILLS_LAMBDA
 System3/Test_2/MetaD-EXE/sys3.xtc
 System3/Test_2/MetaD-EXE/HILLS_2D
+System3/Test_2/MetaD-EXE/larger_k/sys3.xtc
+System3/Test_2/MetaD-EXE/larger_sigma/sys3.xtc
