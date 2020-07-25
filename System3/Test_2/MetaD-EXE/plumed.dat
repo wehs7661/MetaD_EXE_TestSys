@@ -6,7 +6,7 @@ lambda: EXTRACV NAME=lambda
 
 METAD ...
 ARG=lambda,n
-SIGMA=0.01,0.2     # small SIGMA ensure that the Gaussian approaximate a delta function
+SIGMA=0.01,0.2    # small SIGMA ensure that the Gaussian approaximate a delta function
 HEIGHT=2.0    
 PACE=10        # should be nstexpanded
 GRID_MIN=0,0     # index of alchemical states starts from 0

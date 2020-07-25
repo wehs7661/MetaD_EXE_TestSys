@@ -2,14 +2,14 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: wei-tse (1000)
 ;	On host: castlepeak
-;	At date: Sun Jul 19 16:15:09 2020
+;	At date: Thu Jul 23 19:02:57 2020
 ;
 ;	Created by:
 ;	                :-) GROMACS - gmx grompp, 2020.2-MODIFIED (-:
 ;	
 ;	Executable:   /usr/local/gromacs/bin/gmx
 ;	Data prefix:  /usr/local/gromacs
-;	Working dir:  /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/rerun
+;	Working dir:  /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/diff_pull_option
 ;	Command line:
 ;	  gmx grompp -f expanded.mdp -c sys3.gro -p sys3.top -o sys3.tpr
 
@@ -250,11 +250,11 @@ pull-group2-weights      =
 pull-group2-pbcatom      = 0
 pull-coord1-type         = umbrella
 pull-coord1-potential-provider = 
-pull-coord1-geometry     = distance
+pull-coord1-geometry     = direction-periodic
 pull-coord1-groups       = 1 2
 pull-coord1-dim          = Y Y Y
 pull-coord1-origin       = 0.0 0.0 0.0
-pull-coord1-vec          = 0.0 0.0 0.0
+pull-coord1-vec          = 0.0000001 0.0 0.0
 pull-coord1-start        = yes
 pull-coord1-init         = 0
 pull-coord1-rate         = 0

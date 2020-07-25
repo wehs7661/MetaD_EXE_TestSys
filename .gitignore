@@ -9,5 +9,7 @@ System3/Test_1/MetaD-EXE/sys3.xtc
 System3/Test_1/MetaD-EXE/HILLS_LAMBDA
 System3/Test_2/MetaD-EXE/sys3.xtc
 System3/Test_2/MetaD-EXE/HILLS_2D
-System3/Test_2/MetaD-EXE/larger_k/sys3.xtc
+System3/Test_2/MetaD-EXE/failed/larger_k/sys3.xtc
 System3/Test_2/MetaD-EXE/larger_sigma/sys3.xtc
+System3/Test_2/MetaD-EXE/smaller_sphere/sys3.xtc
+System3/Test_2/MetaD-EXE/smaller_sphere/HILLS_2D
