@@ -1,0 +1,42 @@
+
+
+The log file(s) to be analyzed: sys2.log.
+Length of the simulation for the weights average calculation: 1.0 ns.
+
+Data analysis of the file sys2.log:
+===================================
+The weights have not equilibrated.
+Initial weights: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+Final weights:   0.0 8.492 14.09921 17.468 19.34573 20.45465 20.93301 18.71658 16.38594
+The difference between the initial weights and final weights are:
+0.0 8.49 14.1 17.47 19.35 20.45 20.93 18.72 16.39
+Check the log file for more information.
+The maximum and minimum of the free energy difference estimate are: 18.78603 and 14.3803, respectively. (Range: 4.40573)
+The standard deviation of the free energy difference:  1.13397.
+The average weights over the last 1.0 ns of the simulation before the weights are equilibrated (from 4.0 to 5.0 ns) are:
+  0.0 7.89073 14.08567 17.15156 19.07169 20.78751 21.35524 18.77608 16.51467 
+
+1 file(s) analyzed.
+Total time elapsed (including plotting): 1.815814733505249 seconds.
+
+
+
+The log file(s) to be analyzed: sys2.log.
+Length of the simulation for the weights average calculation: 1.0 ns.
+
+Data analysis of the file sys2.log:
+===================================
+The weights have not equilibrated.
+Initial weights: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+Final weights:   0.0 8.492 14.09921 17.468 19.34573 20.45465 20.93301 18.71658 16.38594
+The difference between the initial weights and final weights are:
+0.0 8.49 14.1 17.47 19.35 20.45 20.93 18.72 16.39
+Check the log file for more information.
+The maximum and minimum of the free energy difference estimate are: 16.21481 and 16.38594, respectively. (Range: -0.17113000000000156)
+The standard deviation of the free energy difference:  1.13397.
+The average weights over the last 1.0 ns of the simulation before the weights are equilibrated (from 4.0 to 5.0 ns) are:
+  0.0 7.89073 14.08567 17.15156 19.07169 20.78751 21.35524 18.77608 16.51467 
+
+1 file(s) analyzed.
+Total time elapsed (including plotting): 1.8209080696105957 seconds.
+
