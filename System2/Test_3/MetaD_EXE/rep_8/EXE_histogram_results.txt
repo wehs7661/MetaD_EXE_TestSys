@@ -1,0 +1,21 @@
+
+
+The log file(s) to be analyzed: sys2.log.
+Length of the simulation for the weights average calculation: 1.0 ns.
+
+Data analysis of the file sys2.log:
+===================================
+The weights have not equilibrated.
+Initial weights: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+Final weights:   0.0 7.61249 13.97406 17.0177 19.0871 20.64215 21.4021 19.92297 17.56494
+The difference between the initial weights and final weights are:
+0.0 7.61 13.97 17.02 19.09 20.64 21.4 19.92 17.56
+Check the log file for more information.
+The maximum and minimum of the free energy difference estimate are: 17.95825 and 12.53082, respectively. (Range: 5.427429999999999)
+The standard deviation of the free energy difference:  1.41528.
+The average weights over the last 1.0 ns of the simulation before the weights are equilibrated (from 4.0 to 5.0 ns) are:
+  0.0 7.81574 14.02517 16.9038 18.83287 20.30781 20.79333 18.06835 15.44303 
+
+1 file(s) analyzed.
+Total time elapsed (including plotting): 2.797905683517456 seconds.
+
