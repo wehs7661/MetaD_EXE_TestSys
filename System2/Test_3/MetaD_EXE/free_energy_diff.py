@@ -1,7 +1,7 @@
 import numpy as np
 
 fes = []
-for i in range(10):
+for i in range(20):
     f = open(f'rep_{i + 1}/EXE_histogram_results.txt', 'r')
     lines = f.readlines()
     f.close()

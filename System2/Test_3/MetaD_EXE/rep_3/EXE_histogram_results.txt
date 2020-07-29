@@ -17,5 +17,5 @@ The average weights over the last 1.0 ns of the simulation before the weights ar
   0.0 7.58566 13.6529 16.51877 18.42981 19.9698 20.58989 17.43939 14.82433 
 
 1 file(s) analyzed.
-Total time elapsed (including plotting): 2.7879247665405273 seconds.
+Total time elapsed (including plotting): 2.6778111457824707 seconds.
 
