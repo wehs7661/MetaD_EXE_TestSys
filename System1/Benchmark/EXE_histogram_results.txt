@@ -1,0 +1,10 @@
+
+
+The log file(s) to be analyzed: sys1.log.
+Length of the simulation for the weights average calculation: 1.0 ns.
+
+Data analysis of the file sys1.log:
+===================================
+This is a fixed-weight expanded ensemble simulation.
+Accordingly, only the final histogram will be output and saved.
+

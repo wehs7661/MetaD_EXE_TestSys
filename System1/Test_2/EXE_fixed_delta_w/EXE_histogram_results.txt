@@ -1,0 +1,15 @@
+
+
+The log file(s) to be analyzed: sys1.log.
+Length of the simulation for the weights average calculation: 20 ns.
+
+Data analysis of the file sys1.log:
+===================================
+The weights have not equilibrated.
+Initial weights: 0.0 0.0 0.0 0.0 0.0 0.0
+Final weights:   0.0 -0.5 -1.49999 -2.49998 -3.99997 -5.49996
+The difference between the initial weights and final weights are:
+0.0 -0.5 -1.5 -2.5 -4.0 -5.5
+Check the log file for more information.
+The starting point of the weights average calculation is less than 0!
+Please specified a shorter length of simulation for the weights average calculation.
