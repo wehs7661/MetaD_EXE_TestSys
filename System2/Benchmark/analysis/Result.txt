@@ -16,10 +16,8 @@ TI: 16.61275947940049 +/- 0.11997208050905618 kT
 BAR: 15.888649076521219 +/- unknown kT
 MBAR: 15.885814292181829 +/- 0.10122964224183822 kT
 ------------------------------------------------
-
-Calculating the free energy difference between the coupled and uncoupled state
-as a function of time using MBAR ...
-Calculating Wang-Landau weights for expanded ensemble using TI ...
+Calculating Wang-Landau weights for expanded ensemble using MBAR ...
+Estimated Wang-Landau weights by MBAR:  0.0 7.84404 14.10661 17.01866 19.02242 20.61722 21.19038 18.56726 15.88581
 
 Computing and visualizing the overlap matrix ...
-Time elapsed: 934.7705638408661 seconds.
+Time elapsed: 87.9229166507721 seconds.
