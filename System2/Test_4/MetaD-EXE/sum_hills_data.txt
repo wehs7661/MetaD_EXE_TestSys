@@ -1,0 +1,11 @@
+# Free energy difference as a function of time
+# Base command: plumed sum_hills --hills HILLS_2D --idw lambda --kt 2.4777090399459767 --min -3.141592653589793,0.0000 --max 3.141592653589793,8.0000 --spacing 8,0.01 --stride NUM_STRIDE
+# Column 1: Time (ps); Column 2: Free energy difference (kT)
+4000.0   75.59170105600015
+4002.0   75.59170105600015
+4004.0   75.59170105600015
+4006.0   75.59170105600015
+4008.0   75.59170105600015
+4010.0   75.59170105600015
+4012.0   75.59170105600015
+4014.0   75.59170105600015
