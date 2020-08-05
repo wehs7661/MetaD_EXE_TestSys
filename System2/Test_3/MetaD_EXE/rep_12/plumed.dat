@@ -2,7 +2,7 @@ lambda: EXTRACV NAME=lambda
 
 METAD ...
 ARG=lambda 
-SIGMA=0.01     # small SIGMA ensure that the Gaussian approaximate a delta function
+SIGMA=0.0001     # small SIGMA ensure that the Gaussian approaximate a delta function
 HEIGHT=0.5     # In this case, the wegiths in EXE_fixed are fixed, meaning no biasing potentials added
 PACE=10        # should be nstexpanded
 GRID_MIN=0     # index of alchemical states starts from 0
