@@ -27,14 +27,14 @@ if __name__ == '__main__':
     save_data("# Column 1: Time (ps); Column 2: Free energy difference (kT)")
     
     for i in track(range(501)):    # 100 * 500 = 50000 Gaussians, 1 ns
-        time = (start + step * i) * 0.02
+        t = (start + step * i) * 0.02
         cmd = plumed_cmd + str(int(start + step * i))
         logger(f"Executing the command {cmd} ...")
         os.system(cmd)
         
         fes = np.loadtxt("fes_0.dat")
         diff = fes[-1][1] - fes[0][1]   # free energy difference
-        save_data(f"{time}" + "   " + f"{diff}")
+        save_data(f"{t}" + "   " + f"{diff}")
         os.system("rm fes_*")
 
     logger("Reading sum_hills_data.txt")    
