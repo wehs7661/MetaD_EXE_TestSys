@@ -1,0 +1,13 @@
+
+
+The log file(s) to be analyzed: sys3.log.
+Length of the simulation for the weights average calculation: 20 ns.
+
+Data analysis of the file sys3.log:
+===================================
+This is a fixed-weight expanded ensemble simulation.
+Accordingly, only the final histogram will be output and saved.
+
+The adjusted weights are (RMSD: 0.15573559150379063): 0.00000 9.96091 19.45864 28.54184 37.28383 45.70919 53.74276 61.52830 69.05933 76.25925 83.23655 89.87129 96.29456 102.38424 108.32994 113.86639 119.19000 124.22580 129.01362 133.47104 135.07742 137.69450 140.06195 142.68622 145.22194 146.79125 147.89286 149.47557 150.56397 153.29965 155.01123 155.95490 156.96063 158.53843 161.26123 163.86912 166.23646 168.05841 168.58421 168.91134 168.85764 168.14377 166.44574 164.03162 160.92645 158.25375 155.89591 154.45766 153.42286 153.25978 
+The starting point of the weights average calculation is less than 0!
+Please specified a shorter length of simulation for the weights average calculation.
