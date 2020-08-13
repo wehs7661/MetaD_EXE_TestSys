@@ -1,0 +1,7 @@
+
+
+The log file(s) to be analyzed: sys3.log.
+Length of the simulation for the weights average calculation: 20 ns.
+
+Data analysis of the file sys3.log:
+===================================
