@@ -19,3 +19,17 @@ The average weights over the last 1.0 ns of the simulation before the weights ar
 1 file(s) analyzed.
 Total time elapsed (including plotting): 3.4825034141540527 seconds.
 
+The adjusted weights are (RMSD: 0.03153624518213715): 0.00000 7.80622 14.18713 17.35005 19.29906 20.69265 20.67641 18.43027 15.59433 
+The weights have not equilibrated.
+Initial weights: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+Final weights:   0.0 7.74194 14.13403 17.32355 19.28278 20.68103 20.67645 18.44879 15.61786
+The difference between the initial weights and final weights are:
+0.0 7.74 14.13 17.32 19.28 20.68 20.68 18.45 15.62
+Check the log file for more information.
+The adjusted weights are (RMSD: 0.03153624518213715): 0.00000 7.80622 14.18713 17.35005 19.29906 20.69265 20.67641 18.43027 15.59433 
+The weights have not equilibrated.
+Initial weights: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+Final weights:   0.0 7.74194 14.13403 17.32355 19.28278 20.68103 20.67645 18.44879 15.61786
+The difference between the initial weights and final weights are:
+0.0 7.74 14.13 17.32 19.28 20.68 20.68 18.45 15.62
+Check the log file for more information.
