@@ -2,14 +2,14 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: wei-tse (1000)
 ;	On host: castlepeak
-;	At date: Thu Jul  9 20:14:41 2020
+;	At date: Tue Aug 18 21:01:45 2020
 ;
 ;	Created by:
 ;	                :-) GROMACS - gmx grompp, 2020.2-MODIFIED (-:
 ;	
 ;	Executable:   /usr/local/gromacs/bin/gmx
 ;	Data prefix:  /usr/local/gromacs
-;	Working dir:  /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/Test_4/MetaD-EXE
+;	Working dir:  /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/Test_4/MetaD-EXE/biasf_20/rep_1
 ;	Command line:
 ;	  gmx grompp -f sys2_expanded.mdp -c sys2.gro -p sys2.top -o sys2.tpr
 
@@ -25,7 +25,7 @@ integrator               = md-vv
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-nsteps                   = 2500000
+nsteps                   = 10000000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
