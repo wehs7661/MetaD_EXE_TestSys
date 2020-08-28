@@ -1,0 +1,14 @@
+The adjusted weights are (RMSD: 0.09995571484422543): 0.00000 8.05476 14.96951 19.07377 20.80909 22.48618 22.53955 19.26688 16.52424 
+The weights have not equilibrated.
+Initial weights: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+Final weights:   0.0 7.8501 14.79727 18.98734 20.7675 22.45186 22.52669 19.33046 16.58575
+The difference between the initial weights and final weights are:
+0.0 7.85 14.8 18.99 20.77 22.45 22.53 19.33 16.59
+Check the log file for more information.
+The adjusted weights are (RMSD: 0.09995571484422543): 0.00000 8.05476 14.96951 19.07377 20.80909 22.48618 22.53955 19.26688 16.52424 
+The weights have not equilibrated.
+Initial weights: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+Final weights:   0.0 7.8501 14.79727 18.98734 20.7675 22.45186 22.52669 19.33046 16.58575
+The difference between the initial weights and final weights are:
+0.0 7.85 14.8 18.99 20.77 22.45 22.53 19.33 16.59
+Check the log file for more information.

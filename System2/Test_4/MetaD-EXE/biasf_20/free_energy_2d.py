@@ -1,7 +1,7 @@
 import numpy as np 
 
 fes = [] 
-for i in range(16):
+for i in range(4):
     f = open(f"rep_{i + 1}/sum_hills_log.txt", 'r')
     lines = f.readlines()
     f.close()
@@ -12,8 +12,8 @@ for i in range(16):
         if "Free energy difference averaging" in l:
             fes.append(float(lines[line_n - 1].split(':')[-1]))
 
-print(fes.index(18.58874738657086))
-fes.remove(18.58874738657086)
+#print(fes.index(18.58874738657086))
+#fes.remove(18.58874738657086)
 print(max(fes), min(fes)) 
 print(np.mean(fes))
 print(np.std(fes))

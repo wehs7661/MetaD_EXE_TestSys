@@ -12,18 +12,19 @@ rc('font', **{
 rc('mathtext', **{'default': 'regular'})
 plt.rc('font', family='serif')
 
-N, Lambda = [], []
+t, N, Lambda = [], [], []
 infile = open('COLVAR', 'r')
 lines = infile.readlines()
 infile.close()
 
 for line in lines:
     if line[0] != '#' and line[0] != '@' and len(line.split()) == 4:
+        t.append(float(line.split()[0]))
         N.append(float(line.split()[1]))
         Lambda.append(float(line.split()[2]))
 
 plt.figure()
-plt.scatter(N, Lambda, marker='x', s=0.5)
+plt.scatter(N, Lambda, marker='x', s=0.5, c=plt.cm.GnBu(np.linspace(0, 1, len(N))))
 plt.xlabel('The number of water molecules in the cavity')
 plt.ylabel('The index of the alchemical state')
 plt.grid()
