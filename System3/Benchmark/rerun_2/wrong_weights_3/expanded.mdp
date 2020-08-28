@@ -1,0 +1,131 @@
+; Run control
+integrator               = md-vv
+tinit                    = 0
+dt                       = 0.002
+nsteps                   = 50000000  ; 100 ns
+comm-mode                = Linear
+nstcomm                  = 1
+
+; Output control
+nstlog                   = 1000
+nstcalcenergy            = 1
+nstenergy                = 1000
+nstxout-compressed       = 1000
+
+; Neighborsearching and short-range nonbonded interactions
+nstlist                  = 10
+ns_type                  = grid
+pbc                      = xyz
+rlist                    = 1.0
+
+; Electrostatics
+cutoff-scheme		 = verlet
+coulombtype              = PME
+coulomb-modifier	 = Potential-shift-Verlet
+rcoulomb-switch          = 0.89
+rcoulomb                 = 0.9
+
+; van der Waals
+vdw-type                 = Cut-off
+vdw-modifier             = Potential-switch
+rvdw-switch              = 0.85
+rvdw                     = 0.9
+
+; Apply long range dispersion corrections for Energy and Pressure 
+DispCorr                 = AllEnerPres
+
+; Spacing for the PME/PPPM FFT grid
+fourierspacing           = 0.10
+
+; EWALD/PME/PPPM parameters
+fourier_nx               = 0
+fourier_ny               = 0
+fourier_nz               = 0
+pme_order                = 4
+ewald_rtol               = 1e-05
+ewald_geometry           = 3d
+epsilon_surface          = 0
+
+; Temperature coupling
+tcoupl                   = v-rescale
+nsttcouple               = 1
+tc_grps                  = System
+tau_t                    = 0.5
+ref_t                    = 298
+
+; Pressure coupling is on for NPT
+pcoupl                   = no
+
+gen_vel                  = yes
+gen-temp                 = 298
+gen-seed                 = 6722267; need to randomize the seed each time.
+
+; options for bonds
+constraints              = h-bonds  ; we only have C-H bonds here
+
+; Type of constraint algorithm
+constraint-algorithm     = lincs
+continuation             = no
+
+; Highest order in the expansion of the constraint coupling matrix
+lincs-order              = 12
+lincs-iter               = 2
+
+; Free energy calculation
+free_energy              = expanded
+calc-lambda-neighbors   = -1
+sc-alpha                 = 0.5
+sc-power                 = 1
+sc-sigma                 = 0.5
+couple-moltype           = GST
+couple-lambda0           = vdw-q
+couple-lambda1           = none
+couple-intramol          = yes
+init-lambda-state        = 0
+nstdhdl                  = 1000
+dhdl-print-energy        = total
+
+; Seed for Monte Carlo in lambda space
+lmc-seed                 = 1000
+lmc-gibbsdelta           = -1
+lmc-forced-nstart        = 0
+symmetrized-transition-matrix = yes
+nst-transition-matrix    = 100000
+;wl-scale                 = 0.8
+;wl-ratio                 = 0.7
+;init-wl-delta            = 2.0
+
+; expanded ensemble variables
+nstexpanded             = 10
+lmc-stats               = no
+lmc-move                = metropolized-gibbs
+;lmc-weights-equil       = wl-delta
+;weight-equil-wl-delta   = 0.001
+;wl-oneovert             = yes
+
+; Pull code
+pull                    = yes
+pull-ngroups            = 2
+pull-ncoords            = 1
+pull-group1-name        = HST
+pull-group2-name        = GST
+pull-group1-pbcatom     = 51
+pull-pbc-ref-prev-step-com  = yes
+
+pull-coord1-groups      = 1 2
+pull-coord1-type        = umbrella
+pull-coord1-geometry    = distance
+pull-coord1-dim         = Y Y Y
+pull-coord1-origin      = 0.0 0.0 0.0
+pull-coord1-vec         = 0.0 0.0 0.0
+pull-coord1-start       = yes
+pull-coord1-rate        = 0
+pull-coord1-k           = 0 ; kJ mol^-1 nm^-2
+pull-coord1-kB          = 1000 ; kJ mol^-1 nm^-2
+
+; lambda-states          = 1      2      3      4      5      6      7      8      9      10     11     12     13     14     15     16     17     18     19     20     21     22     23     24     25     26     27     28     29     30     31     32     33     34     35     36     37     38     39     40     41     42     43     44     45     46     47     48     49     50
+
+coul-lambdas             = 0.0    0.05   0.1    0.15   0.2    0.25   0.3    0.35   0.4    0.45   0.5    0.55   0.6    0.65   0.7    0.75   0.8    0.85   0.9    0.95   0.97   1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.00   1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0
+vdw_lambdas              = 0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.0    0.05   0.1    0.15   0.18   0.2    0.23   0.25   0.3    0.33   0.35   0.37   0.4    0.45   0.5    0.55   0.6    0.63   0.66   0.69   0.72   0.75   0.78   0.81   0.84   0.88   0.92   0.96   1.0
+restraint-lambdas        = 0.0    0.0005 0.0010 0.0025 0.0050 0.0075 0.01   0.05   0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    0.95   1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.00   1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0    1.0
+init-lambda-weights      = 0.00000 9.76974 19.14114 28.13565 36.76765 45.08712 53.07573 60.76960 71.02531 82.10606 88.70576 94.89170 103.19636 111.97033 119.01134 126.38648 130.58882 134.48373 136.86519 139.34767 142.01050 143.62305 144.76680 146.46878 147.65855 150.53413 152.26372 153.44234 154.61179 156.39185 157.65221 159.44495 160.63083 162.42395 164.20328 165.34096 166.54530 168.19652 169.53624 170.42462 170.57236 169.84241 167.98058 165.29630 162.55173 160.17445 157.84602 156.43108 155.89355 155.76018

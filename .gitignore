@@ -35,5 +35,10 @@ System3/Test_2/MetaD-EXE/HILLS_2D
 System3/Benchmark/sys3.xtc
 System3/Benchmark/rerun/sys3.xtc
 System3/Benchmark/rerun/adjusted/sys3.xtc
+System3/Benchmark/rerun_2/sys3.xtc
+System3/Benchmark/rerun_2/sys3.log
+System3/Benchmark/rerun_2/wrong_weights/sys3.xtc
+System3/Benchmark/rerun_2/wrong_weights_2/sys3.xtc
+System3/Benchmark/rerun_2/wrong_weights_3/sys3.xtc
 System3/Test_1/EXE/Wang-Landau/rerun/sys3.xtc
 System3/Test_1/EXE/Wang-Landau/rerun_2/sys3.xtc
