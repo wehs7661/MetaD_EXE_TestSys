@@ -5,17 +5,26 @@ Length of the simulation for the weights average calculation: 1.0 ns.
 
 Data analysis of the file sys2.log:
 ===================================
+The adjusted weights are (RMSD: 0.0002152918324024022): 0.00000 5.50138 10.00032 13.00022 14.50109 14.00094 14.50102 10.50069 9.00087 
 The weights have not equilibrated.
 Initial weights: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
-Final weights:   0.0 5.0 9.5 14.0 14.5 14.5 13.0 -1.5 -5.0
+Final weights:   0.0 5.50098 10.0 13.0 14.50098 14.00098 14.50098 10.50098 9.00098
 The difference between the initial weights and final weights are:
-0.0 5.0 9.5 14.0 14.5 14.5 13.0 -1.5 -5.0
+0.0 5.5 10.0 13.0 14.5 14.0 14.5 10.5 9.0
 Check the log file for more information.
-The maximum and minimum of the free energy difference estimate are: 40.0 and -25.5, respectively. (Range: 65.5)
-The standard deviation of the free energy difference:  10.77811.
+The adjusted weights are (RMSD: 0.0002152918324024022): 0.00000 5.50138 10.00032 13.00022 14.50109 14.00094 14.50102 10.50069 9.00087 
+The maximum and minimum of the free energy difference estimate are: 38.5 and -24.0, respectively. (Range: 62.5)
+The standard deviation of the free energy difference:  11.29516.
 The average weights over the last 1.0 ns of the simulation before the weights are equilibrated (from 4.0 to 5.0 ns) are:
-  0.0 6.83134 13.02495 16.43513 18.10279 19.10778 17.31537 13.23952 12.08982 
+  0.0 6.85231 13.10183 16.73951 18.40419 19.45009 17.39318 13.28643 12.07784 
 
 1 file(s) analyzed.
-Total time elapsed (including plotting): 5.421718120574951 seconds.
+Total time elapsed (including plotting): 1.3656070232391357 seconds.
 
+The adjusted weights are (RMSD: 0.0002152918324024022): 0.00000 5.50138 10.00032 13.00022 14.50109 14.00094 14.50102 10.50069 9.00087 
+The weights have not equilibrated.
+Initial weights: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+Final weights:   0.0 5.50098 10.0 13.0 14.50098 14.00098 14.50098 10.50098 9.00098
+The difference between the initial weights and final weights are:
+0.0 5.5 10.0 13.0 14.5 14.0 14.5 10.5 9.0
+Check the log file for more information.
