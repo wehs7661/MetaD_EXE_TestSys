@@ -1,0 +1,181 @@
+import os
+import sys
+import numpy as np
+import argparse
+
+def initialize():
+    parser = argparse.ArgumentParser(
+        description='This code performs reweighting and block analysis to calculate the error of associated free energy.')
+    parser.add_argument('-i',
+                        '--input',
+                        default='weights.dat',
+                        help='The file containing the weights for CV values as a time series. (Default: weights.dat)')
+    parser.add_argument('-n',
+                        '--n_CVs',
+                        type=int,
+                        default=1,
+                        help='The number of collective variable(s). (Default: 1)')
+    parser.add_argument('-b',
+                        '--block_size',
+                        type=int,
+                        help='The size of the block (the number of time frames/data points in a block).')
+    parser.add_argument('-kt',
+                        '--kbT',
+                        type=float,
+                        default=2.4777090399459767,
+                        help='The conversion factor corresponding to the simulation tempature (from kBT to kJ/mol). (Default: 2.4777090399459767, at 298 K)')
+    
+    args_parse = parser.parse_args()
+    return args_parse
+
+def get_index(i, n_bins):
+    """
+    This function returns a tuple consisting indices in each dimension
+    
+    Parmaeters
+    ----------
+    i      (int):  multidimensional index. e.g. If 2D case where CV1 and CV2 have 50 and 40 bins, respectively, then i ranges from 0 to 1999.
+    n_bins (list): a list of number of bins for each dimension.
+
+    Return
+    ------
+    index (tuple): a tuple consisting indices in each dimension. For example, try the following code to understand:
+    ```
+    convert_dict = {}
+    for i in range(48):   # 2 * 3 * 4 * 2
+        convert_dict[i]=(i % 2, int(np.floor(i/2)) % 3, int(np.floor(i/6)) % 4, int(np.floor(i/24)))
+    ```
+    """
+    index = []
+    # the first index (for the first dimension)
+    index.append(i % n_bins[0])
+    
+    if len(n_bins) > 2:
+        # middle indices
+        for j in range(1, len(n_bins) - 1):  # len(n_bins) = # of CVs
+            index.append(int(np.floor(i / np.prod(n_bins[:j - 1])) % n_bins[j])) 
+    
+    if len(n_bins) > 1:
+        # the last index
+        index.append(int(np.floor(i / np.prod(n_bins[: - 1]))))
+    
+    return tuple(index)
+
+def get_CV_values(index_tuple, g_min, dx):
+    """
+    This function returns corresponding CV values given the indices of the grids. For example, grid indices (2, 3, 10) might correspond to (CV1, CV2, CV3) = (3.89, 4.21, -0.34).
+
+    Parameters
+    ----------
+    index_tuple (tuple): a tuple consisting indices in each dimension
+    g_min       (list):  a list of CV minimum
+    dx          (list):  a list of CV spacing
+
+    Return
+    ------
+    x           (list):  a list of CV values
+    """
+    x = []
+    for i in range(len(index_tuple)):
+        x.append(g_min[i] + index_tuple[i] * dx[i])
+    return x
+
+def get_CV_indices(x, g_min, dx):
+    """
+    This function returns the indices of the grids given the values of multidimensional CV. For example, (CV1, CV@, CV3) = (3.89, 4.21, -0.34)might correspond to a index tuple like (2, 3, 10). This is the inverse function of get_CV_indices.
+
+    Parameters
+    ----------
+    x      (list): a list of CV values
+    g_min  (list): a list of CV minimum
+    dx     (list): a list of CV spacing
+
+    Return
+    ------
+    index  (tuple): a tuple consisting indices in each dimension
+    """
+    index = []
+    for i in range(len(x)):
+        index.append(int(round(x[i] - g_min[i]) / dx[i]))
+    return tuple(index)
+
+
+if __name__ == '__main__':
+    # Part 1: Setting up parameters
+    args = initialize()
+    g_min, g_max, n_bins = [], [], []   # FES grid information
+    ordinal = lambda n: "%d%s" % (n,"tsnrhtdd"[(n//10%10!=1)*(n%10<4)*n%10::4])
+    for i in range(args.n_CVs):
+        g_min.append(float(input(f"Please input the lower bound of the {ordinal(i + 1)} CV: ")))
+        g_max.append(float(input(f"Please input the upper bound of the {ordinal(i + 1)} CV: ")))
+        n_bins.append(float(input(f"Please input the number of bins for the {ordinal(i + 1)} CV: ")))
+
+    # the size of the bin/grid for each dimension of CV
+    dx = []
+    for i in range(args.n_CVs):
+        dx.append((g_max[i] - g_min[i]) / (n_bins[i] - 1))
+
+    # Part 2: Read in data (output: a list of weights and a list of tuples of CV indices)
+    data = np.loadtxt(args.input)
+    w_list = np.transpose(data)[-1]
+    
+    CV_indices = []
+    for i in range(len(data)):
+        # e.g. CV_indices[0] = (3, 4) --> the indicess of (CV1, CV2) at the first time frame 
+        CV_indices.append(get_CV_indices(data[i][:-1], g_min, dx))
+
+    if len(CV_indices[0]) != args.n_CVs:
+        print(f'The input file {args.input} is in the wrong format.')
+        sys.exit()
+    
+    n_data = len(CV_indices)   # number of time frames/data points
+    n_b = int(n_data / args.block_size)  # number of blocks
+    
+    # Part 3: Construct the histogram dictionaries
+    # For all dictionaries: (key: (CV1_idx, CV2_idx, ...), value: avg weight at (CV1, CV2, ...))
+    histo_avg, histo_avg_sq = {}, {}  # global dictionary (across different blocks)
+    
+    for i in range(n_b):
+        b_l = i * args.block_size        # left bound of the i-th block
+        b_r = (i + 1) * args.block_size  # right bound of the i-th block
+        histo = {} # a dictionary for the i-th block (key: (CV1, CV2, ...), value: avg weight at (CV1, 
+        for j in range(b_l, b_r):  # e.g. time frames 501 to 1000 
+            if CV_indices[j] in histo:
+                histo[CV_indices[j]] += (w_list[j] / args.block_size)
+            else:
+                histo[CV_indices[j]] = (w_list[j] / args.block_size)
+    
+        for key in histo:
+            if key in histo_avg: 
+                histo_avg[key] += histo[key]
+                histo_avg_sq[key] += histo[key] * histo[key]
+            else:
+                histo_avg[key] = histo[key]
+                histo_avg_sq[key] = histo[key] * histo[key]
+    
+    # Part 4: Calculate the FES and its corresponding error
+    output = open(f"fes_bsize_{args.block_size}.dat", "w")
+    N = int(np.prod([n_bins]))      # the total number of bins (in multi-dimensional space)
+
+    for i in range(N):
+        # 3-1: Output the multidimensional CV values
+        index_tuple = get_index(i, n_bins)      # indices of the grid point
+        x = get_CV_values(index_tuple, g_min, dx)    # CV values of the grid point
+        for value in x:
+            output.write("%12.6lf " % value)
+
+        # 3-2: Calculate FES and its corresponding uncertainty
+        if index_tuple in histo_avg:   # indices = (CV1_idx, CV2_idx, ...)
+            # mean and variance, and standard deviation
+            avg_h = histo_avg[index_tuple] / n_b
+            var_h = (histo_avg_sq[index_tuple] / n_b - avg_h ** 2) * n_b / (n_b - 1)
+            std_h = np.sqrt(var_h / n_b)
+
+            # Free energy and its uncertainty
+            fes = -args.kbT * np.log(avg_h)
+            err = args.kbT / avg_h * std_h
+            output.write("  %12.6lf %12.6lf\n" % (fes, err))
+        else:
+            output.write("       Infinity\n")
+    output.close()
+
