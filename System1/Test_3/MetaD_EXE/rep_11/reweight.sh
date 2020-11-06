@@ -19,7 +19,7 @@ while getopts "ic:oc:p:x:n:" opt; do
     esac
 done
 
-awk 'NR==1 || NR%100==2' $colvar_i > COLVAR_awk
+#awk 'NR==1 || NR%100==2' $colvar_i > COLVAR_awk
 plumed driver --plumed $plumed --noatoms
 bmax=`awk 'BEGIN{max=0.}{if($1!="#!" && $3>max)max=$3}END{print max}' $colvar_o`
 awk '{if($1!="#!") print $2,exp(($3-bmax)/kbt)}' kbt=$kbT bmax=$bmax $colvar_o > weights.dat
