@@ -19,11 +19,14 @@ def initialize():
                         '--block_size',
                         type=int,
                         help='The size of the block (the number of time frames/data points in a block).')
-    parser.add_argument('-kt',
-                        '--kbT',
+    parser.add_argument('-t',
+                        '--truncate',
                         type=float,
-                        default=2.4777090399459767,
-                        help='The conversion factor corresponding to the simulation tempature (from kBT to kJ/mol). (Default: 2.4777090399459767, at 298 K)')
+                        help='The fraction of simulation to be truncated.')
+    parser.add_argument('-g',
+                        '--grid_info',
+                        nargs='+',
+                        help='The min, max and the number of grids of the CVs, e.g. min_1, max_1, n_1, min_2, max_2, n_2 are the grid info for CV_1 and CV_2.')
     
     args_parse = parser.parse_args()
     return args_parse
@@ -103,13 +106,18 @@ def get_CV_indices(x, g_min, dx):
 if __name__ == '__main__':
     # Part 1: Setting up parameters
     args = initialize()
-    g_min, g_max, n_bins = [], [], []   # FES grid information
-    ordinal = lambda n: "%d%s" % (n,"tsnrhtdd"[(n//10%10!=1)*(n%10<4)*n%10::4])
-    for i in range(args.n_CVs):
-        g_min.append(float(input(f"Please input the lower bound of the {ordinal(i + 1)} CV: ")))
-        g_max.append(float(input(f"Please input the upper bound of the {ordinal(i + 1)} CV: ")))
-        n_bins.append(float(input(f"Please input the number of bins for the {ordinal(i + 1)} CV: ")))
-
+    g_min, g_max, n_bins = [], [], []
+    if len(args.grid_info) / args.n_CVs != 3:
+        print('Error: The grid information is not correct.')
+    else:
+        for i in range(len(args.grid_info)):
+            if i % 3 == 0:
+                g_min.append(float(args.grid_info[i]))
+            elif i % 3 == 1:
+                g_max.append(float(args.grid_info[i]))
+            else:
+                n_bins.append(int(args.grid_info[i]))
+    
     # the size of the bin/grid for each dimension of CV
     dx = []
     for i in range(args.n_CVs):
@@ -117,6 +125,8 @@ if __name__ == '__main__':
 
     # Part 2: Read in data (output: a list of weights and a list of tuples of CV indices)
     data = np.loadtxt(args.input)
+    if args.truncate is not None:
+        data = data[int(args.truncate * len(data)):]  # truncate the data if needed
     w_list = np.transpose(data)[-1]
     
     CV_indices = []
@@ -125,7 +135,7 @@ if __name__ == '__main__':
         CV_indices.append(get_CV_indices(data[i][:-1], g_min, dx))
 
     if len(CV_indices[0]) != args.n_CVs:
-        print(f'The input file {args.input} is in the wrong format.')
+        print(f'Error: The input file {args.input} is in the wrong format.')
         sys.exit()
     
     n_data = len(CV_indices)   # number of time frames/data points
@@ -172,8 +182,8 @@ if __name__ == '__main__':
             std_h = np.sqrt(var_h / n_b)
 
             # Free energy and its uncertainty
-            fes = -args.kbT * np.log(avg_h)
-            err = args.kbT / avg_h * std_h
+            fes = -np.log(avg_h)      # units: kT
+            err = 1 / avg_h * std_h   # units: kT
             output.write("  %12.6lf %12.6lf\n" % (fes, err))
         else:
             output.write("       Infinity\n")

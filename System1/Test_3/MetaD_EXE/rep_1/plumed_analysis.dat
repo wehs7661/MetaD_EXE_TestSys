@@ -5,7 +5,7 @@ lambda: READ FILE=COLVAR VALUES=lambda IGNORE_TIME IGNORE_FORCES
 METAD ...
 ARG=lambda
 SIGMA=0.01
-HEIGHT=0.5
+HEIGHT=1.2388545199729883
 PACE=10000000  # longer than the simulation length so no hills will be added
 GRID_MIN=0
 GRID_MAX=5

@@ -1,0 +1,80 @@
+Simulation length (before truncation): 0.5 ns (2500 time frames)
+0% of the data (0 time frames, 0.0ns) was truncated before the block analysis
+Simulation length (before truncation): 0.5 ns (2500 time frames)
+0% of the data (0 time frames, 0.0ns) was truncated before the block analysis
+Simulation length (before truncation): 0.5 ns (2500 time frames)
+0% of the data (0 time frames, 0.0ns) was truncated before the block analysis
+Simulation length (before truncation): 0.5 ns (2500 time frames)
+0% of the data (0 time frames, 0.0ns) was truncated before the block analysis
+Simulation length (before truncation): 0.5 ns (2500 time frames)
+0% of the data (0 time frames, 0.0ns) was truncated before the block analysis
+Simulation length (before truncation): 0.5 ns (2500 time frames)
+0% of the data (0 time frames, 0.0ns) was truncated before the block analysis
+Block size: {i} ({i * args.dt} ps), Free energy difference: {block_result[0]} +/- {block_result[1]} kT
+Block size: {i} ({i * args.dt} ps), Free energy difference: {block_result[0]} +/- {block_result[1]} kT
+Block size: {i} ({i * args.dt} ps), Free energy difference: {block_result[0]} +/- {block_result[1]} kT
+Block size: {i} ({i * args.dt} ps), Free energy difference: {block_result[0]} +/- {block_result[1]} kT
+Simulation length (before truncation): 0.5 ns (2500 time frames)
+30.0% of the data (525 time frames, 0.105ns) was truncated before the block analysis
+Block size: 50.0 (10.0 ps), Free energy difference: -3.2489512057142855 +/- 0.38956798190254893 kT
+Block size: 100.0 (20.0 ps), Free energy difference: -3.2522788888888887 +/- 0.32908254524192654 kT
+Block size: 150.0 (30.0 ps), Free energy difference: -3.2478251583333333 +/- 0.3225897845244691 kT
+Block size: 200.0 (40.0 ps), Free energy difference: -3.245810059259259 +/- 0.26650853675978065 kT
+Simulation length (before truncation): 5.0 ns (2500 time frames)
+30.0% of the data (525 time frames, 1.05ns) was truncated before the block analysis
+Block size: 50.0 (100.0 ps), Free energy difference: -3.2490 +/-  0.3896 kT
+Block size: 100.0 (200.0 ps), Free energy difference: -3.2523 +/-  0.3291 kT
+Block size: 150.0 (300.0 ps), Free energy difference: -3.2478 +/-  0.3226 kT
+Block size: 200.0 (400.0 ps), Free energy difference: -3.2458 +/-  0.2665 kT
+Simulation length (before truncation): 5.0 ns (2500 time frames)
+30.0% of the data (525 time frames, 1.05ns) was truncated before the block analysis
+Block size: 5.0 (10.0 ps), Free energy difference: -3.2490 +/-  0.4812 kT
+Block size: 10.0 (20.0 ps), Free energy difference: -3.2490 +/-  0.4697 kT
+Block size: 15.0 (30.0 ps), Free energy difference: -3.2489 +/-  0.4564 kT
+Block size: 20.0 (40.0 ps), Free energy difference: -3.2489 +/-  0.4437 kT
+Block size: 25.0 (50.0 ps), Free energy difference: -3.2490 +/-  0.4316 kT
+Block size: 30.0 (60.0 ps), Free energy difference: -3.2488 +/-  0.4224 kT
+Block size: 35.0 (70.0 ps), Free energy difference: -3.2490 +/-  0.4119 kT
+Block size: 40.0 (80.0 ps), Free energy difference: -3.2493 +/-  0.4125 kT
+Block size: 45.0 (90.0 ps), Free energy difference: -3.2493 +/-  0.3952 kT
+Block size: 50.0 (100.0 ps), Free energy difference: -3.2490 +/-  0.3896 kT
+Block size: 55.0 (110.0 ps), Free energy difference: -3.2497 +/-  0.3797 kT
+Block size: 60.0 (120.0 ps), Free energy difference: -3.2485 +/-  0.3534 kT
+Block size: 65.0 (130.0 ps), Free energy difference: -3.2493 +/-  0.3620 kT
+Block size: 70.0 (140.0 ps), Free energy difference: -3.2490 +/-  0.3768 kT
+Block size: 75.0 (150.0 ps), Free energy difference: -3.2493 +/-  0.3676 kT
+Block size: 80.0 (160.0 ps), Free energy difference: -3.2494 +/-  0.3559 kT
+Block size: 85.0 (170.0 ps), Free energy difference: -3.2513 +/-  0.3639 kT
+Block size: 90.0 (180.0 ps), Free energy difference: -3.2526 +/-  0.3539 kT
+Block size: 95.0 (190.0 ps), Free energy difference: -3.2530 +/-  0.3347 kT
+Block size: 100.0 (200.0 ps), Free energy difference: -3.2523 +/-  0.3291 kT
+Block size: 105.0 (210.0 ps), Free energy difference: -3.2507 +/-  0.3271 kT
+Block size: 110.0 (220.0 ps), Free energy difference: -3.2487 +/-  0.3293 kT
+Block size: 115.0 (230.0 ps), Free energy difference: -3.2495 +/-  0.3031 kT
+Block size: 120.0 (240.0 ps), Free energy difference: -3.2514 +/-  0.3231 kT
+Block size: 125.0 (250.0 ps), Free energy difference: -3.2490 +/-  0.3083 kT
+Block size: 130.0 (260.0 ps), Free energy difference: -3.2536 +/-  0.3010 kT
+Block size: 135.0 (270.0 ps), Free energy difference: -3.2486 +/-  0.3252 kT
+Block size: 140.0 (280.0 ps), Free energy difference: -3.2523 +/-  0.2942 kT
+Block size: 145.0 (290.0 ps), Free energy difference: -3.2479 +/-  0.2866 kT
+Block size: 150.0 (300.0 ps), Free energy difference: -3.2478 +/-  0.3226 kT
+Block size: 155.0 (310.0 ps), Free energy difference: -3.2563 +/-  0.2671 kT
+Block size: 160.0 (320.0 ps), Free energy difference: -3.2483 +/-  0.2689 kT
+Block size: 165.0 (330.0 ps), Free energy difference: -3.2475 +/-  0.3133 kT
+Block size: 170.0 (340.0 ps), Free energy difference: -3.2566 +/-  0.3204 kT
+Block size: 175.0 (350.0 ps), Free energy difference: -3.2490 +/-  0.2670 kT
+Block size: 180.0 (360.0 ps), Free energy difference: -3.2457 +/-  0.2701 kT
+Block size: 185.0 (370.0 ps), Free energy difference: -3.2499 +/-  0.2912 kT
+Block size: 190.0 (380.0 ps), Free energy difference: -3.2594 +/-  0.3021 kT
+Block size: 195.0 (390.0 ps), Free energy difference: -3.2485 +/-  0.2918 kT
+Block size: 200.0 (400.0 ps), Free energy difference: -3.2458 +/-  0.2665 kT
+Block size: 205.0 (410.0 ps), Free energy difference: -3.2453 +/-  0.2583 kT
+Block size: 210.0 (420.0 ps), Free energy difference: -3.2554 +/-  0.2729 kT
+Block size: 215.0 (430.0 ps), Free energy difference: -3.2551 +/-  0.2571 kT
+Block size: 220.0 (440.0 ps), Free energy difference: -3.2478 +/-  0.2657 kT
+Block size: 225.0 (450.0 ps), Free energy difference: -3.2453 +/-  0.2521 kT
+Block size: 230.0 (460.0 ps), Free energy difference: -3.2430 +/-  0.2511 kT
+Block size: 235.0 (470.0 ps), Free energy difference: -3.2449 +/-  0.2555 kT
+Block size: 240.0 (480.0 ps), Free energy difference: -3.2567 +/-  0.2638 kT
+Block size: 245.0 (490.0 ps), Free energy difference: -3.2607 +/-  0.2786 kT
+Block size: 250.0 (500.0 ps), Free energy difference: -3.2490 +/-  0.2883 kT
