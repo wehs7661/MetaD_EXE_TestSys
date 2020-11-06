@@ -9,18 +9,21 @@ Fitting BAR on u_nk ...
 Fitting MBAR on u_nk ...
 
 ------ Results based on the whole dataset ------
-Statistical inefficiency of dHdl: 1.3229840993881226
+Statistical inefficiency of dHdl: 1.303863525390625
 Statistical inefficiency of u_nk: 1.0
 
-TI: -2.6849493635381894 +/- 0.32695806085406515 kT
-BAR: -3.450691587245502 +/- unknown kT
-MBAR: -3.3374206318152404 +/- 0.2530900118123674 kT
+TI: -2.568656717794046 +/- 0.3185250371501618 kT
+BAR: -3.54620740844735 +/- unknown kT
+MBAR: -3.41805181006547 +/- 0.2387685338694758 kT
 ------------------------------------------------
 Calculating Wang-Landau weights for expanded ensemble using MBAR ...
 
 Computing and visualizing the overlap matrix ...
-Time elapsed: 4.6904120445251465 seconds.
-Loading the preprocessed data dHdl and u_nk ...
+Time elapsed: 1.8782250881195068 seconds.
+Preprocessing the data in the dhdl files ...
+Parsing ./sys1_dhdl.xvg and collecting data ...
+Data preprocessing completed!
+
 
 Performing free energy calculations on the whole dataset ...
 Fitting TI on dHdl ...
@@ -28,11 +31,14 @@ Fitting BAR on u_nk ...
 Fitting MBAR on u_nk ...
 
 ------ Results based on the whole dataset ------
-TI: -2.6849493635381894 +/- 0.32695806085406515 kT
-BAR: -3.450691587245502 +/- unknown kT
-MBAR: -3.3374206318152404 +/- 0.2530900118123674 kT
+Statistical inefficiency of dHdl: 1.303863525390625
+Statistical inefficiency of u_nk: 1.0
+
+TI: -2.568656717794046 +/- 0.3185250371501618 kT
+BAR: -3.54620740844735 +/- unknown kT
+MBAR: -3.41805181006547 +/- 0.2387685338694758 kT
 ------------------------------------------------
 Calculating Wang-Landau weights for expanded ensemble using MBAR ...
 
 Computing and visualizing the overlap matrix ...
-Time elapsed: 0.818213939666748 seconds.
+Time elapsed: 1.864307165145874 seconds.
