@@ -1,0 +1,23 @@
+
+
+The log file(s) to be analyzed: sys2.log.
+Length of the simulation for the weights average calculation: 1.0 ns.
+
+Data analysis of the file sys2.log:
+===================================
+The adjusted weights are (RMSD: 0.07980354219540435): 0.00000 7.98143 14.38602 17.36384 19.32074 20.89478 21.43209 18.25053 15.57028 
+The weights have not equilibrated.
+Initial weights: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+Final weights:   0.0 7.82069 14.25366 17.30109 19.27997 20.86217 21.42058 18.31454 15.62566
+The difference between the initial weights and final weights are:
+0.0 7.82 14.25 17.3 19.28 20.86 21.42 18.31 15.63
+Check the log file for more information.
+The adjusted weights are (RMSD: 0.07980354219540435): 0.00000 7.98143 14.38602 17.36384 19.32074 20.89478 21.43209 18.25053 15.57028 
+The maximum and minimum of the free energy difference estimate are: 18.61603 and 14.23862, respectively. (Range: 4.377409999999999)
+The standard deviation of the free energy difference:  0.92493.
+The average weights over the last 1.0 ns of the simulation before the weights are equilibrated (from 4.0 to 5.0 ns) are:
+  0.0 7.99931 14.67207 17.85728 19.87109 21.49086 22.06934 19.13925 16.42397 
+
+1 file(s) analyzed.
+Total time elapsed (including plotting): 0.7886090278625488 seconds.
+
