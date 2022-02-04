@@ -1,0 +1,2 @@
+theta: TORSION ATOMS=7,2,5,11
+PRINT ARG=theta STRIDE=10 FILE=dihedral/sys2_dihedral_7_2_5_11_stateB.dat

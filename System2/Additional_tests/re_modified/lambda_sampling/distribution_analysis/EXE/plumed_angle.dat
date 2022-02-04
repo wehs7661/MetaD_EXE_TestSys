@@ -1,0 +1,2 @@
+theta: ANGLE ATOMS=9,3,10
+PRINT ARG=theta STRIDE=10 FILE=angle/sys2_angle_9_3_10_stateB.dat
