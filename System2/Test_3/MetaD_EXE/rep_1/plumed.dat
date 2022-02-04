@@ -12,6 +12,7 @@ TEMP=298
 BIASFACTOR=50
 LABEL=metad    # it's not clear how GRID parameters will have influences here
 FILE=HILLS_LAMBDA
+RESTART=YES
 ... METAD
 
 PRINT STRIDE=10 ARG=lambda,metad.bias FILE=COLVAR

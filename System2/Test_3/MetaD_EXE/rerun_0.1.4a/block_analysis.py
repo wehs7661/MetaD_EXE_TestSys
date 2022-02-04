@@ -21,7 +21,7 @@ if __name__ == '__main__':
         fes_err = data[-1]
         delta_f.append(data[-2][-1] - data[-2][0])
         delta_f_err.append(np.sqrt(fes_err[-1] ** 2 + fes_err[0] ** 2))
-        print(f'Block size: {i} ({0.02 * i} ps), Free energy difference: {delta_f[-1]: .5f} +/- {delta_f_err[-1]: .5f} kT')
+        print(f'Block size: {i} ({0.02 * i} ps), Free energy difference: {delta_f[-1]: .5f} +/- {delta_f_err[-1]: .7f} kT')
 
     # free energy difference as a function of block size
     plt.figure()
