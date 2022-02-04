@@ -1,0 +1,7 @@
+theta: TORSION ATOMS=1,2,4,5
+
+PRINT STRIDE=1 ARG=theta FILE=test
+
+
+
+
