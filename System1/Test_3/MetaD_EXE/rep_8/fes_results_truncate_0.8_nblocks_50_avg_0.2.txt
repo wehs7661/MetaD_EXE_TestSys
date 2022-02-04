@@ -1,0 +1,23 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: bootstrapping.py -d rep_1/ rep_10/ rep_11/ rep_12/ rep_13/ rep_14/ rep_15/ rep_16/ rep_17/ rep_18/ rep_19/ rep_2/ rep_20/ rep_3/ rep_4/ rep_5/ rep_6/ rep_7/ rep_8/ rep_9/ -n 50 -s 1994 -hh HILLS_LAMBDA -t 0.8 -r -3.3430185676865705
+- Current working directory: rep_8/
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_LAMBDA, and COLVAR output by the simulation
+- Number of blocks: [50]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.8
+- Averaged fraction: 0.2
+- Random seed: 1994
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+Section 2: Results of free energy calculations
+==============================================
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      50     |       20.00     |          -3.428201          |     0.138502     |
++-------------+-----------------+-----------------------------+------------------+
+
+Files output by this code: fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.8_avg_0.2.png, fes_results_truncate_0.8_nblocks_50_avg_0.2.txt
+Time elapsed:  27.99 seconds.

@@ -1,0 +1,12 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: bootstrapping.py -d rep_1/ -hh HILLS_LAMBDA -s 1994 -t 0 -n 150
+- Current working directory: rep_1/
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_LAMBDA, and COLVAR output by the simulation
+- Number of blocks: [150]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.0
+- Averaged fraction: 0.2
+- Random seed: 1994
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15

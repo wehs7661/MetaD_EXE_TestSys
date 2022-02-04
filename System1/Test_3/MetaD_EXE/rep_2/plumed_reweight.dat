@@ -1,0 +1,18 @@
+lambda: READ FILE=COLVAR VALUES=lambda IGNORE_TIME IGNORE_FORCES
+
+METAD ...
+ARG=lambda
+SIGMA=0.01
+HEIGHT=1.2388545199729883
+PACE=50  # longer than the simulation length so no hills will be added
+GRID_MIN=0
+GRID_MAX=5
+GRID_BIN=5
+TEMP=298
+BIASFACTOR=50
+LABEL=metad
+RESTART=YES
+... METAD
+
+rw: REWEIGHT_BIAS TEMP=298 
+PRINT ARG=lambda,rw FILE=weights.dat

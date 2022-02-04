@@ -12,7 +12,7 @@ if __name__ == '__main__':
     rc('mathtext', **{'default': 'regular'})
     plt.rc('font', family='serif')
 
-    block_sizes = np.arange(50, 5050, 50)
+    block_sizes = np.arange(50, 2550, 50)
     
     delta_f, delta_f_err = [], []  # free energy difference and its uncertainty
     for i in block_sizes:

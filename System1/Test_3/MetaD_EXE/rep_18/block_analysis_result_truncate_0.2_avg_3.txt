@@ -1,0 +1,118 @@
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0-dev (git: 9991c4c14) compiled on Nov 12 2020 at 15:24:46
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /home/wei-tse/Documents/Software/PLUMED/plumed2/
+PLUMED: For installed feature, see /home/wei-tse/Documents/Software/PLUMED/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_analysis.dat
+PLUMED: Action RESTART
+PLUMED:   with label @0
+PLUMED:   MD code didn't require restart
+PLUMED:   Switching on restart
+PLUMED:   Restarting simulation: files will be appended
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000  Gaussian height 1.238855
+PLUMED:   Gaussian deposition pace 10000000
+PLUMED:   Gaussian file HILLS_LAMBDA_modified
+PLUMED:   Well-Tempered Bias Factor 50.000000
+PLUMED:   Hills relaxation time (tau) 980000263.363023
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0
+PLUMED:   Grid max 5
+PLUMED:   Grid bin 5
+PLUMED:   Grid uses spline interpolation
+PLUMED:   added component to this action:  metad.work 
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width can produce artifacts
+PLUMED:   Restarting from HILLS_LAMBDA_modified:      250000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda metad.bias
+PLUMED:   on file COLVAR_analysis
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_analysis.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1     6.502328     6.502328     6.502328     6.502328
+PLUMED: 1 Prepare dependencies                        250001     0.254713     0.000001     0.000001     0.001118
+PLUMED: 2 Sharing data                                250001     0.006352     0.000000     0.000000     0.000000
+PLUMED: 3 Waiting for data                            250001     0.008108     0.000000     0.000000     0.000017
+PLUMED: 4 Calculating (forward loop)                  250001     0.731367     0.000003     0.000003     0.002739
+PLUMED: 5 Applying (backward loop)                    250001     0.112441     0.000000     0.000000     0.000024
+PLUMED: 6 Update                                      250001     1.661789     0.000007     0.000006     0.005356
+Block size: 50 (1.0 ps), Free energy difference: -3.33439 +/-  0.02594 kT
+Block size: 100 (2.0 ps), Free energy difference: -3.33439 +/-  0.03359 kT
+Block size: 150 (3.0 ps), Free energy difference: -3.33495 +/-  0.03822 kT
+Block size: 200 (4.0 ps), Free energy difference: -3.33439 +/-  0.04140 kT
+Block size: 250 (5.0 ps), Free energy difference: -3.33439 +/-  0.04395 kT
+Block size: 300 (6.0 ps), Free energy difference: -3.33628 +/-  0.04593 kT
+Block size: 350 (7.0 ps), Free energy difference: -3.33591 +/-  0.04615 kT
+Block size: 400 (8.0 ps), Free energy difference: -3.33439 +/-  0.04675 kT
+Block size: 450 (9.0 ps), Free energy difference: -3.33628 +/-  0.04747 kT
+Block size: 500 (10.0 ps), Free energy difference: -3.33439 +/-  0.05053 kT
+Block size: 550 (11.0 ps), Free energy difference: -3.33851 +/-  0.04859 kT
+Block size: 600 (12.0 ps), Free energy difference: -3.33628 +/-  0.04946 kT
+Block size: 650 (13.0 ps), Free energy difference: -3.34032 +/-  0.04972 kT
+Block size: 700 (14.0 ps), Free energy difference: -3.34057 +/-  0.05005 kT
+Block size: 750 (15.0 ps), Free energy difference: -3.34057 +/-  0.04904 kT
+Block size: 800 (16.0 ps), Free energy difference: -3.33439 +/-  0.05004 kT
+Block size: 850 (17.0 ps), Free energy difference: -3.33699 +/-  0.05021 kT
+Block size: 900 (18.0 ps), Free energy difference: -3.33628 +/-  0.04765 kT
+Block size: 950 (19.0 ps), Free energy difference: -3.34057 +/-  0.04793 kT
+Block size: 1000 (20.0 ps), Free energy difference: -3.33439 +/-  0.04917 kT
+Block size: 1050 (21.0 ps), Free energy difference: -3.34057 +/-  0.04639 kT
+Block size: 1100 (22.0 ps), Free energy difference: -3.33779 +/-  0.04878 kT
+Block size: 1150 (23.0 ps), Free energy difference: -3.33625 +/-  0.05127 kT
+Block size: 1200 (24.0 ps), Free energy difference: -3.33873 +/-  0.04909 kT
+Block size: 1250 (25.0 ps), Free energy difference: -3.33439 +/-  0.04862 kT
+Block size: 1300 (26.0 ps), Free energy difference: -3.33653 +/-  0.04691 kT
+Block size: 1350 (27.0 ps), Free energy difference: -3.33628 +/-  0.04506 kT
+Block size: 1400 (28.0 ps), Free energy difference: -3.33787 +/-  0.04745 kT
+Block size: 1450 (29.0 ps), Free energy difference: -3.34027 +/-  0.04955 kT
+Block size: 1500 (30.0 ps), Free energy difference: -3.34057 +/-  0.04401 kT
+Block size: 1550 (31.0 ps), Free energy difference: -3.33495 +/-  0.04896 kT
+Block size: 1600 (32.0 ps), Free energy difference: -3.33439 +/-  0.04754 kT
+Block size: 1650 (33.0 ps), Free energy difference: -3.33851 +/-  0.04651 kT
+Block size: 1700 (34.0 ps), Free energy difference: -3.33653 +/-  0.04863 kT
+Block size: 1750 (35.0 ps), Free energy difference: -3.34057 +/-  0.04852 kT
+Block size: 1800 (36.0 ps), Free energy difference: -3.33628 +/-  0.04216 kT
+Block size: 1850 (37.0 ps), Free energy difference: -3.33628 +/-  0.04668 kT
+Block size: 1900 (38.0 ps), Free energy difference: -3.34057 +/-  0.04877 kT
+Block size: 1950 (39.0 ps), Free energy difference: -3.33653 +/-  0.04722 kT
+Block size: 2000 (40.0 ps), Free energy difference: -3.33439 +/-  0.04419 kT
+Block size: 2050 (41.0 ps), Free energy difference: -3.33718 +/-  0.04601 kT
+Block size: 2100 (42.0 ps), Free energy difference: -3.34057 +/-  0.04485 kT
+Block size: 2150 (43.0 ps), Free energy difference: -3.33495 +/-  0.04630 kT
+Block size: 2200 (44.0 ps), Free energy difference: -3.33956 +/-  0.04969 kT
+Block size: 2250 (45.0 ps), Free energy difference: -3.33956 +/-  0.04254 kT
+Block size: 2300 (46.0 ps), Free energy difference: -3.33841 +/-  0.04560 kT
+Block size: 2350 (47.0 ps), Free energy difference: -3.33699 +/-  0.04019 kT
+Block size: 2400 (48.0 ps), Free energy difference: -3.33873 +/-  0.05050 kT
+Block size: 2450 (49.0 ps), Free energy difference: -3.33855 +/-  0.04367 kT
+Block size: 2500 (50.0 ps), Free energy difference: -3.33439 +/-  0.04249 kT

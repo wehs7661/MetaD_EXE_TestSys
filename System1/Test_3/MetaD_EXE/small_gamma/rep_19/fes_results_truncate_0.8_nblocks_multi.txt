@@ -1,0 +1,31 @@
+Section 1: Parameters for data analysis
+=======================================
+- Directory: rep_19/
+- Files analyzed/used: plumed_final_bias.dat, COLVAR_FINAL_BIAS, HILLS_LAMBDA
+- Number of blocks: [2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.8
+- Averaged fraction: 0.2
+- Random seed: 1994
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+Section 2: Results of free energy calculations
+==============================================
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      2      |      500.00     |          -3.396124          |     0.081719     |
+|      5      |      200.00     |          -3.396124          |     0.144076     |
+|      10     |      100.00     |          -3.396124          |     0.100309     |
+|      20     |       50.00     |          -3.396124          |     0.136552     |
+|      50     |       20.00     |          -3.396124          |     0.143754     |
+|     100     |       10.00     |          -3.396124          |     0.130065     |
+|     200     |       5.00      |          -3.396124          |     0.100850     |
+|     500     |       2.00      |          -3.396124          |     0.084108     |
+|     1000    |       1.00      |          -3.396124          |     0.067834     |
+|     2000    |       0.50      |          -3.396124          |     0.049802     |
++-------------+-----------------+-----------------------------+------------------+
+
+Files output by this code: fes*dat, COLVAR_FINAL_BIAS, df_err_bsize_truncate_0.8.png, fes_results_truncate_0.8_nblocks_multi.txt
+Time elapsed:  13.88 seconds.

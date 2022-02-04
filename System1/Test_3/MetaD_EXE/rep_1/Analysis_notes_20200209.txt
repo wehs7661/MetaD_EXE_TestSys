@@ -1,0 +1,14 @@
+To calculate the uncertainty of the free energy surface, we follow the procedures below:
+1. Run the command `plumed driver --plumed plumed_blocks.dat --noatoms`
+  - Note that in plumed_blocks.dat, instead of using RESTART at the beginning, we used RESTART=YES in the METAD seciton. The former will append all the histogram data in the same file `hist.dat`, while the latter generates multiple hist.dat files: analysis.0.hist.dat is the first block, analysis.1.hist.dat the second, ..., and hist.dat contains the histogram data of the last block. 
+  - Here the block size (CLEAR keyword) is 2500, which should be equal to the STRIDE of DUMPGRID.
+2. Run block_averaging.py with the command ``
+  - There are N steps in `calculate_free_energy` 
+  - Step 1: Calcualte the average of the weighted histogram for each gridded CV value
+    - For the i-th histogram data file, norm (a floating number) is \sum_{j}^{N} w_{j} of i-th block (the total value of the weights), where the N is the number of data points in the block (block size). 
+    - Note that `hist` (a list) is already weighted and normalized. That is, the j-th value (corresponding to the j-th gridded CV value) in hist is w_{j}X_{j}/(\sum_{j}^{N} w_{j}), where X_{j} is the count of the j-th CV value.
+    - Therefore, j-th value in norm * hist is w_{j}X_{j}. The j-th value in avg before division by N is 
+    - As a result, in avg (list) returned by the loop (before being divided by N), the j-th value is \sum_{j} w_{j}X_{j}.
+    - On the other hand, N is 
+
+

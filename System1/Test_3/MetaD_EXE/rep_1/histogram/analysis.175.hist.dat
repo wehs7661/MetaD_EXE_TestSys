@@ -1,0 +1,12 @@
+#! FIELDS lambda hh dhh_lambda
+#! SET normalisation  500.000000
+#! SET min_lambda 0
+#! SET max_lambda 5
+#! SET nbins_lambda  5
+#! SET periodic_lambda false
+ 0.000000 5.704875 0.000000
+ 1.000000 5.305932 0.000000
+ 2.000000 4.747413 0.000000
+ 3.000000 3.071856 0.000000
+ 4.000000 0.718096 0.000000
+ 5.000000 0.398942 0.000000

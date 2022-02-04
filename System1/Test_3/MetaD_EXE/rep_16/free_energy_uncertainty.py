@@ -180,7 +180,7 @@ if __name__ == '__main__':
             avg_h = histo_avg[index_tuple] / n_b
             var_h = (histo_avg_sq[index_tuple] / n_b - avg_h ** 2) * n_b / (n_b - 1)
             std_h = np.sqrt(var_h / n_b)
-
+            
             # Free energy and its uncertainty
             fes = -np.log(avg_h)      # units: kT
             err = 1 / avg_h * std_h   # units: kT
