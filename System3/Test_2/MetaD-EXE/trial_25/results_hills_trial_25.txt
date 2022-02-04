@@ -1,0 +1,22 @@
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_25
+- Command line: /home/wei-tse/.local/bin/plot_xy -i HILLS_2D -x Time (ns) -cx ps to ns -y Gaussian height (kT) -c 5 -n hills_trial_25
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of gaussian height: 1.339 (RMSF: 1.303, max: 12.653, min: 0.152)
+The maximum of gaussian height occurs at 2.273 ns.
+The minimum of gaussian height occurs at 100.000 ns.
+The gaussian height (1.339 kT) at 36.639 ns is closet to the average.
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_25
+- Command line: /home/wei-tse/.local/bin/plot_xy -i HILLS_2D -x Time (ns) -cx ps to ns -y Gaussian height (kT) -cy kJ/mol to kT -c 5 -n hills_trial_25
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of gaussian height: 0.540 (RMSF: 1.303, max: 5.104, min: 0.061)
+The maximum of gaussian height occurs at 2.273 ns.
+The minimum of gaussian height occurs at 100.000 ns.
+The gaussian height (0.540 kT) at 36.639 ns is closet to the average.

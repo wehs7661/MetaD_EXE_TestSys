@@ -1,0 +1,10 @@
+
+Data analysis of the file: COLVAR_backup
+========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_25
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR_backup -n None
+Assessment of the hsitogram flatness: N_ratio = 52428.000
+The maximum of x is 17.717498.
+The minimum of x is 0.087389.
+The total number of counts is 3247842.
+X between 0.439991 and 0.528142 has the highest probability density.

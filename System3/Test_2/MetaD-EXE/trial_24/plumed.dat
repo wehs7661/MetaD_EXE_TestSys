@@ -1,0 +1,20 @@
+center: CENTER ATOMS=1-144            # geometric center of the host molecule
+water_group: GROUP ATOMS=207-6656:3   # oxygen atom of the water molecules
+n: COORDINATION GROUPA=center GROUPB=water_group R_0=0.35  # radius: 0.6 nm
+lambda: EXTRACV NAME=lambda
+
+METAD ...
+ARG=lambda,n
+SIGMA=0.01,0.05    # small SIGMA ensure that the Gaussian approaximate a delta function
+HEIGHT=12.394781044629076
+PACE=10
+GRID_MIN=0,0     # index of alchemical states starts from 0
+GRID_MAX=39,20     # we have 40 states in total
+GRID_BIN=39,100
+TEMP=298
+BIASFACTOR=150
+LABEL=metad
+FILE=HILLS_2D
+... METAD
+
+PRINT STRIDE=10 ARG=n,lambda,metad.bias FILE=COLVAR

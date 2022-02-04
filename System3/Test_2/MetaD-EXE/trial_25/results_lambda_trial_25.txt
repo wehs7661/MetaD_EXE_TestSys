@@ -1,0 +1,16 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_25
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x $ \lambda $ -n lambda_trial_25 -nb 40 -ol
+Assessment of the hsitogram flatness: N_ratio = 1072.462
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_25
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x $ \lambda $ -n lambda_trial_25 -nb 40 -ol -c 2
+Assessment of the hsitogram flatness: N_ratio = 2.822
+The maximum of $ \lambda $ is 39.000000.
+The minimum of $ \lambda $ is 0.000000.
+The total number of counts is 5004209.
+$ \lambda $ between 0.000000 and 0.975000 has the highest probability density.

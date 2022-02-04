@@ -1,0 +1,30 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_25
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x Time (ns) -cc ps to ns -y Number of watre molecules -n water_hist_trial_25 -Nb 0 12
+Assessment of the hsitogram flatness: N_ratio = 15543.333
+The maximum of time is 0.017717 ns.
+The minimum of time is 0.000087 ns.
+The total number of counts is 5000001.
+Time between 0.000440 and 0.000528 ns has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_25
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x Number of watre molecules -n water_hist_trial_25 -Nb 0 12
+Assessment of the hsitogram flatness: N_ratio = 15.661
+The maximum of number of watre molecules is 17.717498.
+The minimum of number of watre molecules is 0.087389.
+The total number of counts is 5004209.
+Number of watre molecules between 0.444767 and 0.504330 has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_25
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x Number of watre molecules -n water_hist_trial_25 -Nb 1 12
+Assessment of the hsitogram flatness: N_ratio = 1.297
+The maximum of number of watre molecules is 17.717498.
+The minimum of number of watre molecules is 0.087389.
+The total number of counts is 5004209.
+Number of watre molecules between 1.055002 and 1.110002 has the highest probability density.
