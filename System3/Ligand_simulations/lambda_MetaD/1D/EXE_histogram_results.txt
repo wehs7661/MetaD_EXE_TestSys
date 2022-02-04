@@ -1,0 +1,19 @@
+
+
+The log file(s) to be analyzed: md.log.
+Length of the simulation for the weights average calculation: 2.0 ns.
+
+Data analysis of the file md.log:
+=================================
+This is a fixed-weight expanded ensemble simulation.
+Accordingly, only the final histogram will be output and saved.
+
+The adjusted weights are (RMSD: inf): 0.00000   -inf 20.63033 29.85280 38.88703 47.54734 55.77260 63.66628 71.11898 78.22756 84.92019 91.21889 97.23640 102.79507 108.06080 113.05072 117.53973 121.82887 125.62966 129.21088 132.45194 134.43379 136.59826 138.98328 141.46857 142.55371 143.66644 144.53137 145.24356 145.51415 145.60618 145.42976 144.77580 143.37229 141.35145 138.92690 136.57422 133.88764 132.01845 131.18979 
+The maximum and minimum of the free energy difference estimate are: 132.02475 and 126.61752, respectively. (Range: 5.407230000000013)
+The standard deviation of the free energy difference:  1.66054.
+The average weights over the last 2.0 ns of the simulation before the weights are equilibrated (from 18.0 to 20.0 ns) are:
+  0.0 10.26405 20.05848 29.36496 38.22595 46.6291 54.61329 62.1595 69.33338 76.16655 82.61347 88.77267 94.60214 100.06722 105.21753 110.17845 114.63048 118.86664 122.72234 126.30489 129.55136 131.5852 133.84135 136.32583 138.88973 140.08003 141.20763 142.11708 142.83486 143.12481 143.20785 143.03003 142.38939 141.13705 139.3264 137.10592 134.88536 132.27537 130.46172 129.69506 
+
+1 file(s) analyzed.
+Total time elapsed (including plotting): 1.3615567684173584 seconds.
+

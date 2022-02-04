@@ -1,0 +1,1 @@
+This folder contains the EXE or lambda-MetaD simulations for the alchemical process of disappearing the ligand from the solvent. Considering this alchemical process and the process of turning off the interactions in the binding complex, we can complete the whole thermodynamic cycle and calculate the binding free energy. 

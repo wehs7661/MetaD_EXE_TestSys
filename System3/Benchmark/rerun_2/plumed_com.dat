@@ -1,0 +1,5 @@
+com1: COM ATOMS=1-144
+com2: COM ATOMS=145-193
+d: DISTANCE ATOMS=com1,com2
+
+PRINT STRIDE=10 ARG=d FILE=sys3_com.dat
