@@ -1,0 +1,20 @@
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo
+- Command line: /home/wei-tse/.local/bin/plot_xy -i HILLS_2D -x $ \lambda $ -n lambda
+Analyzing the file ... 
+Plotting and saving figure ...
+Maximum of y: 39.000, which occurs at 872.780.
+Minimum of y: 0.000, which occurs at 0.020.
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo
+- Command line: /home/wei-tse/.local/bin/plot_xy -i HILLS_2D -x Time (ns) -cx ps to ns -y $ \lambda $ -n lambda
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of $ \lambda $: 15.782 (RMSF: 0.752, max: 39.000, min: 0.000)
+The maximum of $ \lambda $ occurs at 0.873 ns.
+The minimum of $ \lambda $ occurs at 0.000 ns.
+The $ \lambda $ (16.000) at 0.402 ns is closet to the average.

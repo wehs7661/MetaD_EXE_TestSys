@@ -1,0 +1,11 @@
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo
+- Command line: /home/wei-tse/.local/bin/plot_xy -i HILLS_2D -x Time (ns) -cx ps to ns -y Number of water molecules -n water -c 2
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of number of water molecules: 6.938 (RMSF: 0.621, max: 17.837, min: 0.088)
+The maximum of number of water molecules occurs at 36.742 ns.
+The minimum of number of water molecules occurs at 22.315 ns.
+The number of water molecules (6.938) at 82.830 ns is closet to the average.

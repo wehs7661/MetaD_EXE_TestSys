@@ -1,0 +1,35 @@
+
+Data analysis of the file: COLVARa
+==================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVARa -x Number of water molecules -n water_hist
+Assessment of the hsitogram flatness: N_ratio = 43316.000
+The maximum of number of water molecules is 17.837342.
+The minimum of number of water molecules is 0.088240.
+The total number of counts is 4588456.
+Number of water molecules between 0.443222 and 0.531968 has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x Time (ns) -y Number of water molecules -cc ps to ns -n water_hist -t w/o the wall potential
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x Time (ns) -y Number of water molecules -cc ps to ns -n water_hist -t w/o the wall potential
+Assessment of the hsitogram flatness: N_ratio = 43316.000
+The maximum of time is 0.017837 ns.
+The minimum of time is 0.000088 ns.
+The total number of counts is 4543918.
+Time between 0.000443 and 0.000532 ns has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x Number of water molecules -n water_hist -t w/o the wall potential
+Assessment of the hsitogram flatness: N_ratio = 43316.000
+The maximum of number of water molecules is 17.837342.
+The minimum of number of water molecules is 0.088240.
+The total number of counts is 4588456.
+Number of water molecules between 0.443222 and 0.531968 has the highest probability density.

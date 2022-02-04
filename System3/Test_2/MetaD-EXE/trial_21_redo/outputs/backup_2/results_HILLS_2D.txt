@@ -1,0 +1,34 @@
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo/outputs/backup_2
+- Command line: /home/wei-tse/anaconda3/bin/plot_xy -i HILLS_2D
+Analyzing the file ... 
+Plotting and saving figure ...
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo/outputs/backup_2
+- Command line: /home/wei-tse/anaconda3/bin/plot_xy -i HILLS_2D
+Analyzing the file ... 
+Plotting and saving figure ...
+Maximum of y: 39.000, which occurs at 872.780.
+Minimum of y: 0.000, which occurs at 0.020.
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo/outputs/backup_2
+- Command line: /home/wei-tse/anaconda3/bin/plot_xy -i HILLS_2D -c 2
+Analyzing the file ... 
+Plotting and saving figure ...
+Maximum of y: 17.837, which occurs at 36741.722.
+Minimum of y: 0.088, which occurs at 22314.881.
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo/outputs/backup_2
+- Command line: /home/wei-tse/anaconda3/bin/plot_xy -i HILLS_2D -c 5
+Analyzing the file ... 
+Plotting and saving figure ...
+Maximum of y: 12.687, which occurs at 182.900.
+Minimum of y: 0.223, which occurs at 66596.003.

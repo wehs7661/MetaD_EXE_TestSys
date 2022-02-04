@@ -1,0 +1,38 @@
+
+Data analysis of the file: COLVARa
+==================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVARa -x Number of water molecules
+Assessment of the hsitogram flatness: N_ratio = 43316.000
+The maximum of number of water molecules is 17.837342.
+The minimum of number of water molecules is 0.088240.
+The total number of counts is 4588456.
+Number of water molecules between 0.443222 and 0.531968 has the highest probability density.
+
+Data analysis of the file: COLVARa
+==================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVARa
+Assessment of the hsitogram flatness: N_ratio = 43316.000
+The maximum of x is 17.837342.
+The minimum of x is 0.088240.
+The total number of counts is 4588456.
+X between 0.443222 and 0.531968 has the highest probability density.
+
+Data analysis of the file: COLVARa
+==================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVARa -ol
+Assessment of the hsitogram flatness: N_ratio = 43316.000
+
+Data analysis of the file: COLVARa
+==================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVARa -ol
+Assessment of the hsitogram flatness: N_ratio = 43316.000
+
+Data analysis of the file: COLVARa
+==================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21_redo
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVARa -ol
+Assessment of the hsitogram flatness: N_ratio = 43316.000
