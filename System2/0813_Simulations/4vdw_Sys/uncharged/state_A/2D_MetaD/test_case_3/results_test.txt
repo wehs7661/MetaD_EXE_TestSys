@@ -1,0 +1,18 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/0813_Simulations/4vdw_Sys/uncharged/state_A/2D_MetaD/test_case_3
+- Command line: /home/wei-tse/.local/bin/plot_xy -i COLVAR -n test
+Analyzing the file ... 
+Plotting and saving figure ...
+Maximum of y: 3.142, which occurs at 3552.920.
+Minimum of y: -3.142, which occurs at 17761.021.
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/0813_Simulations/4vdw_Sys/uncharged/state_A/2D_MetaD/test_case_3
+- Command line: /home/wei-tse/.local/bin/plot_xy -i HILLS_2D -c 5 -n test
+Analyzing the file ... 
+Plotting and saving figure ...
+Maximum of y: 2.521, which occurs at 1.000.
+Minimum of y: 0.227, which occurs at 19927.001.

@@ -1,0 +1,10 @@
+
+Data analysis of the file: dihedral.dat
+=======================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/0813_Simulations/4vdw_Sys/uncharged/state_A/EXE/Fixed
+- Command line: /home/wei-tse/.local/bin/plot_hist -i dihedral.dat -x Dihedral (deg) -cc radian to degree -n hist_dihedral
+Assessment of the hsitogram flatness: N_ratio = 3.000
+The maximum of dihedral is 179.996468 deg.
+The minimum of dihedral is -179.921811 deg.
+The total number of counts is 5001.
+Dihedral between -179.921811 and -178.122220 deg has the highest probability density.

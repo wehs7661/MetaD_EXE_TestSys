@@ -1,0 +1,10 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/0813_Simulations/4vdw_Sys/uncharged/state_A/2D_MetaD
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x Dihedral (deg) -cc radian to degree -n hist_dihedral
+Assessment of the hsitogram flatness: N_ratio = 1.258
+The maximum of dihedral is 179.999848 deg.
+The minimum of dihedral is -179.999905 deg.
+The total number of counts is 5000001.
+Dihedral between -170.999911 and -169.199913 deg has the highest probability density.
