@@ -1,0 +1,33 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: bootstrapping.py -d rerun/ rerun_5/ rerun_6/ rerun_7/ rerun_8/ -s 1994 -hh HILLS_LAMBDA -n 2 5 10 20 50 100 200 500 1000 2000 5000 -t 0
+- Current working directory: rerun_6/
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_LAMBDA, and COLVAR output by the simulation
+- Number of blocks: [2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.0
+- Averaged fraction: 0.2
+- Random seed: 1994
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+Section 2: Results of free energy calculations
+==============================================
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      2      |     10000.00    |          148.837179         |     0.040511     |
+|      5      |      4000.00    |          148.837179         |     0.191542     |
+|      10     |      2000.00    |          148.837179         |     0.251425     |
+|      20     |      1000.00    |          148.837179         |     0.370602     |
+|      50     |      400.00     |          148.837179         |     0.453622     |
+|     100     |      200.00     |          148.837179         |     0.380609     |
+|     200     |      100.00     |          148.837179         |     0.339956     |
+|     500     |       40.00     |          148.837179         |     0.256991     |
+|     1000    |       20.00     |          148.837179         |     0.197224     |
+|     2000    |       10.00     |          148.837179         |     0.149583     |
+|     5000    |       4.00      |          148.837179         |     0.113269     |
++-------------+-----------------+-----------------------------+------------------+
+
+Files output by this code: fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.0_avg_0.2.png, fes_results_truncate_0.0_nblocks_multi_avg_0.2.txt
+Time elapsed:  900.55 seconds.

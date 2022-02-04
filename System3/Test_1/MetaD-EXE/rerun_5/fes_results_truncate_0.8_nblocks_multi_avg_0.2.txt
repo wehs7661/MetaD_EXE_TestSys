@@ -1,0 +1,336 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: bootstrapping.py -d rerun/ rerun_5/ rerun_6/ rerun_7/ rerun_8/ -s 1994 -hh HILLS_LAMBDA -n 2 5 10 20 50 100 200 500 1000 2000 5000 -t 0.8
+- Current working directory: rerun_5/
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_LAMBDA, and COLVAR output by the simulation
+- Number of blocks: [2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.8
+- Averaged fraction: 0.2
+- Random seed: 1994
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+====================== Warning ======================
+55 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+30 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+===================== Warning =====================
+1 out of 200 bootstrap iterations had 0 probability.
+====================================================
+===================== Warning =====================
+2 out of 200 bootstrap iterations had 0 probability.
+====================================================
+====================== Warning ======================
+18 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+18 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+15 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+60 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+80 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+===================== Warning =====================
+1 out of 200 bootstrap iterations had 0 probability.
+====================================================
+====================== Warning ======================
+13 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+28 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+66 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+74 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+28 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+20 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+48 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+76 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+26 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+23 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+69 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+75 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+===================== Warning =====================
+7 out of 200 bootstrap iterations had 0 probability.
+====================================================
+===================== Warning =====================
+7 out of 200 bootstrap iterations had 0 probability.
+====================================================
+====================== Warning ======================
+23 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+19 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+===================== Warning =====================
+4 out of 200 bootstrap iterations had 0 probability.
+====================================================
+====================== Warning ======================
+25 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+20 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+===================== Warning =====================
+5 out of 200 bootstrap iterations had 0 probability.
+====================================================
+===================== Warning =====================
+7 out of 200 bootstrap iterations had 0 probability.
+====================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+===================== Warning =====================
+1 out of 200 bootstrap iterations had 0 probability.
+====================================================
+====================== Warning ======================
+13 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+10 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+10 out of 200 bootstrap iterations had 0 probability.
+=====================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+====================== Warning ======================
+200 out of 200 bootstrap iterations had 0 probability.
+======================================================
+
+Section 2: Results of free energy calculations
+==============================================
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      2      |      2000.00    |              inf            |        nan       |
+|      5      |      800.00     |              inf            |        nan       |
+|      10     |      400.00     |              inf            |        nan       |
+|      20     |      200.00     |              inf            |        nan       |
+|      50     |       80.00     |              inf            |        nan       |
+|     100     |       40.00     |              inf            |        nan       |
+|     200     |       20.00     |              inf            |        nan       |
+|     500     |       8.00      |              inf            |        nan       |
+|     1000    |       4.00      |              inf            |        nan       |
+|     2000    |       2.00      |              inf            |        nan       |
+|     5000    |       0.80      |              inf            |        nan       |
++-------------+-----------------+-----------------------------+------------------+
+
+Files output by this code: fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.8_avg_0.2.png, fes_results_truncate_0.8_nblocks_multi_avg_0.2.txt
+Time elapsed:  220.07 seconds.
