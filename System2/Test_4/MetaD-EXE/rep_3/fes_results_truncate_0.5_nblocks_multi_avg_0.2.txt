@@ -1,0 +1,33 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: bootstrapping.py -d rep_1/ rep_10/ rep_11/ rep_12/ rep_13/ rep_14/ rep_15/ rep_16/ rep_17/ rep_18/ rep_19/ rep_2/ rep_20/ rep_3/ rep_4/ rep_5/ rep_6/ rep_7/ rep_8/ rep_9/ -n 2 5 10 20 50 100 200 500 1000 2000 5000 -s 1994 -hh HILLS_2D -t 0.5 -r 15.885814292181829
+- Current working directory: rep_3/
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.5
+- Averaged fraction: 0.2
+- Random seed: 1994
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+Section 2: Results of free energy calculations
+==============================================
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      2      |      5000.00    |           15.690707         |     0.125228     |
+|      5      |      2000.00    |           15.690707         |     0.132029     |
+|      10     |      1000.00    |           15.690707         |     0.206787     |
+|      20     |      500.00     |           15.690707         |     0.192165     |
+|      50     |      200.00     |           15.690707         |     0.161703     |
+|     100     |      100.00     |           15.690707         |     0.164414     |
+|     200     |       50.00     |           15.690707         |     0.145622     |
+|     500     |       20.00     |           15.690707         |     0.121414     |
+|     1000    |       10.00     |           15.690707         |     0.090201     |
+|     2000    |       5.00      |           15.690707         |     0.074605     |
+|     5000    |       2.00      |           15.690707         |     0.047288     |
++-------------+-----------------+-----------------------------+------------------+
+
+Files output by this code: fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.5_avg_0.2.png, fes_results_truncate_0.5_nblocks_multi_avg_0.2.txt
+Time elapsed:  133.72 seconds.
