@@ -1,0 +1,32 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: bootstrapping.py -d rep_1/ -n 2 5 10 20 50 100 500 1000 2000 5000 -s 1994 -hh HILLS_2D -t 0.8
+- Current working directory: rep_1/
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [2, 5, 10, 20, 50, 100, 500, 1000, 2000, 5000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.8
+- Averaged fraction: 0.2
+- Random seed: 1994
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+Section 2: Results of free energy calculations
+==============================================
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      2      |      5000.00    |           16.081590         |     0.039229     |
+|      5      |      2000.00    |           16.081590         |     0.072142     |
+|      10     |      1000.00    |           16.081590         |     0.123808     |
+|      20     |      500.00     |           16.081590         |     0.165607     |
+|      50     |      200.00     |           16.081590         |     0.136242     |
+|     100     |      100.00     |           16.081590         |     0.139827     |
+|     500     |       20.00     |           16.081590         |     0.126406     |
+|     1000    |       10.00     |           16.081590         |     0.094861     |
+|     2000    |       5.00      |           16.081590         |     0.076419     |
+|     5000    |       2.00      |           16.081590         |     0.052985     |
++-------------+-----------------+-----------------------------+------------------+
+
+Files output by this code: fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.8_avg_0.2.png, fes_results_truncate_0.8_nblocks_multi_avg_0.2.txt
+Time elapsed:  126.83 seconds.

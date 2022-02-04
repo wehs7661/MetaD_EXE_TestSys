@@ -1,0 +1,40 @@
+
+Data analysis of the file: COLVAR_backup
+========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/Additional_tests/re_modified/lambda_sampling/state_A/lambda_MetaD/2D_simulation/rep_1
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR_backup -x Dihedral angle (deg) -cc radian to degree -c 1 -n dihedral_dist_state_A
+Assessment of the hsitogram flatness: N_ratio = 1.354
+The maximum of dihedral angle is 180.000020 deg.
+The minimum of dihedral angle is -179.999963 deg.
+The total number of counts is 2925128.
+Dihedral angle between 82.800025 and 84.600025 deg has the highest count, which is 17081.
+
+Data analysis of the file: COLVAR_backup
+========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/Additional_tests/re_modified/lambda_sampling/state_A/lambda_MetaD/2D_simulation/rep_1
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR_backup -x Dihedral angle (deg) -cc radian to degree -c 1 -n dihedral_dist_state_A -t Expanded ensemble starting from state A
+Assessment of the hsitogram flatness: N_ratio = 1.354
+The maximum of dihedral angle is 180.000020 deg.
+The minimum of dihedral angle is -179.999963 deg.
+The total number of counts is 2925128.
+Dihedral angle between 82.800025 and 84.600025 deg has the highest count, which is 17081.
+
+Data analysis of the file: COLVAR_backup
+========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/Additional_tests/re_modified/lambda_sampling/state_A/lambda_MetaD/2D_simulation/rep_1
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR_backup -x Dihedral angle (deg) -cc radian to degree -c 1 -n dihedral_dist_state_A -t 2D alchemicalm metadynamics starting from state A
+Assessment of the hsitogram flatness: N_ratio = 1.354
+The maximum of dihedral angle is 180.000020 deg.
+The minimum of dihedral angle is -179.999963 deg.
+The total number of counts is 2925128.
+Dihedral angle between 82.800025 and 84.600025 deg has the highest count, which is 17081.
+
+Data analysis of the file: COLVAR_backup
+========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/Additional_tests/re_modified/lambda_sampling/state_A/lambda_MetaD/2D_simulation/rep_1
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR_backup -x Dihedral angle (deg) -cc radian to degree -c 1 -n dihedral_dist_state_A -t 2D alchemical metadynamics starting from state A
+Assessment of the hsitogram flatness: N_ratio = 1.354
+The maximum of dihedral angle is 180.000020 deg.
+The minimum of dihedral angle is -179.999963 deg.
+The total number of counts is 2925128.
+Dihedral angle between 82.800025 and 84.600025 deg has the highest count, which is 17081.

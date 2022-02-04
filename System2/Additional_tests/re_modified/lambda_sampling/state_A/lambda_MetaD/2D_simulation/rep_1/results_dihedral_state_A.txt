@@ -1,0 +1,22 @@
+
+Data analysis of the file: COLVAR_backup
+========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/Additional_tests/re_modified/lambda_sampling/state_A/lambda_MetaD/2D_simulation/rep_1
+- Command line: /home/wei-tse/.local/bin/plot_xy -i COLVAR_backup -x Time (ns) -cx ps to ns -y Dihedral angle (deg) -cy radian to degree -c 2 -n dihedral_state_A
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of dihedral angle: 209.521 (RMSF: 0.733, max: 458.366, min: 0.000)
+The maximum of dihedral angle occurs at 0.184 ns.
+The minimum of dihedral angle occurs at 0.000 ns.
+The dihedral angle (229.183 deg) at 0.023 ns is closet to the average.
+
+Data analysis of the file: COLVAR_backup
+========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/Additional_tests/re_modified/lambda_sampling/state_A/lambda_MetaD/2D_simulation/rep_1
+- Command line: /home/wei-tse/.local/bin/plot_xy -i COLVAR_backup -x Time (ns) -cx ps to ns -y Dihedral angle (deg) -cy radian to degree -c 1 -n dihedral_state_A
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of dihedral angle: -0.088 (RMSF: -1171.712, max: 180.000, min: -180.000)
+The maximum of dihedral angle occurs at 19.926 ns.
+The minimum of dihedral angle occurs at 27.167 ns.
+The dihedral angle (-0.088 deg) at 2.208 ns is closet to the average.
