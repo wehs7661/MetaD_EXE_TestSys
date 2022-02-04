@@ -1,0 +1,16 @@
+theta: TORSION ATOMS=4,1,2,5
+
+METAD ...
+ARG=theta
+SIGMA=0.5     # small SIGMA ensure that the Gaussian approaximate a delta function
+HEIGHT=2.5     # kJ/mol
+PACE=500        # should be nstexpanded
+GRID_MIN=-pi   # index of alchemical states starts from 0
+GRID_MAX=pi    # we have 6 states in total
+TEMP=298
+BIASFACTOR=60
+LABEL=metad    
+FILE=HILLS
+... METAD
+
+PRINT STRIDE=10 ARG=theta,metad.bias FILE=COLVAR

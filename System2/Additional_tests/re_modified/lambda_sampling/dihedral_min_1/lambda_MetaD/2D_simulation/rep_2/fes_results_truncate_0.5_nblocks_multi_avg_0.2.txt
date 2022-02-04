@@ -1,0 +1,32 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: bootstrapping.py -d rep_1/ rep_2/ -n 2 5 10 20 50 100 500 1000 2000 5000 -s 1994 -hh HILLS_2D -t 0.5
+- Current working directory: rep_2/
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [2, 5, 10, 20, 50, 100, 500, 1000, 2000, 5000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.5
+- Averaged fraction: 0.2
+- Random seed: 1994
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+Section 2: Results of free energy calculations
+==============================================
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      2      |     12500.00    |           15.099180         |     0.063504     |
+|      5      |      5000.00    |           15.099180         |     0.044538     |
+|      10     |      2500.00    |           15.099180         |     0.072839     |
+|      20     |      1250.00    |           15.099180         |     0.070226     |
+|      50     |      500.00     |           15.099180         |     0.085344     |
+|     100     |      250.00     |           15.099180         |     0.080758     |
+|     500     |       50.00     |           15.099180         |     0.084269     |
+|     1000    |       25.00     |           15.099180         |     0.076338     |
+|     2000    |       12.50     |           15.099180         |     0.064022     |
+|     5000    |       5.00      |           15.099180         |     0.049609     |
++-------------+-----------------+-----------------------------+------------------+
+
+Files output by this code: fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.5_avg_0.2.png, fes_results_truncate_0.5_nblocks_multi_avg_0.2.txt
+Time elapsed:  232.19 seconds.
