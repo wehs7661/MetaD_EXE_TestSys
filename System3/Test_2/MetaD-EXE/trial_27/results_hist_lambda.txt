@@ -1,0 +1,20 @@
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_27
+- Command line: /home/wei-tse/.local/bin/plot_hist -i HILLS_2D -n hist_lambda -x $ \lambda $ -nb 40
+Assessment of the hsitogram flatness: N_ratio = 2.909
+The maximum of $ \lambda $ is 39.000000.
+The minimum of $ \lambda $ is 0.000000.
+The total number of counts is 3083464.
+$ \lambda $ between 0.000000 and 0.975000 has the highest probability density.
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_27
+- Command line: /home/wei-tse/.local/bin/plot_hist -i HILLS_2D -n hist_lambda -x $ \lambda $ -nb 40 -t Trial 27
+Assessment of the hsitogram flatness: N_ratio = 2.909
+The maximum of $ \lambda $ is 39.000000.
+The minimum of $ \lambda $ is 0.000000.
+The total number of counts is 3083464.
+$ \lambda $ between 0.000000 and 0.975000 has the highest probability density.

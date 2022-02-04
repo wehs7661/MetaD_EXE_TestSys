@@ -1,0 +1,30 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_26
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR
+Assessment of the hsitogram flatness: N_ratio = 4723.833
+The maximum of x is 14.010166.
+The minimum of x is 0.090653.
+The total number of counts is 1074838.
+X between 0.090653 and 0.160251 has the highest probability density.
+
+Data analysis of the file: HILLS_2D_backup
+==========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_26
+- Command line: /home/wei-tse/.local/bin/plot_hist -i HILLS_2D_backup
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of x is 39.000000.
+The minimum of x is 0.000000.
+The total number of counts is 2227530.
+X between 0.000000 and 0.195000 has the highest probability density.
+
+Data analysis of the file: HILLS_2D_backup
+==========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_26
+- Command line: /home/wei-tse/.local/bin/plot_hist -i HILLS_2D_backup -c 2
+Assessment of the hsitogram flatness: N_ratio = 3328.800
+The maximum of x is 14.284435.
+The minimum of x is 0.090653.
+The total number of counts is 2227530.
+X between 0.445498 and 0.516466 has the highest probability density.

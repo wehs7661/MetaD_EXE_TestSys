@@ -1,0 +1,60 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_26
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -n lambda_hist -x $ \lambda $ -nb 40
+Assessment of the hsitogram flatness: N_ratio = 128.758
+The maximum of $ \lambda $ is 14.284435.
+The minimum of $ \lambda $ is 0.090653.
+The total number of counts is 2238161.
+$ \lambda $ between 0.445498 and 0.800342 has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_26
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -n lambda_hist -x $ \lambda $ -nb 40 -c 2
+Assessment of the hsitogram flatness: N_ratio = 2.911
+The maximum of $ \lambda $ is 39.000000.
+The minimum of $ \lambda $ is 0.000000.
+The total number of counts is 2238161.
+$ \lambda $ between 0.000000 and 0.975000 has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_26
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x Time (ns) -y Number of water molecules -cc ps to ns -n lambda_hist -t w/ the wall potential
+Assessment of the hsitogram flatness: N_ratio = 3328.800
+The maximum of time is 0.014284 ns.
+The minimum of time is 0.000091 ns.
+The total number of counts is 2238161.
+Time between 0.000445 and 0.000516 ns has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_26
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x Time (ns) -y $ \lambda $ -cc ps to ns -n lambda_hist -t w/ the wall potential -nb 40
+Assessment of the hsitogram flatness: N_ratio = 128.758
+The maximum of time is 0.014284 ns.
+The minimum of time is 0.000091 ns.
+The total number of counts is 2238161.
+Time between 0.000445 and 0.000800 ns has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_26
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x Time (ns) -y $ \lambda $ -cc ps to ns -n lambda_hist -t w/ the wall potential -nb 40 -ol -c 2
+Assessment of the hsitogram flatness: N_ratio = 2.911
+The maximum of time is 0.039000 ns.
+The minimum of time is 0.000000 ns.
+The total number of counts is 2238161.
+Time between 0.000000 and 0.000975 ns has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_26
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x $ \lambda $ -n lambda_hist -t w/o the wall potential -nb 40 -ol -c 2
+Assessment of the hsitogram flatness: N_ratio = 2.911
+The maximum of $ \lambda $ is 39.000000.
+The minimum of $ \lambda $ is 0.000000.
+The total number of counts is 2238161.
+$ \lambda $ between 0.000000 and 0.975000 has the highest probability density.

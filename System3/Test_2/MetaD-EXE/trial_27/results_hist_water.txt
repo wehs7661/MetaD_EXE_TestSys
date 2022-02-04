@@ -1,0 +1,20 @@
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_27
+- Command line: /home/wei-tse/.local/bin/plot_hist -i HILLS_2D -c 2 -x Number of water molecules -n hist_water
+Assessment of the hsitogram flatness: N_ratio = 3161.650
+The maximum of number of water molecules is 13.549172.
+The minimum of number of water molecules is 0.089919.
+The total number of counts is 3083464.
+Number of water molecules between 0.291808 and 0.359104 has the highest probability density.
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_27
+- Command line: /home/wei-tse/.local/bin/plot_hist -i HILLS_2D -c 2 -x Number of water molecules -n hist_water -t Trial 27
+Assessment of the hsitogram flatness: N_ratio = 3161.650
+The maximum of number of water molecules is 13.549172.
+The minimum of number of water molecules is 0.089919.
+The total number of counts is 3083464.
+Number of water molecules between 0.291808 and 0.359104 has the highest probability density.

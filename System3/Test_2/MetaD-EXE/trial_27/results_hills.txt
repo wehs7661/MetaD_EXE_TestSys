@@ -1,0 +1,40 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_27
+- Command line: /home/wei-tse/.local/bin/plot_xy -i COLVAR -x Time (ns) -cx ps to ns -y Gaussian height (kT) -cy kJ/mol to kT -n hills -c 5
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of gaussian height: 2.183 (RMSF: 7.599, max: 430.380, min: 0.000)
+The maximum of gaussian height occurs at 38.856 ns.
+The minimum of gaussian height occurs at 0.000 ns.
+The gaussian height (2.183 kT) at 22.787 ns is closet to the average.
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_27
+- Command line: /home/wei-tse/.local/bin/plot_xy -i HILLS_2D -x Time (ns) -cx ps to ns -y Gaussian height (kT) -cy kJ/mol to kT -n hills -c 5
+Analyzing the file ... 
+Plotting and saving figure ...
+
+Data analysis of the file: HILLS_2D_backup
+==========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_27
+- Command line: /home/wei-tse/.local/bin/plot_xy -i HILLS_2D_backup -x Time (ns) -cx ps to ns -y Gaussian height (kT) -cy kJ/mol to kT -n hills -c 5
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of gaussian height: 0.854 (RMSF: 0.987, max: 5.111, min: 0.126)
+The maximum of gaussian height occurs at 14.928 ns.
+The minimum of gaussian height occurs at 40.397 ns.
+The gaussian height (0.854 kT) at 13.216 ns is closet to the average.
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_27
+- Command line: /home/wei-tse/.local/bin/plot_xy -i HILLS_2D -c 5 -n hills -x Time (ns) -cx ps to ns -y Gaussian height (kT) -cy kJ/mol to kT
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of gaussian height: 0.656 (RMSF: 1.149, max: 5.111, min: 0.087)
+The maximum of gaussian height occurs at 14.928 ns.
+The minimum of gaussian height occurs at 58.641 ns.
+The gaussian height (0.656 kT) at 12.803 ns is closet to the average.
