@@ -1,0 +1,331 @@
+Step 8090708, time 16181.4 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000016, max 0.000038 (between atoms 3 and 9)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      9   47.2    0.1093   0.1093      0.1093
+
+Step 8090709, time 16181.4 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000190, max 0.000446 (between atoms 3 and 9)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      9   42.5    0.1093   0.1092      0.1093
+
+Step 8090710, time 16181.4 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000177, max 0.000399 (between atoms 3 and 9)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      9   34.1    0.1092   0.1092      0.1093
+
+Step 8090724, time 16181.4 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000092, max 0.000204 (between atoms 3 and 8)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8   31.0    0.1093   0.1093      0.1093
+
+Step 8090746, time 16181.5 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000100, max 0.000234 (between atoms 3 and 8)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8   31.7    0.1093   0.1093      0.1093
+
+Step 8090747, time 16181.5 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000063, max 0.000147 (between atoms 3 and 8)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8   30.7    0.1093   0.1093      0.1093
+
+Step 8090748, time 16181.5 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000057, max 0.000118 (between atoms 3 and 8)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8   42.0    0.1093   0.1093      0.1093
+
+Step 8090749, time 16181.5 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000237, max 0.000481 (between atoms 3 and 8)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8   37.7    0.1093   0.1092      0.1093
+
+Step 8090750, time 16181.5 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000050, max 0.000108 (between atoms 3 and 8)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8   32.1    0.1092   0.1093      0.1093
+
+Step 8090752, time 16181.5 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000059, max 0.000108 (between atoms 3 and 8)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8   30.3    0.1093   0.1093      0.1093
+
+Step 8090753, time 16181.5 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000193, max 0.000381 (between atoms 3 and 8)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8   32.8    0.1093   0.1093      0.1093
+
+Step 8090762, time 16181.5 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000141, max 0.000245 (between atoms 3 and 10)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      9   33.8    0.1093   0.1093      0.1093
+
+Step 8090763, time 16181.5 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000308, max 0.000745 (between atoms 3 and 9)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      9   37.5    0.1093   0.1094      0.1093
+
+Step 8090764, time 16181.5 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000056, max 0.000132 (between atoms 3 and 9)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      9   33.6    0.1094   0.1093      0.1093
+
+Step 8090774, time 16181.5 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000152, max 0.000272 (between atoms 3 and 10)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3     10   33.3    0.1093   0.1093      0.1093
+      3     10   33.3    0.1093   0.1093      0.1093
+      3     10   33.3    0.1093   0.1093      0.1093
+      3     10   33.3    0.1093   0.1093      0.1093
+      3     10   33.3    0.1093   0.1093      0.1093
+      3     10   33.3    0.1093   0.1093      0.1093
+
+Step 8090775, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000341, max 0.000826 (between atoms 3 and 10)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3     10   36.7    0.1093   0.1092      0.1093
+      3     10   36.7    0.1093   0.1092      0.1093
+      3     10   36.7    0.1093   0.1092      0.1093
+      3     10   36.7    0.1093   0.1092      0.1093
+      3     10   36.7    0.1093   0.1092      0.1093
+      3     10   36.7    0.1093   0.1092      0.1093
+
+Step 8090776, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000132, max 0.000322 (between atoms 3 and 10)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3     10   34.4    0.1092   0.1093      0.1093
+      3     10   34.4    0.1092   0.1093      0.1093
+      3     10   34.4    0.1092   0.1093      0.1093
+      3     10   34.4    0.1092   0.1093      0.1093
+      3     10   34.4    0.1092   0.1093      0.1093
+      3     10   34.4    0.1092   0.1093      0.1093
+
+Step 8090777, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000034, max 0.000062 (between atoms 3 and 10)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3     10   30.7    0.1093   0.1093      0.1093
+      3     10   30.7    0.1093   0.1093      0.1093
+      3     10   30.7    0.1093   0.1093      0.1093
+      3     10   30.7    0.1093   0.1093      0.1093
+      3     10   30.7    0.1093   0.1093      0.1093
+      3     10   30.7    0.1093   0.1093      0.1093
+
+Step 8090783, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000074, max 0.000134 (between atoms 3 and 9)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8   30.6    0.1093   0.1093      0.1093
+
+Step 8090787, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000272, max 0.000573 (between atoms 3 and 8)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8   32.0    0.1093   0.1094      0.1093
+
+Step 8090796, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000096, max 0.000211 (between atoms 3 and 10)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      9   32.8    0.1093   0.1093      0.1093
+
+Step 8090797, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.000026, max 0.000062 (between atoms 3 and 9)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      9   35.9    0.1093   0.1093      0.1093
+
+Step 8090812, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 1.103232, max 2.070263 (between atoms 2 and 7)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      2      7  109.0    0.1093   0.3355      0.1093
+      2      7  109.0    0.1093   0.3355      0.1093
+      2      7  109.0    0.1093   0.3355      0.1093
+      2      7  109.0    0.1093   0.3355      0.1093
+      2      7  109.0    0.1093   0.3355      0.1093
+      2      7  109.0    0.1093   0.3355      0.1093
+      2      7  109.0    0.1093   0.3355      0.1093
+      2      7  109.0    0.1093   0.3355      0.1093
+      3      9  111.4    0.1093   0.2991      0.1093
+Wrote pdb files with previous and current coordinates
+
+Step 8090813, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 0.003799, max 0.007416 (between atoms 3 and 9)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      2      7   70.9    0.3355   0.1093      0.1093
+      2      7   70.9    0.3355   0.1093      0.1093
+      2      7   70.9    0.3355   0.1093      0.1093
+      2      7   70.9    0.3355   0.1093      0.1093
+      2      7   70.9    0.3355   0.1093      0.1093
+      2      7   70.9    0.3355   0.1093      0.1093
+      2      7   70.9    0.3355   0.1093      0.1093
+      2      7   70.9    0.3355   0.1093      0.1093
+      3      8   43.0    0.1128   0.1097      0.1093
+      3      9   71.5    0.2991   0.1085      0.1093
+      3     10   34.4    0.1107   0.1097      0.1093
+      3     10   34.4    0.1107   0.1097      0.1093
+      3     10   34.4    0.1107   0.1097      0.1093
+      3     10   34.4    0.1107   0.1097      0.1093
+      3     10   34.4    0.1107   0.1097      0.1093
+      3     10   34.4    0.1107   0.1097      0.1093
+
+Step 8090814, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 1.076707, max 2.114153 (between atoms 2 and 7)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      2      7  108.7    0.1093   0.3403      0.1093
+      2      7  108.7    0.1093   0.3403      0.1093
+      2      7  108.7    0.1093   0.3403      0.1093
+      2      7  108.7    0.1093   0.3403      0.1093
+      2      7  108.7    0.1093   0.3403      0.1093
+      2      7  108.7    0.1093   0.3403      0.1093
+      2      7  108.7    0.1093   0.3403      0.1093
+      2      7  108.7    0.1093   0.3403      0.1093
+      3      8   38.4    0.1097   0.1100      0.1093
+      3      9  112.8    0.1085   0.2816      0.1093
+Wrote pdb files with previous and current coordinates
+
+Step 8090815, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 3.686629, max 6.966081 (between atoms 2 and 7)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      2      7   97.2    0.3403   0.8706      0.1093
+      2      7   97.2    0.3403   0.8706      0.1093
+      2      7   97.2    0.3403   0.8706      0.1093
+      2      7   97.2    0.3403   0.8706      0.1093
+      2      7   97.2    0.3403   0.8706      0.1093
+      2      7   97.2    0.3403   0.8706      0.1093
+      2      7   97.2    0.3403   0.8706      0.1093
+      2      7   97.2    0.3403   0.8706      0.1093
+      3      8  122.8    0.1100   0.2019      0.1093
+      3      9  113.3    0.2816   0.2761      0.1093
+      3     10   98.9    0.1114   0.7076      0.1093
+      3     10   98.9    0.1114   0.7076      0.1093
+      3     10   98.9    0.1114   0.7076      0.1093
+      3     10   98.9    0.1114   0.7076      0.1093
+      3     10   98.9    0.1114   0.7076      0.1093
+      3     10   98.9    0.1114   0.7076      0.1093
+Wrote pdb files with previous and current coordinates
+
+WARNING: Listed nonbonded interaction between particles 7 and 10
+at distance 3.203 which is larger than the table limit 2.001 nm.
+
+This is likely either a 1,4 interaction, or a listed interaction inside
+a smaller molecule you are decoupling during a free energy calculation.
+Since interactions at distances beyond the table cannot be computed,
+they are skipped until they are inside the table limit again. You will
+only see this message once, even if it occurs for several interactions.
+
+IMPORTANT: This should not happen in a stable simulation, so there is
+probably something wrong with your system. Only change the table-extension
+distance in the mdp file if you are really sure that is the reason.
+
+
+
+Step 8090816, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 13.713437, max 27.528713 (between atoms 3 and 10)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      2      7   55.1    0.8706   2.2020      0.1093
+      2      7   55.1    0.8706   2.2020      0.1093
+      2      7   55.1    0.8706   2.2020      0.1093
+      2      7   55.1    0.8706   2.2020      0.1093
+      2      7   55.1    0.8706   2.2020      0.1093
+      2      7   55.1    0.8706   2.2020      0.1093
+      2      7   55.1    0.8706   2.2020      0.1093
+      2      7   55.1    0.8706   2.2020      0.1093
+      3      8   89.9    0.2019   0.1022      0.1093
+      3      9  109.7    0.2761   0.3241      0.1093
+      3     10  107.8    0.7076   3.1179      0.1093
+      3     10  107.8    0.7076   3.1179      0.1093
+      3     10  107.8    0.7076   3.1179      0.1093
+      3     10  107.8    0.7076   3.1179      0.1093
+      3     10  107.8    0.7076   3.1179      0.1093
+      3     10  107.8    0.7076   3.1179      0.1093
+Wrote pdb files with previous and current coordinates
+
+Step 8090817, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 24.472952, max 52.413609 (between atoms 3 and 10)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8  110.0    0.1022   0.3200      0.1093
+      3      9  108.4    0.3241   0.3467      0.1093
+Wrote pdb files with previous and current coordinates
+
+Step 8090818, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 24.612780, max 54.967030 (between atoms 3 and 10)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8  113.2    0.3200   0.2778      0.1093
+      3      9  102.4    0.3467   0.5096      0.1093
+Wrote pdb files with previous and current coordinates
+
+Step 8090819, time 16181.6 (ps)  LINCS WARNING
+relative constraint deviation after LINCS:
+rms 357597.968750, max 710185.187500 (between atoms 5 and 11)
+bonds that rotated more than 30 degrees:
+ atom 1 atom 2  angle  previous, current, constraint length
+      3      8   45.7    0.2778 55959.9062      0.1093
+      3      9   89.9    0.5096 811.8182      0.1093
+      3     10   51.9    6.1166 2817.6267      0.1093
+      3     10   51.9    6.1166 2817.6267      0.1093
+      3     10   51.9    6.1166 2817.6267      0.1093
+      3     10   51.9    6.1166 2817.6267      0.1093
+      3     10   51.9    6.1166 2817.6267      0.1093
+      3     10   51.9    6.1166 2817.6267      0.1093
+      5     11   62.3    0.0971 68944.8672      0.0971
+      5     11   62.3    0.0971 68944.8672      0.0971
+      5     11   62.3    0.0971 68944.8672      0.0971
+      5     11   62.3    0.0971 68944.8672      0.0971
+      5     11   62.3    0.0971 68944.8672      0.0971
+      5     11   62.3    0.0971 68944.8672      0.0971
+      5     11   62.3    0.0971 68944.8672      0.0971
+      5     11   62.3    0.0971 68944.8672      0.0971
+Wrote pdb files with previous and current coordinates
+Segmentation fault (core dumped)
