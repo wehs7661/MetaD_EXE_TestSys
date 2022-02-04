@@ -1,0 +1,17 @@
+
+
+The log file(s) to be analyzed: sys3.log.
+Length of the simulation for the weights average calculation: 20 ns.
+
+Data analysis of the file sys3.log:
+===================================
+The adjusted weights are (RMSD: nan): 0.00000 10.06830 19.10383 28.19582 36.36797 44.16209 52.69786 59.85441 70.18711 81.23306 88.51732    inf    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan 
+The weights have not equilibrated.
+Initial weights: 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+Final weights:   0.0 9.63135 18.58198 27.64693 35.97242 43.59311 52.09055 59.51245 69.4907 79.54325 85.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115 87.87115
+The difference between the initial weights and final weights are:
+0.0 9.63 18.58 27.65 35.97 43.59 52.09 59.51 69.49 79.54 85.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87 87.87
+Check the log file for more information.
+The adjusted weights are (RMSD: nan): 0.00000 10.06830 19.10383 28.19582 36.36797 44.16209 52.69786 59.85441 70.18711 81.23306 88.51732    inf    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan    nan 
+The starting point of the weights average calculation is less than 0!
+Please specified a shorter length of simulation for the weights average calculation.
