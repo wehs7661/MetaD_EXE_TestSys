@@ -1,0 +1,8 @@
+Minimum 1 is at -1.63362818 (f = 2.17956384 kT).
+Closet configuration is at 4162.000198 ps, whose dihedral is -1.632796.
+Extracting the configurations ...
+
+Minimum 2 is at 1.602212253 (f = 0.0 kT).
+Closet configuration is at 731.000035 ps, whose dihedral is 1.60219.
+Extracting the configurations ...
+

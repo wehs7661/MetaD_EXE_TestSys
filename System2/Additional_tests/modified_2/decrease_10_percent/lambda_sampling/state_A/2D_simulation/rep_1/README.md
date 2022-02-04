@@ -1,0 +1,1 @@
+Note that here we only run metadynamics for the state that lambda=0 (the first alchemical state), since our expanded ensembles later will use the configuraitons at lambda=0 and metadynamics for lambda=0 should be sufficient to show the increase in the torsional barrier.

@@ -1,0 +1,16 @@
+Minimum 1 is at -1.759291886 (f = 4.81912519 kT).
+Closet configuration is at 2208.000105 ps, whose dihedral is -1.758571.
+Extracting the configurations ...
+
+Minimum 2 is at 1.665044106 (f = 0.0 kT).
+Closet configuration is at 1477.00007 ps, whose dihedral is 1.665022.
+Extracting the configurations ...
+
+Minimum 1 is at -1.759291886 (f = 4.81912519 kT).
+Closet configuration is at 2208.000105 ps, whose dihedral is -1.758571.
+Extracting the configurations ...
+
+Minimum 2 is at 1.665044106 (f = 0.0 kT).
+Closet configuration is at 1477.00007 ps, whose dihedral is 1.665022.
+Extracting the configurations ...
+
