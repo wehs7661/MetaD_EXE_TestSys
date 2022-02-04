@@ -1,0 +1,11 @@
+Statistics based on all the repetitions:
+========================================
+- Average free energy difference:  16.626868
+- Standard deviation of all reps:  0.302959
+- Reference value:  16.626868
+- RMSE value:  0.677438
+- Root-mean-squared Z-score:  2.096227
+- The free energy difference of all reps: [' 17.007630', ' 16.273891', ' 16.921294', ' 16.625063', ' 16.306462']
+- The uncertainty of free energy difference of all reps: [' 0.140924', ' 0.142611', ' 0.139833', ' 0.152196', ' 0.158026']
+
+Total time elapsed:  90.29 seconds.
