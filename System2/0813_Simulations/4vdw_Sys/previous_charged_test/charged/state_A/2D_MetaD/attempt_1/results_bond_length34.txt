@@ -1,0 +1,11 @@
+
+Data analysis of the file: bond_length.dat
+==========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/0813_Simulations/4vdw_Sys/charged/state_A/2D_MetaD/attempt_1
+- Command line: /home/wei-tse/.local/bin/plot_xy -i bond_length.dat -x Time (ns) -cx ps to ns -y Bond length 3-4 (nm) -c 3 -n bond_length34 -fx 2
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of bond length 3-4: 0.150 (RMSF: 0.034, max: 0.188, min: 0.117)
+The maximum of bond length 3-4 occurs at 71.738 ns.
+The minimum of bond length 3-4 occurs at 40.952 ns.
+The bond length 3-4 (0.150 nm) at 5.136 ns is closet to the average.

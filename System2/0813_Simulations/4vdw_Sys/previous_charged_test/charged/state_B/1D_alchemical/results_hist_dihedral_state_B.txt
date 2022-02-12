@@ -1,0 +1,10 @@
+
+Data analysis of the file: dihedral.dat
+=======================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/0813_Simulations/4vdw_Sys/charged/state_B/1D_alchemical
+- Command line: /home/wei-tse/.local/bin/plot_hist -i dihedral.dat -x Dihedral (deg) -cc radian to degree -n hist_dihedral_state_B -t 1D alchemical MetaD starting from state B
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of dihedral is 49.426319 deg.
+The minimum of dihedral is -47.962354 deg.
+The total number of counts is 50001.
+Dihedral between 1.218926 and 1.705869 deg has the highest probability density.

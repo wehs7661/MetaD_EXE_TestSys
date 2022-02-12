@@ -1,0 +1,22 @@
+
+Data analysis of the file: temperature_LIG.xvg
+==============================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/0813_Simulations/4vdw_Sys/charged/state_B/2D_MetaD/attempt_1
+- Command line: /home/wei-tse/.local/bin/plot_xy -i temperature_LIG.xvg temperature_SOL.xvg -l Ligand Solvent -x Time (ns) -cx ps to ns -y Temperature (K) -n temperature
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of temperature: 325.104 (RMSF: 0.417, max: 1068.467, min: 40.795)
+The maximum of temperature occurs at 11.786 ns.
+The minimum of temperature occurs at 7.494 ns.
+The temperature (325.100 K) at 8.854 ns is closet to the average.
+
+Data analysis of the file: temperature_SOL.xvg
+==============================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System2/0813_Simulations/4vdw_Sys/charged/state_B/2D_MetaD/attempt_1
+- Command line: /home/wei-tse/.local/bin/plot_xy -i temperature_LIG.xvg temperature_SOL.xvg -l Ligand Solvent -x Time (ns) -cx ps to ns -y Temperature (K) -n temperature
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of temperature: 298.048 (RMSF: 0.027, max: 334.365, min: 266.253)
+The maximum of temperature occurs at 11.866 ns.
+The minimum of temperature occurs at 1.694 ns.
+The temperature (298.047 K) at 7.182 ns is closet to the average.
