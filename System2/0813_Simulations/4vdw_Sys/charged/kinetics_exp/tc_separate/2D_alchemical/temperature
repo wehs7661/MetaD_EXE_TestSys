@@ -1,0 +1,9 @@
+
+Data analysis of the file: temperature.xvg
+==========================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/kinetics_exp/tc_separate/2D_alchemical
+- Command line: /home/wei-tse/.local/bin/plot_xy -i temperature.xvg -o temperature
+Analyzing the file ... 
+Plotting and saving figure ...
+Maximum of y: 1183.813, which occurs at 6712.000.
+Minimum of y: 46.571, which occurs at 8810.000.
