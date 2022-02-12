@@ -1,0 +1,13 @@
+
+Data analysis of the file: temperature.xvg
+==========================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_8/Group_4
+- Command line: /home/wei-tse/.local/bin/plot_xy -i temperature.xvg -x Time (ps) -y Temperature (K) -w 100 -o temperature
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of temperature: 399.055 (RMSF: 0.592, max: 1635.890, min: 80.361)
+The maximum of temperature occurs at 1.078 ps.
+The minimum of temperature occurs at 0.512 ps.
+The temperature (399.096 K) at 0.498 ps is closet to the average.
+Calculating and plotting the running average ...
+Window size: 100 data points

@@ -1,0 +1,3 @@
+Equipartition: Testing group-wise kinetic energies (non-strict)
+* tot:
+After equilibration, decorrelation and tail pruning, 3.30% (33 frames) of original Kinetic energy remain.

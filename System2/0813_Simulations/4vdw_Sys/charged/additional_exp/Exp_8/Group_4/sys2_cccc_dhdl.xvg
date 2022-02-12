@@ -1,0 +1,50 @@
+# This file was created Tue Sep 28 18:17:19 2021
+# Created by:
+#                  :-) GROMACS - gmx mdrun, 2020.4-MODIFIED (-:
+# 
+# Executable:   /usr/local/gromacs/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Working dir:  /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_8/Group_4
+# Command line:
+#   gmx mdrun -s sys2_cccc.tpr -o sys2_cccc.trr -c sys2_cccc_output.gro -e sys2_cccc.edr -dhdl sys2_cccc_dhdl.xvg -g sys2_cccc.log -plumed -cpi state.cpt
+# gmx mdrun is part of G R O M A C S:
+#
+# Great Red Oystrich Makes All Chemists Sane
+#
+@    title "dH/d\xl\f{} and \xD\f{}H"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "dH/d\xl\f{} and \xD\f{}H (kJ/mol [\xl\f{}]\S-1\N)"
+@TYPE xy
+@ subtitle "T = 298 (K) "
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Thermodynamic state"
+@ s1 legend "Total Energy (kJ/mol)"
+@ s2 legend "dH/d\xl\f{} coul-lambda = 0.0000"
+@ s3 legend "dH/d\xl\f{} vdw-lambda = 0.0000"
+@ s4 legend "\xD\f{}H \xl\f{} to (0.0000, 0.0000)"
+@ s5 legend "\xD\f{}H \xl\f{} to (0.0500, 0.0000)"
+@ s6 legend "\xD\f{}H \xl\f{} to (0.1000, 0.0000)"
+@ s7 legend "\xD\f{}H \xl\f{} to (0.2000, 0.0000)"
+@ s8 legend "\xD\f{}H \xl\f{} to (0.3000, 0.0000)"
+@ s9 legend "\xD\f{}H \xl\f{} to (0.3500, 0.0000)"
+@ s10 legend "\xD\f{}H \xl\f{} to (0.4000, 0.0000)"
+@ s11 legend "\xD\f{}H \xl\f{} to (0.4500, 0.0000)"
+@ s12 legend "\xD\f{}H \xl\f{} to (0.5000, 0.0000)"
+@ s13 legend "\xD\f{}H \xl\f{} to (0.6000, 0.0000)"
+@ s14 legend "\xD\f{}H \xl\f{} to (0.7000, 0.0000)"
+@ s15 legend "\xD\f{}H \xl\f{} to (0.8500, 0.0000)"
+@ s16 legend "\xD\f{}H \xl\f{} to (1.0000, 0.0000)"
+@ s17 legend "\xD\f{}H \xl\f{} to (1.0000, 0.2000)"
+@ s18 legend "\xD\f{}H \xl\f{} to (1.0000, 0.4000)"
+@ s19 legend "\xD\f{}H \xl\f{} to (1.0000, 0.5000)"
+@ s20 legend "\xD\f{}H \xl\f{} to (1.0000, 0.6000)"
+@ s21 legend "\xD\f{}H \xl\f{} to (1.0000, 0.7000)"
+@ s22 legend "\xD\f{}H \xl\f{} to (1.0000, 0.8000)"
+@ s23 legend "\xD\f{}H \xl\f{} to (1.0000, 1.0000)"
+0.0000    0 -15401.688 765.92310 -416.47803 -0.00012207031 38.296523 76.592374 153.18490 229.77709 268.07325 306.36946 344.66611 382.96184 459.55418 536.14655 651.03519 765.92371 714.42431 696.66983 693.48938 692.47987 692.96295 694.48896 699.53859
+2.0000    0 -15570.898 710.93640 -585.12189 0.0000000 35.546755 71.093356 142.18708 213.28077 248.82768 284.37434 319.92134 355.46806 426.56170 497.65523 604.29567 710.93611 644.76550 624.89158 621.55612 620.54923 621.08473 622.66655 627.77595

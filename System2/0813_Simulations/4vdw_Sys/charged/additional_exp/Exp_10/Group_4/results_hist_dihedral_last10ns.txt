@@ -1,0 +1,10 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_10/Group_4
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x Dihedral angle (deg) -cc radian to degree -t Last 10 ns (Group 4) -tr 66.666666666666 -n hist_dihedral_last10ns
+Assessment of the hsitogram flatness: N_ratio = 1.518
+The maximum of dihedral angle is 179.999963 deg.
+The minimum of dihedral angle is -179.995436 deg.
+The total number of counts is 1833335.
+Dihedral angle between 0.002263 and 1.802240 deg has the highest count, which is 11272.

@@ -1,0 +1,13 @@
+
+Data analysis of the file: temperature.xvg
+==========================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_8/Group_1
+- Command line: /home/wei-tse/.local/bin/plot_xy -i temperature.xvg -x Time (ps) -y Temperature (K) -o temperature -w 100 -t 2D alchemical metadynamics
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of temperature: 316.744 (RMSF: 0.407, max: 850.684, min: 71.796)
+The maximum of temperature occurs at 1.082 ps.
+The minimum of temperature occurs at 0.838 ps.
+The temperature (317.341 K) at 0.568 ps is closet to the average.
+Calculating and plotting the running average ...
+Window size: 100 data points
