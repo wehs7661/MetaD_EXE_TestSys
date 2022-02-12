@@ -1,0 +1,51 @@
+Equipartition: Testing group-wise kinetic energies (non-strict)
+* tot:
+After equilibration, decorrelation and tail pruning, 20.69% (5173 frames) of original Kinetic energy remain.
+T(mu) = 334.57 +- 1.87 K
+T(sigma) = 340.32 +- 4.24 K
+* tra:
+After equilibration, decorrelation and tail pruning, 78.55% (19639 frames) of original Kinetic energy remain.
+T(mu) = 293.21 +- 1.84 K
+T(sigma) = 295.04 +- 2.77 K
+* rni:
+After equilibration, decorrelation and tail pruning, 16.66% (4166 frames) of original Kinetic energy remain.
+T(mu) = 354.74 +- 2.64 K
+T(sigma) = 364.73 +- 5.39 K
+* rot:
+After equilibration, decorrelation and tail pruning, 56.71% (14178 frames) of original Kinetic energy remain.
+T(mu) = 288.88 +- 1.99 K
+T(sigma) = 288.64 +- 2.96 K
+* int:
+After equilibration, decorrelation and tail pruning, 11.31% (2827 frames) of original Kinetic energy remain.
+T(mu) = 386.66 +- 4.40 K
+T(sigma) = 382.55 +- 7.50 K
+
+
+Equipartition: Testing group-wise kinetic energies (non-strict)
+* tot:
+After equilibration, decorrelation and tail pruning, 23.20% (5799 frames) of original Kinetic energy remain.
+T(mu) = 339.58 +- 1.82 K
+T(sigma) = 352.69 +- 4.19 K
+* tra:
+After equilibration, decorrelation and tail pruning, 56.34% (14085 frames) of original Kinetic energy remain.
+T(mu) = 294.00 +- 2.05 K
+T(sigma) = 296.11 +- 3.01 K
+* rni:
+After equilibration, decorrelation and tail pruning, 19.72% (4931 frames) of original Kinetic energy remain.
+T(mu) = 354.18 +- 2.28 K
+T(sigma) = 373.09 +- 5.02 K
+* rot:
+After equilibration, decorrelation and tail pruning, 50.97% (12742 frames) of original Kinetic energy remain.
+T(mu) = 284.10 +- 2.17 K
+T(sigma) = 288.96 +- 3.27 K
+* int:
+After equilibration, decorrelation and tail pruning, 16.40% (4099 frames) of original Kinetic energy remain.
+T(mu) = 390.72 +- 3.60 K
+T(sigma) = 397.51 +- 6.87 K
+
+Part 1
+[(19.536697782581715, 9.968734012465347), (2.6038601295781723, 1.0700031900916032), (21.464331307511845, 12.377988889244204), (4.571185874460118, 3.156440723502956), (20.140846981412782, 11.27036815941173)]
+
+Part 2
+[(22.894692838028735, 13.04656529365386), (1.9513977379305443, 0.6284945902024528), (24.651625052340133, 14.950259584484296), (6.413060373545937, 2.763923664091133), (25.765480474846548, 14.4874521916349)]
+Time elapsed: 152.8752782344818 seconds.

@@ -1,0 +1,9 @@
+
+Data analysis of the file: angles.dat
+=====================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_1/Group_1
+- Command line: /home/wei-tse/.local/bin/plot_xy -i angles.dat
+Analyzing the file ... 
+Plotting and saving figure ...
+Maximum of y: 2.374, which occurs at 39882.000.
+Minimum of y: 1.803, which occurs at 41488.000.

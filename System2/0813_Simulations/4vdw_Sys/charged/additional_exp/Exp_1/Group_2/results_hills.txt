@@ -1,0 +1,11 @@
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_1/Group_2
+- Command line: /home/wei-tse/.local/bin/plot_xy -i HILLS_2D -c 5 -x Time (ns) -cx ps to ns -y Gaussian height (kT) -cy kJ/mol to kT -n hills
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of gaussian height: 0.282 (RMSF: 0.380, max: 0.508, min: 0.108)
+The maximum of gaussian height occurs at 0.002 ns.
+The minimum of gaussian height occurs at 9.960 ns.
+The gaussian height (0.282 kT) at 2.410 ns is closet to the average.
