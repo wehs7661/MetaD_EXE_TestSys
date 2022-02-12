@@ -1,4 +1,0 @@
-theta: TORSION ATOMS=4,1,2,5
-  
-PRINT ARG=theta STRIDE=10 FILE=dihedral.dat
-
