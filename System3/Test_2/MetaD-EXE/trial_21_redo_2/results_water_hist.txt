@@ -1,0 +1,10 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -x Time (ns) -y Number of water molecules -cc ps to ns -n water_hist -t w/o the wall potential
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of time is 0.018055 ns.
+The minimum of time is 0.000096 ns.
+The total number of counts is 2201274.
+Time between 0.000455 and 0.000545 ns has the highest probability density.

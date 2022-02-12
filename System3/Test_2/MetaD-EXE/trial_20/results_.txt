@@ -1,0 +1,80 @@
+
+Data analysis of the file: COLVARa
+==================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_20
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVARa -ol
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_20
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -ol
+Assessment of the hsitogram flatness: N_ratio = 6391.000
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_20
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -ol
+Assessment of the hsitogram flatness: N_ratio = 6391.000
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_20
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -ol
+Assessment of the hsitogram flatness: N_ratio = 6391.000
+The maximum of x is 17.025912.
+The minimum of x is 0.166409.
+The total number of counts is 1000001.
+X between 8.511863 and 8.596160 has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_20
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -ol
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_20
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -ol
+Assessment of the hsitogram flatness: N_ratio = 6391.000
+The maximum of x is 17.025912.
+The minimum of x is 0.166409.
+The total number of counts is 1000001.
+X between 8.511863 and 8.596160 has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_20
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -ol
+Assessment of the hsitogram flatness: N_ratio = 6391.000
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_20
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -ol
+Assessment of the hsitogram flatness: N_ratio = 6391.000
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_20
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -ol
+Assessment of the hsitogram flatness: N_ratio = 6391.000
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_20
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -ol
+Assessment of the hsitogram flatness: N_ratio = 6391.000
+The maximum of x is 17.025912.
+The minimum of x is 0.166409.
+The total number of counts is 1000001.
+X between 8.511863 and 8.596160 has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_20
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -ol
+Assessment of the hsitogram flatness: N_ratio = 6391.000
+The maximum of x is 17.025912.
+The minimum of x is 0.166409.
+The total number of counts is 1000001.
+X between 8.511863 and 8.596160 has the highest probability density.

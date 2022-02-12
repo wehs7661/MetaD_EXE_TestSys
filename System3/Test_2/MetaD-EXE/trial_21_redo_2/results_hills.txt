@@ -1,0 +1,47 @@
+
+Data analysis of the file: HILLS_2D.copy
+========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21
+- Command line: /home/wei-tse/anaconda3/bin/plot_xy -i HILLS_2D.copy -x Time (ns) -cx ps to ns -y Gaussian height (kT) -cy kJ/mol to kT -n hills
+Analyzing the file ... 
+Plotting and saving figure ...
+
+Data analysis of the file: HILLS_2D.copy
+========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21
+- Command line: /home/wei-tse/anaconda3/bin/plot_xy -i HILLS_2D.copy -x Time (ns) -cx ps to ns -y Gaussian height (kJ/mol) -n hills
+Analyzing the file ... 
+Plotting and saving figure ...
+
+Data analysis of the file: HILLS_2D.copy
+========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21
+- Command line: /home/wei-tse/anaconda3/bin/plot_xy -i HILLS_2D.copy -x Time (ps) -y Gaussian height (kJ/mol) -n hills
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of gaussian height: 15.833 (RMSF: 0.750, max: 39.000, min: 0.000)
+The maximum of gaussian height occurs at 592.840 ps.
+The minimum of gaussian height occurs at 0.020 ps.
+The gaussian height (16.000 kJ/mol) at 348.860 ps is closet to the average.
+
+Data analysis of the file: HILLS_2D.copy
+========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21
+- Command line: /home/wei-tse/anaconda3/bin/plot_xy -i HILLS_2D.copy -x Time (ps) -y Gaussian height (kJ/mol) -n hills
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of gaussian height: 15.833 (RMSF: 0.750, max: 39.000, min: 0.000)
+The maximum of gaussian height occurs at 592.840 ps.
+The minimum of gaussian height occurs at 0.020 ps.
+The gaussian height (16.000 kJ/mol) at 348.860 ps is closet to the average.
+
+Data analysis of the file: HILLS_2D.copy
+========================================
+- Working directory: /home/wei-tse/Documents/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_21
+- Command line: /home/wei-tse/anaconda3/bin/plot_xy -i HILLS_2D.copy -x Time (ps) -y Gaussian height (kJ/mol) -n hills -c 5
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of gaussian height: 1.594 (RMSF: 1.186, max: 12.670, min: 0.190)
+The maximum of gaussian height occurs at 619.200 ps.
+The minimum of gaussian height occurs at 74174.204 ps.
+The gaussian height (1.594 kJ/mol) at 31058.781 ps is closet to the average.
