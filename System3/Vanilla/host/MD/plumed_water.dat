@@ -1,0 +1,5 @@
+center: CENTER ATOMS=1-144            # geometric center of the host molecule
+water_group: GROUP ATOMS=145-3300:3   # oxygen atom of the water molecules
+n: COORDINATION GROUPA=center GROUPB=water_group R_0=0.15
+
+PRINT STRIDE=10 ARG=n FILE=water_0.15.dat
