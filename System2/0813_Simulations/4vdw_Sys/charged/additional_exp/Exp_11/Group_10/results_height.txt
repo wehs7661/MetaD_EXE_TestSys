@@ -1,0 +1,25 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_11/Group_10
+- Command line: /home/wei-tse/.local/bin/plot_xy -i COLVAR -c 5 -cx ps to ns -x Time (ns) -n height -y Gaussian height -cy kcal/mol to kT
+Analyzing the file ... 
+Plotting and saving figure ...
+
+Data analysis of the file: HEIGHT
+=================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_11/Group_10
+- Command line: /home/wei-tse/.local/bin/plot_xy -i HEIGHT -c 5 -cx ps to ns -x Time (ns) -n height -y Gaussian height -cy kcal/mol to kT
+Analyzing the file ... 
+Plotting and saving figure ...
+
+Data analysis of the file: HILLS_2D
+===================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_11/Group_10
+- Command line: /home/wei-tse/.local/bin/plot_xy -i HILLS_2D -c 5 -cx ps to ns -x Time (ns) -n height -y Gaussian height -cy kcal/mol to kT
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of gaussian height: 0.994 (RMSF: 0.901, max: 4.255, min: 0.103)
+The maximum of gaussian height occurs at 0.001 ns.
+The minimum of gaussian height occurs at 49.965 ns.
+The gaussian height (0.994) at 42.245 ns is closet to the average.

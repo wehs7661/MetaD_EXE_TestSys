@@ -1,0 +1,10 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_11/Group_1
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -c 2 -n wow
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of x is 19.000000.
+The minimum of x is 0.000000.
+The total number of counts is 5500002.
+X between 0.000000 and 0.095000 has the highest count, which is 1442969.

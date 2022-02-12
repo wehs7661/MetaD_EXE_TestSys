@@ -1,0 +1,9 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_11/Group_10
+- Command line: /home/wei-tse/.local/bin/plot_xy -i COLVAR
+Analyzing the file ... 
+Plotting and saving figure ...
+Maximum of y: 3.142, which occurs at 20010.681.
+Minimum of y: -3.142, which occurs at 9483.300.

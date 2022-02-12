@@ -1,0 +1,19 @@
+theta: TORSION ATOMS=1,2,3,4
+lambda: EXTRACV NAME=lambda
+
+METAD ...
+RESTART=YES
+ARG=theta,lambda 
+SIGMA=0.5,0.0001     # small SIGMA ensure that the Gaussian approaximate a delta function
+HEIGHT=24.7770903995    # kJ/mol
+PACE=500        # should be nstexpanded
+GRID_MIN=-pi,0   # index of alchemical states starts from 0
+GRID_MAX=pi,15    # we have 6 states in total
+GRID_BIN=360,15
+TEMP=298
+BIASFACTOR=60
+LABEL=metad    
+FILE=HILLS_2D
+... METAD
+
+PRINT STRIDE=10 ARG=theta,lambda,metad.bias FILE=COLVAR

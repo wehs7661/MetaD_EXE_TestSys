@@ -1,0 +1,22 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_11/Group_10
+- Command line: /home/wei-tse/.local/bin/plot_xy -i COLVAR -c 2 -cx ps to ns -x Time (ns) -n lambda -y $ \lambda $
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of $ \lambda $: 5.196 (RMSF: 1.062, max: 19.000, min: 0.000)
+The maximum of $ \lambda $ occurs at 4.408 ns.
+The minimum of $ \lambda $ occurs at 0.000 ns.
+The $ \lambda $ (5.000) at 1.152 ns is closet to the average.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_11/Group_10
+- Command line: /home/wei-tse/.local/bin/plot_xy -i COLVAR -c 2 -cx ps to ns -x Time (ns) -n lambda -y $ \lambda $ -tr 83.3333
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of $ \lambda $: 6.118 (RMSF: 0.976, max: 19.000, min: 0.000)
+The maximum of $ \lambda $ occurs at 50.029 ns.
+The minimum of $ \lambda $ occurs at 50.001 ns.
+The $ \lambda $ (6.000) at 50.000 ns is closet to the average.

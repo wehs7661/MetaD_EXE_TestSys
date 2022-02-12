@@ -1,0 +1,18 @@
+Equipartition: Testing group-wise kinetic energies (strict)
+* total:
+After equilibration, decorrelation and tail pruning, 99.06% (49532 frames) of original Kinetic energy remain.
+p = 0.628229
+* translational:
+After equilibration, decorrelation and tail pruning, 100.00% (50001 frames) of original Kinetic energy remain.
+p = 0.960979
+* rotational and internal:
+After equilibration, decorrelation and tail pruning, 100.00% (50001 frames) of original Kinetic energy remain.
+p = 0.764142
+* rotational:
+After equilibration, decorrelation and tail pruning, 100.00% (50001 frames) of original Kinetic energy remain.
+p = 0.942165
+* internal:
+After equilibration, decorrelation and tail pruning, 99.77% (49888 frames) of original Kinetic energy remain.
+p = 0.923891
+[0.6282286019898323, 0.9609794088277399, 0.7641415467415836, 0.9421647129913118, 0.9238907184453827]
+Time elapsed: 328.13112902641296 seconds.

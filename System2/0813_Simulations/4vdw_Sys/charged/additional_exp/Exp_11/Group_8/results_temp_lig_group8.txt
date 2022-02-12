@@ -1,0 +1,11 @@
+
+Data analysis of the file: temperature_lig.xvg
+==============================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_11/Group_8
+- Command line: /home/wei-tse/.local/bin/plot_xy -i temperature_lig.xvg -x Time (ns) -cx ps to ns -y Temperature (K) -t Ligand temperature -n temp_lig_group8
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of temperature: 302.399 (RMSF: 0.407, max: 995.684, min: 34.446)
+The maximum of temperature occurs at 1.382 ns.
+The minimum of temperature occurs at 6.186 ns.
+The temperature (302.484 K) at 4.548 ns is closet to the average.

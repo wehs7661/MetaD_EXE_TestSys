@@ -1,0 +1,10 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /media/wei-tse/ADATA NH03/CU Boulder data/MetaD_TestSys/System2/0813_Simulations/4vdw_Sys/charged/additional_exp/Exp_11/Group_7
+- Command line: /home/wei-tse/.local/bin/plot_hist -i COLVAR -c 2 -x $ \lambda $ -nb 20 -n lambda_distribution_group7 -t Group 7
+Assessment of the hsitogram flatness: N_ratio = 43.961
+The maximum of $ \lambda $ is 19.000000.
+The minimum of $ \lambda $ is 0.000000.
+The total number of counts is 500001.
+$ \lambda $ between 0.000000 and 0.950000 has the highest count, which is 128631.
