@@ -1,0 +1,44 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: bootstrap_estimator.py -d rep_2/ -hh HILLS_LAMBDA -n 2 5 10 20 50 100 200 500 1000 2000 5000 -s 1994 -t 0.2
+- Current working directory: rep_2/
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_LAMBDA, and COLVAR output by the simulation
+- Number of blocks: [2, 5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.2
+- Averaged fraction: 0.2
+- Random seed: 1994
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+Section 2: Results of free energy calculations
+==============================================
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      2      |      2000.00    |          103.372551         |     0.049396     |
+|      5      |      800.00     |          103.372551         |     0.045774     |
+|      10     |      400.00     |          103.372551         |     0.135317     |
+|      20     |      200.00     |          103.372551         |     0.258989     |
+|      50     |       80.00     |          103.372551         |     0.325512     |
+|     100     |       40.00     |          103.372551         |     0.298187     |
+|     200     |       20.00     |          103.372551         |     0.276786     |
+|     500     |       8.00      |          103.372551         |     0.179245     |
+|     1000    |       4.00      |          103.372551         |     0.149119     |
+|     2000    |       2.00      |          103.372551         |     0.121585     |
+|     5000    |       0.80      |          103.372551         |     0.076192     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+==================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.2_avg_0.2.png, fes_results_truncate_0.2_nblocks_multi_avg_0.2.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     960.16 MB    |
+|    average_bias    |     232.27 MB    |
+| read_plumed_output |     238.09 MB    |
++--------------------+------------------+
+- Time elapsed:  247.08 seconds.

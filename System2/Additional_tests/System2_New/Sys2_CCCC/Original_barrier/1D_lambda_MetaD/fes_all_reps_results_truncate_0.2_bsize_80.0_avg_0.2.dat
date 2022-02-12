@@ -1,0 +1,23 @@
+Statistics based on all the repetitions:
+========================================
+- Average free energy difference:  103.234338
+- Standard deviation of the centers of all reps:  0.715329
+- Reference value:  103.234338
+- RMSE value:  0.715329
+- Root-mean-squared Z-score:  2.698883
+- The free energy difference of all reps: [' 104.033112', ' 103.372551', ' 102.297351']
+- The uncertainty of free energy difference of all reps: [' 0.237730', ' 0.319642', ' 0.290892']
+
+Section 3: Information about the analysis process
+==================================================
+- The size of the bootstrap array (n_bootstrap, n_block, block_size): (200, 50, 4000)
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |      1.01 GB     |
+|    average_bias    |     320.30 MB    |
+| read_plumed_output |     320.30 MB    |
++--------------------+------------------+
+
+Total time elapsed:  158.78 seconds.

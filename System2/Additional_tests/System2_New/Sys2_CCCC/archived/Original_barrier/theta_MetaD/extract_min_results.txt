@@ -1,0 +1,32 @@
+Minimum 1 is at 0.0 (f = -135.544923524 kT).
+Closet configuration is at 4947.000235 ps, whose dihedral is -0.00013.
+Extracting the configurations ...
+
+Minimum 1 is at 0.0 (f = -135.544923524 kT).
+Closet configuration is at 4947.000235 ps, whose dihedral is -0.00013.
+Extracting the configurations ...
+
+Minimum 1 is at 0.0 (f = -135.544923524 kT).
+Closet configuration is at 4947.000235 ps, whose dihedral is -0.00013.
+Extracting the configurations ...
+
+Minimum 1 is at 0.0 (f = -135.544923524 kT).
+Closet configuration is at 4947.000235 ps, whose dihedral is -0.00013.
+Extracting the configurations ...
+
+Minimum 1 is at 0.0 (f = -135.544923524 kT).
+Closet configuration is at 4947.000235 ps, whose dihedral is -0.00013.
+Extracting the configurations ...
+
+Minimum 1 is at 0.0 (f = -135.544923524 kT).
+Closet configuration is at 4947.000235 ps, whose dihedral is -0.00013.
+Extracting the configurations ...
+
+Minimum 1 is at -3.141592654 (f = -141.334617598 kT).
+Closet configuration is at 2104.0001 ps, whose dihedral is -3.14156.
+Extracting the configurations ...
+
+Minimum 2 is at 0.0 (f = -135.544923524 kT).
+Closet configuration is at 4947.000235 ps, whose dihedral is -0.00013.
+Extracting the configurations ...
+

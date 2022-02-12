@@ -1,0 +1,39 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: bootstrap_estimator.py -d state_B_new_box/MetaD/ -s 1994 -n 50 20 50 100 200 500 -hh HILLS_2D -t 0.5
+- Current working directory: state_B_new_box/MetaD/
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [50, 20, 50, 100, 200, 500]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.5
+- Averaged fraction: 0.2
+- Random seed: 1994
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+Section 2: Results of free energy calculations
+==============================================
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      50     |      1000.00    |          -2.487048          |     0.041842     |
+|      20     |      2500.00    |          -2.487048          |     0.034498     |
+|      50     |      1000.00    |          -2.487048          |     0.040822     |
+|     100     |      500.00     |          -2.487048          |     0.041292     |
+|     200     |      250.00     |          -2.487048          |     0.038091     |
+|     500     |      100.00     |          -2.487048          |     0.043910     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+==================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.5_avg_0.2.png, fes_results_truncate_0.5_nblocks_multi_avg_0.2.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |      8.56 GB     |
+|    average_bias    |     215.28 MB    |
+| read_plumed_output |     756.16 MB    |
++--------------------+------------------+
+- Time elapsed:  874.40 seconds.
