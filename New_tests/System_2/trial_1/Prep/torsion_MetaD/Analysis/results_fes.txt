@@ -1,0 +1,9 @@
+
+Data analysis of the file: fes.dat
+==================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Prep/torsion_MetaD_redo/Analysis
+- Command line: /home/wei-tse/.local/bin/plot_xy -i fes.dat -x Dihedral (deg) -y Free energy (kT) -cx radian to degree -cy kJ/mol to kT -n fes
+Analyzing the file ... 
+Plotting and saving figure ...
+Maximum of free energy: 48.966 kT, which occurs at -90.000 deg.
+Minimum of free energy: 0.000 kT, which occurs at -180.000 deg.

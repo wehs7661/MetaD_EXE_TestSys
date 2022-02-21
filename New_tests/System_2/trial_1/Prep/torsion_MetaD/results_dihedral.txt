@@ -1,0 +1,7 @@
+
+Data analysis of the file: ../COLVAR
+====================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Prep/torsion_MetaD_redo
+- Command line: /home/wei-tse/.local/bin/plot_xy -i ../COLVAR -x Time (ns) -cx ps to ns -y Dihedral (deg) -cy radian to degree -n dihedral
+Analyzing the file ... 
+Plotting and saving figure ...

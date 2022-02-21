@@ -1,0 +1,20 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_29
+- Command line: /jet/home/wehs7661/.local/bin/plot_hist -i COLVAR -x Number of water molecules -y Count -t Trial 29 -n water -c 2
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of number of water molecules is 39.000000.
+The minimum of number of water molecules is 0.000000.
+The total number of counts is 5000001.
+Number of water molecules between 0.000000 and 0.195000 has the highest probability density.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_29
+- Command line: /jet/home/wehs7661/.local/bin/plot_hist -i COLVAR -x Number of water molecules -y Count -t Trial 29 -n water
+Assessment of the hsitogram flatness: N_ratio = 16054.778
+The maximum of number of water molecules is 9.924147.
+The minimum of number of water molecules is 0.089800.
+The total number of counts is 5000001.
+Number of water molecules between 0.286487 and 0.335659 has the highest probability density.
