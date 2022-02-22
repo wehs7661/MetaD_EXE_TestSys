@@ -1,0 +1,11 @@
+
+Data analysis of the file: ../COLVAR
+====================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Prep/torsion_MetaD/Analysis
+- Command line: /home/wei-tse/.local/bin/plot_xy -i ../COLVAR -x Time (ns) -cx ps to ns -y Dihedral (deg) -cy radian to degree -n dihedral
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of dihedral: -1.433 (RMSF: -81.146, max: 179.999, min: -180.000)
+The maximum of dihedral occurs at 1.548 ns.
+The minimum of dihedral occurs at 3.528 ns.
+The dihedral (-1.431 deg) at 4.029 ns is closet to the average.

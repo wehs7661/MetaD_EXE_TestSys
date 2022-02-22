@@ -1,0 +1,11 @@
+
+Data analysis of the file: volume.xvg
+=====================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Prep/short_MD/MD
+- Command line: /home/wei-tse/.local/bin/plot_xy -i volume.xvg -x Time (ns) -y Volume (nm$^3$) -cx ps to ns -n volume
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of volume: 25.876 (RMSF: 0.011, max: 26.911, min: 24.873)
+The maximum of volume occurs at 3.910 ns.
+The minimum of volume occurs at 1.984 ns.
+The volume (25.877) at 0.054 ns is closet to the average.

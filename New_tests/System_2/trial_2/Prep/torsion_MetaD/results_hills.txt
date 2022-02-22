@@ -1,0 +1,7 @@
+
+Data analysis of the file: ../HILLS
+===================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Prep/torsion_MetaD
+- Command line: /home/wei-tse/.local/bin/plot_xy -i ../HILLS -x Time (ns) -cx ps to ns -y Height (kT) -cy kJ/mol to kT -n hills -c 3
+Analyzing the file ... 
+Plotting and saving figure ...

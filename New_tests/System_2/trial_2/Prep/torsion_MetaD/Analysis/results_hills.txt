@@ -1,0 +1,11 @@
+
+Data analysis of the file: ../HILLS
+===================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Prep/torsion_MetaD/Analysis
+- Command line: /home/wei-tse/.local/bin/plot_xy -i ../HILLS -x Time (ns) -cx ps to ns -y Height (kT) -cy kJ/mol to kT -n hills -c 3
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of height: 0.044 (RMSF: 2.003, max: 1.111, min: 0.004)
+The maximum of height occurs at 0.001 ns.
+The minimum of height occurs at 4.998 ns.
+The height (0.044 kT) at 2.001 ns is closet to the average.
