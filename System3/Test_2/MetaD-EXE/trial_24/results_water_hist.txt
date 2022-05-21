@@ -1,0 +1,5 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_24
+- Command line: /jet/home/wehs7661/.local/bin/plot_hist -i COLVAR -x Number of water molecules -t First 50% of the data -trb 50 -n water_hist

@@ -1,0 +1,22 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_24
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i COLVAR -x Time (ns) -cx ps to ns -y Number of water molecules -trb 50 -n water_timeseries_trial24
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of number of water molecules: 6.883 (RMSF: 0.631, max: 17.642, min: 0.086)
+The maximum of number of water molecules occurs at 31.452 ns.
+The minimum of number of water molecules occurs at 22.306 ns.
+The number of water molecules (6.883) at 20.482 ns is closet to the average.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/MetaD_EXE_TestSys/System3/Test_2/MetaD-EXE/trial_24
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i COLVAR -x Time (ns) -cx ps to ns -y Number of water molecules -trb 70 -n water_timeseries_trial24
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of number of water molecules: 7.047 (RMSF: 0.610, max: 17.642, min: 0.086)
+The maximum of number of water molecules occurs at 31.452 ns.
+The minimum of number of water molecules occurs at 22.306 ns.
+The number of water molecules (7.047) at 36.090 ns is closet to the average.

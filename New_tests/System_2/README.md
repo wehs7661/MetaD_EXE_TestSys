@@ -11,4 +11,8 @@ Here in different trials we were testing out different charges and force constan
     - Starting from state A: not calculated but should be around 5.5 kt or so
     - Starting from state B: not finished because we think another trial (not presented here, charges=+/-0.2, force constant=60) is better 
 
-
+- trial_3: total charges = +/- 0.2, force constant = 60
+    - Adopted case.
+    - Length: 100 ns, later extended to 200 ns.
+    - Starting from state A (100 ns): -0.735 +/- 0.065 kT
+    - Starting from state B (100 ns): -1.907 +/- 0.070 kT
