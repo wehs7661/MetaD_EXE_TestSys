@@ -1,0 +1,101 @@
+
+Data analysis of the file: distribution_analysis/distance/distance_1_4_stateA.dat
+=================================================================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Test_1/2D_lambda_MetaD/trial_3
+- Command line: /home/wei-tse/.local/bin/plot_hist -i distribution_analysis/distance/distance_1_4_stateA.dat distribution_analysis/distance/distance_1_4_stateB.dat -y 1-4 distance (nm) -l State A State B -n sys2_distance_1_4
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of x is 0.415504.
+The minimum of x is 0.280064.
+The total number of counts is 10001.
+X between 0.386384 and 0.387062 has the highest count, which is 120.
+
+Data analysis of the file: distribution_analysis/distance/distance_1_4_stateB.dat
+=================================================================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Test_1/2D_lambda_MetaD/trial_3
+- Command line: /home/wei-tse/.local/bin/plot_hist -i distribution_analysis/distance/distance_1_4_stateA.dat distribution_analysis/distance/distance_1_4_stateB.dat -y 1-4 distance (nm) -l State A State B -n sys2_distance_1_4
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of x is 0.416694.
+The minimum of x is 0.281116.
+The total number of counts is 10001.
+X between 0.388901 and 0.389578 has the highest count, which is 133.
+
+Data analysis of the file: distribution_analysis/distance/distance_1_4_stateA.dat
+=================================================================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Test_1/2D_lambda_MetaD/trial_3
+- Command line: /home/wei-tse/.local/bin/plot_hist -i distribution_analysis/distance/distance_1_4_stateA.dat distribution_analysis/distance/distance_1_4_stateB.dat -y 1-4 distance (nm) -l State A State B -n sys2_distance_1_4 -ks
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of x is 0.415504.
+The minimum of x is 0.280064.
+The total number of counts is 10001.
+X between 0.386384 and 0.387062 has the highest count, which is 120.
+
+Data analysis of the file: distribution_analysis/distance/distance_1_4_stateB.dat
+=================================================================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Test_1/2D_lambda_MetaD/trial_3
+- Command line: /home/wei-tse/.local/bin/plot_hist -i distribution_analysis/distance/distance_1_4_stateA.dat distribution_analysis/distance/distance_1_4_stateB.dat -y 1-4 distance (nm) -l State A State B -n sys2_distance_1_4 -ks
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of x is 0.416694.
+The minimum of x is 0.281116.
+The total number of counts is 10001.
+X between 0.388901 and 0.389578 has the highest count, which is 133.
+
+=== Kolmogorov-Smirnov test ===
+- Files of interest: distribution_analysis/distance/distance_1_4_stateA.dat, distribution_analysis/distance/distance_1_4_stateB.dat
+- Null hypothesis: The distributions obtained from the two files are consistent with each other.
+- D-statistics 0.015898410158984078
+- p-value: 0.15793543433899726
+- Interpretation: The two distributions are consistent with each other.
+
+Data analysis of the file: distribution_analysis/distance/distance_1_4_stateA.dat
+=================================================================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Test_1/2D_lambda_MetaD/trial_3
+- Command line: /home/wei-tse/.local/bin/plot_hist -i distribution_analysis/distance/distance_1_4_stateA.dat distribution_analysis/distance/distance_1_4_stateB.dat -x 1-4 distance (nm) -l State A State B -n sys2_distance_1_4 -ks
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of 1-4 distance is 0.415504 nm.
+The minimum of 1-4 distance is 0.280064 nm.
+The total number of counts is 10001.
+1-4 distance between 0.386384 and 0.387062 nm has the highest count, which is 120.
+
+Data analysis of the file: distribution_analysis/distance/distance_1_4_stateB.dat
+=================================================================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Test_1/2D_lambda_MetaD/trial_3
+- Command line: /home/wei-tse/.local/bin/plot_hist -i distribution_analysis/distance/distance_1_4_stateA.dat distribution_analysis/distance/distance_1_4_stateB.dat -x 1-4 distance (nm) -l State A State B -n sys2_distance_1_4 -ks
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of 1-4 distance is 0.416694 nm.
+The minimum of 1-4 distance is 0.281116 nm.
+The total number of counts is 10001.
+1-4 distance between 0.388901 and 0.389578 nm has the highest count, which is 133.
+
+=== Kolmogorov-Smirnov test ===
+- Files of interest: distribution_analysis/distance/distance_1_4_stateA.dat, distribution_analysis/distance/distance_1_4_stateB.dat
+- Null hypothesis: The distributions obtained from the two files are consistent with each other.
+- D-statistics 0.015898410158984078
+- p-value: 0.15793543433899726
+- Interpretation: The two distributions are consistent with each other.
+
+Data analysis of the file: distribution_analysis/distance/distance_1_4_stateA.dat
+=================================================================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Test_1/2D_lambda_MetaD/trial_3
+- Command line: /home/wei-tse/.local/bin/plot_hist -i distribution_analysis/distance/distance_1_4_stateA.dat distribution_analysis/distance/distance_1_4_stateB.dat -x 1-4 distance (nm) -l State A State B -n sys2_distance_1_4 -ks
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of 1-4 distance is 0.415504 nm.
+The minimum of 1-4 distance is 0.280064 nm.
+The total number of counts is 10001.
+1-4 distance between 0.386384 and 0.387062 nm has the highest count, which is 120.
+
+Data analysis of the file: distribution_analysis/distance/distance_1_4_stateB.dat
+=================================================================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Test_1/2D_lambda_MetaD/trial_3
+- Command line: /home/wei-tse/.local/bin/plot_hist -i distribution_analysis/distance/distance_1_4_stateA.dat distribution_analysis/distance/distance_1_4_stateB.dat -x 1-4 distance (nm) -l State A State B -n sys2_distance_1_4 -ks
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of 1-4 distance is 0.416694 nm.
+The minimum of 1-4 distance is 0.281116 nm.
+The total number of counts is 10001.
+1-4 distance between 0.388901 and 0.389578 nm has the highest count, which is 133.
+
+=== Kolmogorov-Smirnov test ===
+- Files of interest: distribution_analysis/distance/distance_1_4_stateA.dat, distribution_analysis/distance/distance_1_4_stateB.dat
+- Null hypothesis: The distributions obtained from the two files are consistent with each other.
+- D-statistics 0.015898410158984078
+- p-value: 0.15793543433899726
+- Interpretation: The two distributions are consistent with each other.

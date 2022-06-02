@@ -1,0 +1,22 @@
+
+Data analysis of the file: State_A/dihedral.dat
+===============================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Test_1/1D_lambda_MetaD
+- Command line: /home/wei-tse/.local/bin/plot_xy -x Time (ns) -cx ps to ns -fx 2 -y Dihedral (deg) -cy radian to degree -t Sampled dihedral as a function of time -n dihedral_A_B -l 1D λ-MetaD starting from State A 1D λ-MetaD starting from State B -i State_A/dihedral.dat State_B/dihedral.dat
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of dihedral: 0.152 (RMSF: 1150.952, max: 180.000, min: -180.000)
+The maximum of dihedral occurs at 27.132 ns.
+The minimum of dihedral occurs at 68.446 ns.
+The dihedral (-153.447 deg) at 15.318 ns is closet to the average.
+
+Data analysis of the file: State_B/dihedral.dat
+===============================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Test_1/1D_lambda_MetaD
+- Command line: /home/wei-tse/.local/bin/plot_xy -x Time (ns) -cx ps to ns -fx 2 -y Dihedral (deg) -cy radian to degree -t Sampled dihedral as a function of time -n dihedral_A_B -l 1D λ-MetaD starting from State A 1D λ-MetaD starting from State B -i State_A/dihedral.dat State_B/dihedral.dat
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of dihedral: -0.003 (RMSF: -2206.904, max: 27.750, min: -26.567)
+The maximum of dihedral occurs at 116.952 ns.
+The minimum of dihedral occurs at 75.102 ns.
+The dihedral (-0.003 deg) at 40.702 ns is closet to the average.

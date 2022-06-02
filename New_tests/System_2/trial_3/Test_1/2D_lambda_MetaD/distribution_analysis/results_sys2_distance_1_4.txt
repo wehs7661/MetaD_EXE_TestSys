@@ -1,0 +1,5 @@
+
+Data analysis of the file: distribution_analysis/distance/*
+===========================================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_2/Test_1/2D_lambda_MetaD/trial_3/distribution_analysis
+- Command line: /home/wei-tse/.local/bin/plot_hist -i distribution_analysis/distance/* -x 1-4 distance (nm) -l State A State B -n sys2_distance_1_4 -ks

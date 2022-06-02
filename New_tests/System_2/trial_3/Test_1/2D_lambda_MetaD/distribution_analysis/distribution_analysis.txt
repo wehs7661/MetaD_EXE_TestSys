@@ -1,0 +1,18 @@
+Command line: topological_CV_analysis.py -f State_A State_B -r -p sys2
+
+Comparing the data distributions in distribution_analysis/angle/angle_1_2_3_stateA.dat and distribution_analysis/angle/angle_1_2_3_stateB.dat ...
+Null hypothesis: The distributions obtained from the two files are consistent with each other.
+p-value: 0.5535670169842108
+Interpretation: The two distributions are consistent with each other.
+
+Comparing the data distributions in distribution_analysis/angle/angle_2_3_4_stateA.dat and distribution_analysis/angle/angle_2_3_4_stateB.dat ...
+Null hypothesis: The distributions obtained from the two files are consistent with each other.
+p-value: 0.8403569080142048
+Interpretation: The two distributions are consistent with each other.
+
+Comparing the data distributions in distribution_analysis/dihedral/dihedral_1_2_3_4_stateA.dat and distribution_analysis/dihedral/dihedral_1_2_3_4_stateB.dat ...
+Null hypothesis: The distributions obtained from the two files are consistent with each other.
+p-value: 0.5886061772431637
+Interpretation: The two distributions are consistent with each other.
+
+Elapsed time:  123.463453 seconds.
