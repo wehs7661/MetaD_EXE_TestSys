@@ -1,0 +1,10 @@
+
+Data analysis of the file: distance.dat
+=======================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_2
+- Command line: /jet/home/wehs7661/.local/bin/plot_hist -i distance.dat -x COM distance (nm) -n distance_hist
+Assessment of the hsitogram flatness: N_ratio = 2746.000
+The maximum of com distance is 3.473378 nm.
+The minimum of com distance is 0.003919 nm.
+The total number of counts is 100001.
+Com distance between 0.298823 and 0.316170 nm has the highest count, which is 2746.

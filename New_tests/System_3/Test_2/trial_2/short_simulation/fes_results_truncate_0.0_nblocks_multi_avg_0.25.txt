@@ -1,0 +1,45 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 50 200 500 1000 2000 -hh HILLS_2D -t 0 -a 0.25
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.0
+- Averaged fraction: 0.25
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+Section 2: Results of free energy calculations
+==============================================
+- Total number of points (in the HILLS file): 50000
+- Number of points in the unphysical region: 8637 (17.27%)
+    - Number of points with N > 7: 5716 (11.43%)
+    - Number of points with N < 1: 2921 (5.84%)
+- Number of points in the physical region: 47205 (82.73%)
+- Number of points for reweighting: 10340
+
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      50     |       16.54     |          134.790044         |     0.740089     |
+|     200     |       4.12      |          134.789277         |     0.385702     |
+|     500     |       1.64      |          134.789104         |     0.307380     |
+|     1000    |       0.82      |          134.789104         |     0.263101     |
+|     2000    |       0.40      |          134.661061         |     0.220322     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+=================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.0_avg_0.25.png, fes_results_truncate_0.0_nblocks_multi_avg_0.25.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     344.44 MB    |
+|    average_bias    |     171.40 MB    |
+| read_plumed_output |     188.59 MB    |
++--------------------+------------------+
+- Time elapsed:  18.56 seconds.

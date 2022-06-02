@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "calculate_free_energy.py", line 322, in <module>
+    os.makedirs(folder + f'FES_t_{truncate}_a_{avg_frac}')
+NameError: name 'truncate' is not defined
+Traceback (most recent call last):
+  File "calculate_free_energy.py", line 322, in <module>
+    os.makedirs(folder + f'FES_t_{truncate}_a_{avg_frac}')
+NameError: name 'truncate' is not defined
+Traceback (most recent call last):
+  File "calculate_free_energy.py", line 322, in <module>
+    os.makedirs(folder + f'FES_t_{truncate}_a_{avg_frac}')
+NameError: name 'truncate' is not defined
+Traceback (most recent call last):
+  File "calculate_free_energy.py", line 322, in <module>
+    os.makedirs(folder + f'FES_t_{truncate}_a_{avg_frac}')
+NameError: name 'truncate' is not defined
+Traceback (most recent call last):
+  File "calculate_free_energy.py", line 322, in <module>
+    os.makedirs(folder + f'FES_t_{truncate}_a_{avg_frac}')
+NameError: name 'truncate' is not defined
+Traceback (most recent call last):
+  File "calculate_free_energy.py", line 322, in <module>
+    os.makedirs(folder + f'FES_t_{truncate}_a_{avg_frac}')
+NameError: name 'truncate' is not defined
+Traceback (most recent call last):
+  File "calculate_free_energy.py", line 322, in <module>
+    os.makedirs(folder + f'FES_t_{truncate}_a_{avg_frac}')
+NameError: name 'truncate' is not defined
+Traceback (most recent call last):
+  File "calculate_free_energy.py", line 322, in <module>
+    os.makedirs(folder + f'FES_t_{truncate}_a_{avg_frac}')
+NameError: name 'truncate' is not defined
+Traceback (most recent call last):
+  File "calculate_free_energy.py", line 322, in <module>
+    os.makedirs(folder + f'FES_t_{truncate}_a_{avg_frac}')
+NameError: name 'truncate' is not defined

@@ -1,0 +1,22 @@
+
+Data analysis of the file: distance.dat
+=======================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_2
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i distance.dat -x Time (ns) -cx ps to ns -y COM distance (nm) -n distance_timeseries
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of com distance: 1.177 (RMSF: 0.692, max: 3.473, min: 0.004)
+The maximum of com distance occurs at 57.880 ns.
+The minimum of com distance occurs at 95.227 ns.
+The com distance (1.177 nm) at 8.477 ns is closet to the average.
+
+Data analysis of the file: distance.dat
+=======================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_2
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i distance.dat -x Time (ns) -cx ps to ns -y COM distance (nm) -n distance_timeseries -fx 2
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of com distance: 1.177 (RMSF: 0.692, max: 3.473, min: 0.004)
+The maximum of com distance occurs at 115.760 ns.
+The minimum of com distance occurs at 190.454 ns.
+The com distance (1.177 nm) at 16.954 ns is closet to the average.

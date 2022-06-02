@@ -1,0 +1,8 @@
+metad: READ FILE=COLVAR_SUM_BIAS IGNORE_TIME VALUES=metad.bias
+uwall: READ FILE=COLVAR_SUM_BIAS IGNORE_TIME VALUES=uwall.bias
+
+weights2: REWEIGHT_BIAS TEMP=298 ARG=metad.bias
+weights3: REWEIGHT_BIAS TEMP=298 ARG=uwall.bias
+PRINT STRIDE=1 ARG=* FILE=weights.dat
+
+

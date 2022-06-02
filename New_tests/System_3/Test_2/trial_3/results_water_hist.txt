@@ -1,0 +1,16 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_2/trial_3
+- Command line: /jet/home/wehs7661/.local/bin/plot_hist -i COLVAR -x Number of water molecules -n water_hist
+Assessment of the hsitogram flatness: N_ratio = 3915.375
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_2/trial_3
+- Command line: /jet/home/wehs7661/.local/bin/plot_hist -i COLVAR -x Number of water molecules -n water_hist
+Assessment of the hsitogram flatness: N_ratio = 3915.375
+The maximum of number of water molecules is 12.920212.
+The minimum of number of water molecules is 0.148697.
+The total number of counts is 10000001.
+Number of water molecules between 5.448876 and 5.512733 has the highest count, which is 62646.

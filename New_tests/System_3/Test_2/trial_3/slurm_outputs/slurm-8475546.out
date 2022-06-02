@@ -1,0 +1,36 @@
+  File "calculate_free_energy.py", line 318
+    os.system(f'rm -r {folder}FES_t_{args.truncate}_a_{args.avg}')
+    ^
+IndentationError: unexpected indent
+  File "calculate_free_energy.py", line 318
+    os.system(f'rm -r {folder}FES_t_{args.truncate}_a_{args.avg}')
+    ^
+IndentationError: unexpected indent
+  File "calculate_free_energy.py", line 318
+    os.system(f'rm -r {folder}FES_t_{args.truncate}_a_{args.avg}')
+    ^
+IndentationError: unexpected indent
+  File "calculate_free_energy.py", line 318
+    os.system(f'rm -r {folder}FES_t_{args.truncate}_a_{args.avg}')
+    ^
+IndentationError: unexpected indent
+  File "calculate_free_energy.py", line 318
+    os.system(f'rm -r {folder}FES_t_{args.truncate}_a_{args.avg}')
+    ^
+IndentationError: unexpected indent
+  File "calculate_free_energy.py", line 318
+    os.system(f'rm -r {folder}FES_t_{args.truncate}_a_{args.avg}')
+    ^
+IndentationError: unexpected indent
+  File "calculate_free_energy.py", line 318
+    os.system(f'rm -r {folder}FES_t_{args.truncate}_a_{args.avg}')
+    ^
+IndentationError: unexpected indent
+  File "calculate_free_energy.py", line 318
+    os.system(f'rm -r {folder}FES_t_{args.truncate}_a_{args.avg}')
+    ^
+IndentationError: unexpected indent
+  File "calculate_free_energy.py", line 318
+    os.system(f'rm -r {folder}FES_t_{args.truncate}_a_{args.avg}')
+    ^
+IndentationError: unexpected indent

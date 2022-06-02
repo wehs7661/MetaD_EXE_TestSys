@@ -1,0 +1,46 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0 -a 0.25
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.0
+- Averaged fraction: 0.25
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+Section 2: Results of free energy calculations
+==============================================
+- Total number of points (in the HILLS file): 10000000
+- Number of points in the unphysical region: 2242227 (22.42%)
+    - Number of points with N > 7: 1494116 (14.94%)
+    - Number of points with N < 1: 748111 (7.48%)
+- Number of points in the physical region: 9253995 (77.58%)
+- Number of points for reweighting: 1939443
+
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      20     |      7757.76    |          146.784193         |     0.211453     |
+|      50     |      3103.10    |          146.784157         |     0.227085     |
+|     200     |      775.76     |          146.783840         |     0.158608     |
+|     500     |      310.30     |          146.783457         |     0.132588     |
+|     1000    |      155.14     |          146.783079         |     0.110797     |
+|     2000    |       77.56     |          146.782534         |     0.093481     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+=================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.0_avg_0.25.png, fes_results_truncate_0.0_nblocks_multi_avg_0.25.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     26.57 GB     |
+|    average_bias    |      2.16 GB     |
+| read_plumed_output |      2.63 GB     |
++--------------------+------------------+
+- Time elapsed:  7073.80 seconds.

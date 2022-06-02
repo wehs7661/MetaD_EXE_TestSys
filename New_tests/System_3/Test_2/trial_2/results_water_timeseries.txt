@@ -1,0 +1,11 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_2
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i COLVAR -x Time (ns) -cx ps to ns -y Number of water molecules -n water_timeseries
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of number of water molecules: 4.283 (RMSF: 0.534, max: 10.144, min: 0.157)
+The maximum of number of water molecules occurs at 184.808 ns.
+The minimum of number of water molecules occurs at 147.984 ns.
+The number of water molecules (4.283) at 25.532 ns is closet to the average.

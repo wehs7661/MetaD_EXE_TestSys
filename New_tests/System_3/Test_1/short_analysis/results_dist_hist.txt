@@ -1,0 +1,10 @@
+
+Data analysis of the file: analysis.dat
+=======================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_3/Test_1/200ns/short_analysis
+- Command line: /home/wei-tse/.local/bin/plot_hist -i analysis.dat -x COM distance -n dist_hist -c 2
+Assessment of the hsitogram flatness: N_ratio = 1105.000
+The maximum of com distance is 3.438663.
+The minimum of com distance is 0.018264.
+The total number of counts is 67330.
+Com distance between 0.291896 and 0.308998 has the highest count, which is 1105.

@@ -1,0 +1,16 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_2/trial_3
+- Command line: /jet/home/wehs7661/.local/bin/plot_hist -i COLVAR -x $\lambda$ -nb 40 -n lambda_hist
+Assessment of the hsitogram flatness: N_ratio = 435.293
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_2/trial_3
+- Command line: /jet/home/wehs7661/.local/bin/plot_hist -i COLVAR -x $\lambda$ -n lambda_hist -nb 40 -c 2
+Assessment of the hsitogram flatness: N_ratio = 2.746
+The maximum of $\lambda$ is 39.000000.
+The minimum of $\lambda$ is 0.000000.
+The total number of counts is 10000001.
+$\lambda$ between 0.000000 and 0.975000 has the highest count, which is 494319.

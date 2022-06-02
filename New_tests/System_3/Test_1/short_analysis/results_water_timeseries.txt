@@ -1,0 +1,22 @@
+
+Data analysis of the file: analysis.dat
+=======================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_3/Test_1/200ns/short_analysis
+- Command line: /home/wei-tse/.local/bin/plot_xy -i analysis.dat -x Time (ns) -cx ps to ns -y Number of water molecule -n water_timeseries
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of number of water molecule: 7.893 (RMSF: 0.278, max: 10.441, min: 0.698)
+The maximum of number of water molecule occurs at 16.252 ns.
+The minimum of number of water molecule occurs at 24.464 ns.
+The number of water molecule (7.893) at 12.232 ns is closet to the average.
+
+Data analysis of the file: analysis.dat
+=======================================
+- Working directory: /home/wei-tse/Documents/alchemical_MetaD/System_3/Test_1/200ns/short_analysis
+- Command line: /home/wei-tse/.local/bin/plot_xy -i analysis.dat -x Time (ns) -cx ps to ns -y Number of water molecule -n water_timeseries -fx 2
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of number of water molecule: 7.893 (RMSF: 0.278, max: 10.441, min: 0.698)
+The maximum of number of water molecule occurs at 32.504 ns.
+The minimum of number of water molecule occurs at 48.928 ns.
+The number of water molecule (7.893) at 24.464 ns is closet to the average.
