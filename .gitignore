@@ -945,3 +945,12 @@ New_tests/System_2/trial_1/Test_1/1D_lambda_MetaD/State_A/sys2.xtc
 New_tests/System_2/trial_1/Test_1/1D_lambda_MetaD/State_A/COLVAR
 New_tests/System_2/trial_1/Test_1/1D_lambda_MetaD/State_A/COLVAR_SUM_BIAS
 New_tests/System_2/trial_2/Test_1/1D_lambda_MetaD/State_A/sys2.xtc
+New_tests/System_1/1D_lambda_MetaD/trial_2/COLVAR_SUM_BIAS
+New_tests/System_1/1D_lambda_MetaD/trial_2/COLVAR
+New_tests/System_1/1D_lambda_MetaD/trial_2/sys1_EXE.xtc
+New_tests/System_1/1D_lambda_MetaD/trial_1/HILLS_LAMBDA
+New_tests/System_1/1D_lambda_MetaD/trial_1/HILLS_LAMBDA_modified
+New_tests/System_1/1D_lambda_MetaD/trial_1/COLVAR_SUM_BIAS
+New_tests/System_1/1D_lambda_MetaD/trial_1/COLVAR
+New_tests/System_1/1D_lambda_MetaD/trial_1/sys1_EXE.xtc
+New_tests/System_1/EXE/Fixed/sys1_EXE.xtc
