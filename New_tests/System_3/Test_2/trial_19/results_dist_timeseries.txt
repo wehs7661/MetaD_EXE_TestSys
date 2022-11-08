@@ -1,0 +1,22 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_2/trial_19
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i COLVAR -x Time (ns) -cx ps to ns -y COM distance (nm) -n dist_timeseries -c 2
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of com distance: 15.549 (RMSF: 0.755, max: 39.000, min: 0.000)
+The maximum of com distance occurs at 0.102 ns.
+The minimum of com distance occurs at 0.000 ns.
+The com distance (16.000 nm) at 0.027 ns is closet to the average.
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_2/trial_19
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i COLVAR -x Time (ns) -cx ps to ns -y COM distance (nm) -n dist_timeseries -c 3
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of com distance: 0.606 (RMSF: 0.603, max: 1.712, min: 0.001)
+The maximum of com distance occurs at 165.777 ns.
+The minimum of com distance occurs at 49.794 ns.
+The com distance (0.606 nm) at 1.842 ns is closet to the average.
