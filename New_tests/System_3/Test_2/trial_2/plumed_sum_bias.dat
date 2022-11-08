@@ -3,17 +3,28 @@ lambda: READ FILE=COLVAR VALUES=lambda IGNORE_TIME IGNORE_FORCES
 
 METAD ...
 ARG=lambda,n
-SIGMA=0.01,0.05     # small SIGMA ensure that the Gaussian approaximate a delta function
+SIGMA=0.01,0.3    
 HEIGHT=0
-PACE=50000000        # should be nstexpanded
-GRID_MIN=0,0    # index of alchemical states starts from 0
-GRID_MAX=39,20     # we have 50 states in total
+PACE=1000000000
+GRID_MIN=0,0    
+GRID_MAX=39,20   
 GRID_BIN=39,100
 TEMP=298
 BIASFACTOR=150
-LABEL=metad   
+LABEL=metad
 FILE=HILLS_2D_modified
 RESTART=YES
 ... METAD
 
-PRINT STRIDE=1 ARG=lambda,n,metad.bias FILE=COLVAR_SUM_BIAS
+UPPER_WALLS ...
+ ARG=n
+ AT=10.5
+ KAPPA=200.0
+ EXP=2
+ EPS=1
+ OFFSET=0
+ LABEL=uwall
+... UPPER_WALLS
+
+PRINT STRIDE=1 ARG=lambda,n,metad.bias,uwall.bias FILE=COLVAR_SUM_BIAS
+
