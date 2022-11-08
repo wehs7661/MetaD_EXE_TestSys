@@ -1,0 +1,365 @@
+rm: cannot remove './FES_t_0.0_a_0.2': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0 -a 0.2
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.0
+- Averaged fraction: 0.2
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 20.0% of the simulation.
+======================================================
+
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0 (git: 81cd64d7c) compiled on Mar  9 2022 at 16:32:08
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/
+PLUMED: For installed feature, see /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_sum_bias.dat
+PLUMED: Action READ
+PLUMED:   with label n
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value n and storing as n
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda n
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000 0.050000  Gaussian height 0.000000
+PLUMED:   Gaussian deposition pace 50000000
+PLUMED:   Gaussian file HILLS_2D_modified
+PLUMED:   Well-Tempered Bias Factor 150.000000
+PLUMED:   Hills relaxation time (tau) inf
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0 0
+PLUMED:   Grid max 39 20
+PLUMED:   Grid bin 39 100
+PLUMED:   Grid uses spline interpolation
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   Restarting from HILLS_2D_modified:
+PLUMED: WARNING: you are using a HILLS file with Gaussian kernels, PLUMED 2.8 uses stretched Gaussians by default
+PLUMED:       10000000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda metad.bias
+PLUMED:   on file COLVAR_SUM_BIAS
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_sum_bias.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   322.538990   322.538990   322.538990   322.538990
+PLUMED: 1 Prepare dependencies                      10000001    11.339262     0.000001     0.000001     0.000072
+PLUMED: 2 Sharing data                              10000001     0.299728     0.000000     0.000000     0.000032
+PLUMED: 3 Waiting for data                          10000001     0.393121     0.000000     0.000000     0.000011
+PLUMED: 4 Calculating (forward loop)                10000001    52.636274     0.000005     0.000005     0.000282
+PLUMED: 5 Applying (backward loop)                  10000001     4.621794     0.000000     0.000000     0.000068
+PLUMED: 6 Update                                    10000001   109.516022     0.000011     0.000009     0.326776
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Traceback (most recent call last):
+  File "/jet/home/wehs7661/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3361, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 76, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'n'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "calculate_free_energy.py", line 442, in <module>
+    traj = traj[traj['n'].between(0.7, 10.5)]
+  File "/jet/home/wehs7661/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 3458, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/jet/home/wehs7661/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3363, in get_loc
+    raise KeyError(key) from err
+KeyError: 'n'
+rm: cannot remove './FES_t_0.0_a_0.3': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0 -a 0.3
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.0
+- Averaged fraction: 0.3
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 30.0% of the simulation.
+======================================================
+
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0 (git: 81cd64d7c) compiled on Mar  9 2022 at 16:32:08
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/
+PLUMED: For installed feature, see /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_sum_bias.dat
+PLUMED: Action READ
+PLUMED:   with label n
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value n and storing as n
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda n
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000 0.050000  Gaussian height 0.000000
+PLUMED:   Gaussian deposition pace 50000000
+PLUMED:   Gaussian file HILLS_2D_modified
+PLUMED:   Well-Tempered Bias Factor 150.000000
+PLUMED:   Hills relaxation time (tau) inf
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0 0
+PLUMED:   Grid max 39 20
+PLUMED:   Grid bin 39 100
+PLUMED:   Grid uses spline interpolation
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   Restarting from HILLS_2D_modified:
+PLUMED: WARNING: you are using a HILLS file with Gaussian kernels, PLUMED 2.8 uses stretched Gaussians by default
+PLUMED:       10000000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda metad.bias
+PLUMED:   on file COLVAR_SUM_BIAS
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_sum_bias.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   320.685119   320.685119   320.685119   320.685119
+PLUMED: 1 Prepare dependencies                      10000001    11.080180     0.000001     0.000001     0.000072
+PLUMED: 2 Sharing data                              10000001     0.299292     0.000000     0.000000     0.000012
+PLUMED: 3 Waiting for data                          10000001     0.392064     0.000000     0.000000     0.000056
+PLUMED: 4 Calculating (forward loop)                10000001    52.542140     0.000005     0.000005     0.000079
+PLUMED: 5 Applying (backward loop)                  10000001     4.649603     0.000000     0.000000     0.000069
+PLUMED: 6 Update                                    10000001   108.181970     0.000011     0.000009     0.190898
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Traceback (most recent call last):
+  File "/jet/home/wehs7661/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3361, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 76, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'n'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "calculate_free_energy.py", line 442, in <module>
+    traj = traj[traj['n'].between(0.7, 10.5)]
+  File "/jet/home/wehs7661/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 3458, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/jet/home/wehs7661/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3363, in get_loc
+    raise KeyError(key) from err
+KeyError: 'n'
+rm: cannot remove './FES_t_0.0_a_0.4': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0 -a 0.4
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.0
+- Averaged fraction: 0.4
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 40.0% of the simulation.
+======================================================
+
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0 (git: 81cd64d7c) compiled on Mar  9 2022 at 16:32:08
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/
+PLUMED: For installed feature, see /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_sum_bias.dat
+PLUMED: Action READ
+PLUMED:   with label n
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value n and storing as n
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda n
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000 0.050000  Gaussian height 0.000000
+PLUMED:   Gaussian deposition pace 50000000
+PLUMED:   Gaussian file HILLS_2D_modified
+PLUMED:   Well-Tempered Bias Factor 150.000000
+PLUMED:   Hills relaxation time (tau) inf
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0 0
+PLUMED:   Grid max 39 20
+PLUMED:   Grid bin 39 100
+PLUMED:   Grid uses spline interpolation
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   Restarting from HILLS_2D_modified:
+PLUMED: WARNING: you are using a HILLS file with Gaussian kernels, PLUMED 2.8 uses stretched Gaussians by default
+PLUMED:       10000000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda metad.bias
+PLUMED:   on file COLVAR_SUM_BIAS
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_sum_bias.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   322.243904   322.243904   322.243904   322.243904
+PLUMED: 1 Prepare dependencies                      10000001    11.360847     0.000001     0.000001     0.000073
+PLUMED: 2 Sharing data                              10000001     0.298742     0.000000     0.000000     0.000011
+PLUMED: 3 Waiting for data                          10000001     0.392171     0.000000     0.000000     0.000027
+PLUMED: 4 Calculating (forward loop)                10000001    52.429606     0.000005     0.000005     0.000318
+PLUMED: 5 Applying (backward loop)                  10000001     4.614407     0.000000     0.000000     0.000075
+PLUMED: 6 Update                                    10000001   108.934279     0.000011     0.000009     0.144391
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Traceback (most recent call last):
+  File "/jet/home/wehs7661/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3361, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 76, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 108, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'n'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "calculate_free_energy.py", line 442, in <module>
+    traj = traj[traj['n'].between(0.7, 10.5)]
+  File "/jet/home/wehs7661/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 3458, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/jet/home/wehs7661/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 3363, in get_loc
+    raise KeyError(key) from err
+KeyError: 'n'
+rm: cannot remove './FES_t_0.3_a_0.2': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0.3 -a 0.2
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.3
+- Averaged fraction: 0.2
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 20.0% of the simulation.
+======================================================
+
+slurmstepd: error: *** JOB 8586358 ON r263 CANCELLED AT 2022-05-07T12:36:23 ***

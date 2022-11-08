@@ -1,0 +1,39 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: bootstrap_estimator.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0 -a 0
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.0
+- Averaged fraction: 0.0
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+Section 2: Results of free energy calculations
+==============================================
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      20     |     10000.00    |          140.864165         |     0.425513     |
+|      50     |      4000.00    |          140.864165         |     0.394645     |
+|     200     |      1000.00    |          140.864165         |     0.236407     |
+|     500     |      400.00     |          140.864165         |     0.196318     |
+|     1000    |      200.00     |          140.864165         |     0.151174     |
+|     2000    |      100.00     |          140.864165         |     0.144145     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+==================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.0_avg_0.0.png, fes_results_truncate_0.0_nblocks_multi_avg_0.0.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     32.66 GB     |
+|    average_bias    |      0.00 B      |
+| read_plumed_output |      0.00 B      |
++--------------------+------------------+
+- Time elapsed:  3560.68 seconds.

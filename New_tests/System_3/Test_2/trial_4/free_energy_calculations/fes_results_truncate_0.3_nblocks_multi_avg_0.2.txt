@@ -1,0 +1,44 @@
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0.3 -a 0.2
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.3
+- Averaged fraction: 0.2
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+Section 2: Results of free energy calculations
+==============================================
+- Total number of points (in the HILLS file): 10000000
+- Number of points in the unphysical region (N > 10.5): 960558 (9.61%)
+- Number of points in the physical region (N <= 10.5): 9039442 (90.39%)
+- Number of points for reweighting: 1760251
+
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      20     |      6160.88    |          135.727133         |     0.228651     |
+|      50     |      2464.34    |          135.727133         |     0.242978     |
+|     200     |      616.08     |          135.727133         |     0.204244     |
+|     500     |      246.42     |          135.727133         |     0.170360     |
+|     1000    |      123.20     |          135.727133         |     0.137960     |
+|     2000    |       61.60     |          135.727133         |     0.128199     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+=================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.3_avg_0.2.png, fes_results_truncate_0.3_nblocks_multi_avg_0.2.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     21.75 GB     |
+|    average_bias    |      2.14 GB     |
+| read_plumed_output |      3.17 GB     |
++--------------------+------------------+
+- Time elapsed:  5375.44 seconds.

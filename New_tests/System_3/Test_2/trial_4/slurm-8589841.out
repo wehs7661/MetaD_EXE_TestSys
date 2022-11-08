@@ -1,0 +1,1143 @@
+rm: cannot remove './FES_t_0.0_a_0.2': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0 -a 0.2
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.0
+- Averaged fraction: 0.2
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 20.0% of the simulation.
+======================================================
+
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0 (git: 81cd64d7c) compiled on Mar  9 2022 at 16:32:08
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/
+PLUMED: For installed feature, see /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_sum_bias.dat
+PLUMED: Action READ
+PLUMED:   with label n
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value n and storing as n
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda n
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000 0.050000  Gaussian height 0.000000
+PLUMED:   Gaussian deposition pace 50000000
+PLUMED:   Gaussian file HILLS_2D_modified
+PLUMED:   Well-Tempered Bias Factor 150.000000
+PLUMED:   Hills relaxation time (tau) inf
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0 0
+PLUMED:   Grid max 39 20
+PLUMED:   Grid bin 39 100
+PLUMED:   Grid uses spline interpolation
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   Restarting from HILLS_2D_modified:
+PLUMED: WARNING: you are using a HILLS file with Gaussian kernels, PLUMED 2.8 uses stretched Gaussians by default
+PLUMED:       10000000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda n metad.bias
+PLUMED:   on file COLVAR_SUM_BIAS
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_sum_bias.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   330.538675   330.538675   330.538675   330.538675
+PLUMED: 1 Prepare dependencies                      10000001    11.226312     0.000001     0.000001     0.000067
+PLUMED: 2 Sharing data                              10000001     0.301648     0.000000     0.000000     0.000013
+PLUMED: 3 Waiting for data                          10000001     0.392851     0.000000     0.000000     0.000024
+PLUMED: 4 Calculating (forward loop)                10000001    52.323521     0.000005     0.000005     0.000353
+PLUMED: 5 Applying (backward loop)                  10000001     4.682721     0.000000     0.000000     0.000061
+PLUMED: 6 Update                                    10000001   116.753783     0.000012     0.000010     0.504048
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+
+Section 2: Results of free energy calculations
+==============================================
+- Total number of points (in the HILLS file): 10000000
+- Number of points in the unphysical region (N > 10.5): 960558 (9.61%)
+- Number of points in the physical region (N <= 10.5): 9039442 (90.39%)
+- Number of points for reweighting: 1760251
+
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      20     |      8801.26    |          135.731597         |     0.164103     |
+|      50     |      3520.50    |          135.731597         |     0.185991     |
+|     200     |      880.12     |          135.731597         |     0.147369     |
+|     500     |      352.04     |          135.731597         |     0.132637     |
+|     1000    |      176.02     |          135.731597         |     0.119166     |
+|     2000    |       88.00     |          135.731570         |     0.112344     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+=================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.0_avg_0.2.png, fes_results_truncate_0.0_nblocks_multi_avg_0.2.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     30.10 GB     |
+|    average_bias    |      1.68 GB     |
+| read_plumed_output |      3.12 GB     |
++--------------------+------------------+
+- Time elapsed:  6201.37 seconds.
+rm: cannot remove './FES_t_0.0_a_0.3': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0 -a 0.3
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.0
+- Averaged fraction: 0.3
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 30.0% of the simulation.
+======================================================
+
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0 (git: 81cd64d7c) compiled on Mar  9 2022 at 16:32:08
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/
+PLUMED: For installed feature, see /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_sum_bias.dat
+PLUMED: Action READ
+PLUMED:   with label n
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value n and storing as n
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda n
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000 0.050000  Gaussian height 0.000000
+PLUMED:   Gaussian deposition pace 50000000
+PLUMED:   Gaussian file HILLS_2D_modified
+PLUMED:   Well-Tempered Bias Factor 150.000000
+PLUMED:   Hills relaxation time (tau) inf
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0 0
+PLUMED:   Grid max 39 20
+PLUMED:   Grid bin 39 100
+PLUMED:   Grid uses spline interpolation
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   Restarting from HILLS_2D_modified:
+PLUMED: WARNING: you are using a HILLS file with Gaussian kernels, PLUMED 2.8 uses stretched Gaussians by default
+PLUMED:       10000000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda n metad.bias
+PLUMED:   on file COLVAR_SUM_BIAS
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_sum_bias.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   327.934925   327.934925   327.934925   327.934925
+PLUMED: 1 Prepare dependencies                      10000001    11.014383     0.000001     0.000001     0.000098
+PLUMED: 2 Sharing data                              10000001     0.299682     0.000000     0.000000     0.000011
+PLUMED: 3 Waiting for data                          10000001     0.392650     0.000000     0.000000     0.000063
+PLUMED: 4 Calculating (forward loop)                10000001    52.142461     0.000005     0.000005     0.000372
+PLUMED: 5 Applying (backward loop)                  10000001     4.660906     0.000000     0.000000     0.000083
+PLUMED: 6 Update                                    10000001   114.916346     0.000011     0.000010     0.213624
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+
+Section 2: Results of free energy calculations
+==============================================
+- Total number of points (in the HILLS file): 10000000
+- Number of points in the unphysical region (N > 10.5): 960558 (9.61%)
+- Number of points in the physical region (N <= 10.5): 9039442 (90.39%)
+- Number of points for reweighting: 2640377
+
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      20     |      8801.26    |          134.823697         |     0.099957     |
+|      50     |      3520.50    |          134.823697         |     0.156232     |
+|     200     |      880.12     |          134.823697         |     0.140281     |
+|     500     |      352.04     |          134.823697         |     0.120557     |
+|     1000    |      176.02     |          134.823697         |     0.107723     |
+|     2000    |       88.00     |          134.823602         |     0.098856     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+=================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.0_avg_0.3.png, fes_results_truncate_0.0_nblocks_multi_avg_0.3.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     30.09 GB     |
+|    average_bias    |      1.85 GB     |
+| read_plumed_output |      2.91 GB     |
++--------------------+------------------+
+- Time elapsed:  14460.85 seconds.
+rm: cannot remove './FES_t_0.0_a_0.4': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0 -a 0.4
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.0
+- Averaged fraction: 0.4
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 40.0% of the simulation.
+======================================================
+
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0 (git: 81cd64d7c) compiled on Mar  9 2022 at 16:32:08
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/
+PLUMED: For installed feature, see /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_sum_bias.dat
+PLUMED: Action READ
+PLUMED:   with label n
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value n and storing as n
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda n
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000 0.050000  Gaussian height 0.000000
+PLUMED:   Gaussian deposition pace 50000000
+PLUMED:   Gaussian file HILLS_2D_modified
+PLUMED:   Well-Tempered Bias Factor 150.000000
+PLUMED:   Hills relaxation time (tau) inf
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0 0
+PLUMED:   Grid max 39 20
+PLUMED:   Grid bin 39 100
+PLUMED:   Grid uses spline interpolation
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   Restarting from HILLS_2D_modified:
+PLUMED: WARNING: you are using a HILLS file with Gaussian kernels, PLUMED 2.8 uses stretched Gaussians by default
+PLUMED:       10000000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda n metad.bias
+PLUMED:   on file COLVAR_SUM_BIAS
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_sum_bias.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   329.369073   329.369073   329.369073   329.369073
+PLUMED: 1 Prepare dependencies                      10000001    10.937949     0.000001     0.000001     0.000372
+PLUMED: 2 Sharing data                              10000001     0.301509     0.000000     0.000000     0.000033
+PLUMED: 3 Waiting for data                          10000001     0.402250     0.000000     0.000000     0.000009
+PLUMED: 4 Calculating (forward loop)                10000001    52.684242     0.000005     0.000005     0.000368
+PLUMED: 5 Applying (backward loop)                  10000001     4.686169     0.000000     0.000000     0.000059
+PLUMED: 6 Update                                    10000001   114.023825     0.000011     0.000010     0.075514
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+
+Section 2: Results of free energy calculations
+==============================================
+- Total number of points (in the HILLS file): 10000000
+- Number of points in the unphysical region (N > 10.5): 960558 (9.61%)
+- Number of points in the physical region (N <= 10.5): 9039442 (90.39%)
+- Number of points for reweighting: 3520503
+
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      20     |      8801.26    |          137.762860         |     0.369664     |
+|      50     |      3520.50    |          137.762860         |     0.307614     |
+|     200     |      880.12     |          137.762860         |     0.229544     |
+|     500     |      352.04     |          137.762860         |     0.193361     |
+|     1000    |      176.02     |          137.762860         |     0.177265     |
+|     2000    |       88.00     |          137.761743         |     0.142255     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+=================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.0_avg_0.4.png, fes_results_truncate_0.0_nblocks_multi_avg_0.4.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     30.10 GB     |
+|    average_bias    |      1.91 GB     |
+| read_plumed_output |      3.11 GB     |
++--------------------+------------------+
+- Time elapsed:  22695.61 seconds.
+rm: cannot remove './FES_t_0.3_a_0.2': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0.3 -a 0.2
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.3
+- Averaged fraction: 0.2
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 20.0% of the simulation.
+======================================================
+
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0 (git: 81cd64d7c) compiled on Mar  9 2022 at 16:32:08
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/
+PLUMED: For installed feature, see /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_sum_bias.dat
+PLUMED: Action READ
+PLUMED:   with label n
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value n and storing as n
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda n
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000 0.050000  Gaussian height 0.000000
+PLUMED:   Gaussian deposition pace 50000000
+PLUMED:   Gaussian file HILLS_2D_modified
+PLUMED:   Well-Tempered Bias Factor 150.000000
+PLUMED:   Hills relaxation time (tau) inf
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0 0
+PLUMED:   Grid max 39 20
+PLUMED:   Grid bin 39 100
+PLUMED:   Grid uses spline interpolation
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   Restarting from HILLS_2D_modified:
+PLUMED: WARNING: you are using a HILLS file with Gaussian kernels, PLUMED 2.8 uses stretched Gaussians by default
+PLUMED:       10000000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda n metad.bias
+PLUMED:   on file COLVAR_SUM_BIAS
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_sum_bias.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   329.408131   329.408131   329.408131   329.408131
+PLUMED: 1 Prepare dependencies                      10000001    11.093627     0.000001     0.000001     0.000077
+PLUMED: 2 Sharing data                              10000001     0.302637     0.000000     0.000000     0.000015
+PLUMED: 3 Waiting for data                          10000001     0.399963     0.000000     0.000000     0.000066
+PLUMED: 4 Calculating (forward loop)                10000001    52.763580     0.000005     0.000005     0.000097
+PLUMED: 5 Applying (backward loop)                  10000001     4.673827     0.000000     0.000000     0.000082
+PLUMED: 6 Update                                    10000001   114.896126     0.000011     0.000010     0.086364
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+
+Section 2: Results of free energy calculations
+==============================================
+- Total number of points (in the HILLS file): 10000000
+- Number of points in the unphysical region (N > 10.5): 960558 (9.61%)
+- Number of points in the physical region (N <= 10.5): 9039442 (90.39%)
+- Number of points for reweighting: 1760251
+
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      20     |      6160.88    |          135.727133         |     0.228651     |
+|      50     |      2464.34    |          135.727133         |     0.242978     |
+|     200     |      616.08     |          135.727133         |     0.204244     |
+|     500     |      246.42     |          135.727133         |     0.170360     |
+|     1000    |      123.20     |          135.727133         |     0.137960     |
+|     2000    |       61.60     |          135.727133         |     0.128199     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+=================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.3_avg_0.2.png, fes_results_truncate_0.3_nblocks_multi_avg_0.2.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     21.75 GB     |
+|    average_bias    |      2.14 GB     |
+| read_plumed_output |      3.17 GB     |
++--------------------+------------------+
+- Time elapsed:  5375.44 seconds.
+rm: cannot remove './FES_t_0.3_a_0.3': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0.3 -a 0.3
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.3
+- Averaged fraction: 0.3
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 30.0% of the simulation.
+======================================================
+
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0 (git: 81cd64d7c) compiled on Mar  9 2022 at 16:32:08
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/
+PLUMED: For installed feature, see /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_sum_bias.dat
+PLUMED: Action READ
+PLUMED:   with label n
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value n and storing as n
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda n
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000 0.050000  Gaussian height 0.000000
+PLUMED:   Gaussian deposition pace 50000000
+PLUMED:   Gaussian file HILLS_2D_modified
+PLUMED:   Well-Tempered Bias Factor 150.000000
+PLUMED:   Hills relaxation time (tau) inf
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0 0
+PLUMED:   Grid max 39 20
+PLUMED:   Grid bin 39 100
+PLUMED:   Grid uses spline interpolation
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   Restarting from HILLS_2D_modified:
+PLUMED: WARNING: you are using a HILLS file with Gaussian kernels, PLUMED 2.8 uses stretched Gaussians by default
+PLUMED:       10000000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda n metad.bias
+PLUMED:   on file COLVAR_SUM_BIAS
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_sum_bias.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   329.280808   329.280808   329.280808   329.280808
+PLUMED: 1 Prepare dependencies                      10000001    11.349749     0.000001     0.000001     0.000388
+PLUMED: 2 Sharing data                              10000001     0.301818     0.000000     0.000000     0.000042
+PLUMED: 3 Waiting for data                          10000001     0.401991     0.000000     0.000000     0.000044
+PLUMED: 4 Calculating (forward loop)                10000001    52.403684     0.000005     0.000005     0.000385
+PLUMED: 5 Applying (backward loop)                  10000001     4.672228     0.000000     0.000000     0.000071
+PLUMED: 6 Update                                    10000001   115.399742     0.000012     0.000010     0.204388
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+
+Section 2: Results of free energy calculations
+==============================================
+- Total number of points (in the HILLS file): 10000000
+- Number of points in the unphysical region (N > 10.5): 960558 (9.61%)
+- Number of points in the physical region (N <= 10.5): 9039442 (90.39%)
+- Number of points for reweighting: 2640377
+
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      20     |      6160.88    |          134.824327         |     0.152006     |
+|      50     |      2464.34    |          134.824327         |     0.218035     |
+|     200     |      616.08     |          134.824327         |     0.190730     |
+|     500     |      246.42     |          134.824327         |     0.145312     |
+|     1000    |      123.20     |          134.824327         |     0.106742     |
+|     2000    |       61.60     |          134.824327         |     0.113479     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+=================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.3_avg_0.3.png, fes_results_truncate_0.3_nblocks_multi_avg_0.3.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     21.74 GB     |
+|    average_bias    |      2.05 GB     |
+| read_plumed_output |      2.98 GB     |
++--------------------+------------------+
+- Time elapsed:  13334.50 seconds.
+rm: cannot remove './FES_t_0.3_a_0.4': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0.3 -a 0.4
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.3
+- Averaged fraction: 0.4
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 40.0% of the simulation.
+======================================================
+
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0 (git: 81cd64d7c) compiled on Mar  9 2022 at 16:32:08
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/
+PLUMED: For installed feature, see /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_sum_bias.dat
+PLUMED: Action READ
+PLUMED:   with label n
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value n and storing as n
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda n
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000 0.050000  Gaussian height 0.000000
+PLUMED:   Gaussian deposition pace 50000000
+PLUMED:   Gaussian file HILLS_2D_modified
+PLUMED:   Well-Tempered Bias Factor 150.000000
+PLUMED:   Hills relaxation time (tau) inf
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0 0
+PLUMED:   Grid max 39 20
+PLUMED:   Grid bin 39 100
+PLUMED:   Grid uses spline interpolation
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   Restarting from HILLS_2D_modified:
+PLUMED: WARNING: you are using a HILLS file with Gaussian kernels, PLUMED 2.8 uses stretched Gaussians by default
+PLUMED:       10000000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda n metad.bias
+PLUMED:   on file COLVAR_SUM_BIAS
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_sum_bias.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   333.197297   333.197297   333.197297   333.197297
+PLUMED: 1 Prepare dependencies                      10000001    10.980367     0.000001     0.000001     0.000089
+PLUMED: 2 Sharing data                              10000001     0.302925     0.000000     0.000000     0.000011
+PLUMED: 3 Waiting for data                          10000001     0.394027     0.000000     0.000000     0.000024
+PLUMED: 4 Calculating (forward loop)                10000001    52.834508     0.000005     0.000005     0.000384
+PLUMED: 5 Applying (backward loop)                  10000001     5.177479     0.000001     0.000000     0.000068
+PLUMED: 6 Update                                    10000001   115.860338     0.000012     0.000010     0.176030
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+
+Section 2: Results of free energy calculations
+==============================================
+- Total number of points (in the HILLS file): 10000000
+- Number of points in the unphysical region (N > 10.5): 960558 (9.61%)
+- Number of points in the physical region (N <= 10.5): 9039442 (90.39%)
+- Number of points for reweighting: 3520503
+
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      20     |      6160.88    |          137.840309         |     0.560633     |
+|      50     |      2464.34    |          137.840309         |     0.408423     |
+|     200     |      616.08     |          137.840309         |     0.269957     |
+|     500     |      246.42     |          137.840309         |     0.211690     |
+|     1000    |      123.20     |          137.840309         |     0.193575     |
+|     2000    |       61.60     |          137.840309         |     0.176646     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+=================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.3_avg_0.4.png, fes_results_truncate_0.3_nblocks_multi_avg_0.4.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     21.74 GB     |
+|    average_bias    |      2.16 GB     |
+| read_plumed_output |      2.75 GB     |
++--------------------+------------------+
+- Time elapsed:  21560.82 seconds.
+rm: cannot remove './FES_t_0.5_a_0.2': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0.5 -a 0.2
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.5
+- Averaged fraction: 0.2
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 20.0% of the simulation.
+======================================================
+
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0 (git: 81cd64d7c) compiled on Mar  9 2022 at 16:32:08
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/
+PLUMED: For installed feature, see /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_sum_bias.dat
+PLUMED: Action READ
+PLUMED:   with label n
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value n and storing as n
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda n
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000 0.050000  Gaussian height 0.000000
+PLUMED:   Gaussian deposition pace 50000000
+PLUMED:   Gaussian file HILLS_2D_modified
+PLUMED:   Well-Tempered Bias Factor 150.000000
+PLUMED:   Hills relaxation time (tau) inf
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0 0
+PLUMED:   Grid max 39 20
+PLUMED:   Grid bin 39 100
+PLUMED:   Grid uses spline interpolation
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   Restarting from HILLS_2D_modified:
+PLUMED: WARNING: you are using a HILLS file with Gaussian kernels, PLUMED 2.8 uses stretched Gaussians by default
+PLUMED:       10000000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda n metad.bias
+PLUMED:   on file COLVAR_SUM_BIAS
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_sum_bias.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   334.359207   334.359207   334.359207   334.359207
+PLUMED: 1 Prepare dependencies                      10000001    11.384818     0.000001     0.000001     0.000071
+PLUMED: 2 Sharing data                              10000001     0.302634     0.000000     0.000000     0.000066
+PLUMED: 3 Waiting for data                          10000001     0.398339     0.000000     0.000000     0.000047
+PLUMED: 4 Calculating (forward loop)                10000001    53.407790     0.000005     0.000005     0.000391
+PLUMED: 5 Applying (backward loop)                  10000001     4.799997     0.000000     0.000000     0.000072
+PLUMED: 6 Update                                    10000001   116.492286     0.000012     0.000010     0.077109
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+
+Section 2: Results of free energy calculations
+==============================================
+- Total number of points (in the HILLS file): 10000000
+- Number of points in the unphysical region (N > 10.5): 960558 (9.61%)
+- Number of points in the physical region (N <= 10.5): 9039442 (90.39%)
+- Number of points for reweighting: 1760251
+
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      20     |      4400.62    |          135.743781         |     0.350877     |
+|      50     |      1760.24    |          135.743781         |     0.282621     |
+|     200     |      440.06     |          135.743781         |     0.213453     |
+|     500     |      176.02     |          135.743781         |     0.198291     |
+|     1000    |       88.00     |          135.743781         |     0.175665     |
+|     2000    |       44.00     |          135.743781         |     0.140704     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+=================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.5_avg_0.2.png, fes_results_truncate_0.5_nblocks_multi_avg_0.2.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     16.17 GB     |
+|    average_bias    |      1.81 GB     |
+| read_plumed_output |      3.12 GB     |
++--------------------+------------------+
+- Time elapsed:  4831.77 seconds.
+rm: cannot remove './FES_t_0.5_a_0.3': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0.5 -a 0.3
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.5
+- Averaged fraction: 0.3
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 30.0% of the simulation.
+======================================================
+
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0 (git: 81cd64d7c) compiled on Mar  9 2022 at 16:32:08
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/
+PLUMED: For installed feature, see /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_sum_bias.dat
+PLUMED: Action READ
+PLUMED:   with label n
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value n and storing as n
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda n
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000 0.050000  Gaussian height 0.000000
+PLUMED:   Gaussian deposition pace 50000000
+PLUMED:   Gaussian file HILLS_2D_modified
+PLUMED:   Well-Tempered Bias Factor 150.000000
+PLUMED:   Hills relaxation time (tau) inf
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0 0
+PLUMED:   Grid max 39 20
+PLUMED:   Grid bin 39 100
+PLUMED:   Grid uses spline interpolation
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   Restarting from HILLS_2D_modified:
+PLUMED: WARNING: you are using a HILLS file with Gaussian kernels, PLUMED 2.8 uses stretched Gaussians by default
+PLUMED:       10000000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda n metad.bias
+PLUMED:   on file COLVAR_SUM_BIAS
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_sum_bias.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   328.332774   328.332774   328.332774   328.332774
+PLUMED: 1 Prepare dependencies                      10000001    11.085228     0.000001     0.000001     0.000070
+PLUMED: 2 Sharing data                              10000001     0.302433     0.000000     0.000000     0.000063
+PLUMED: 3 Waiting for data                          10000001     0.404375     0.000000     0.000000     0.000014
+PLUMED: 4 Calculating (forward loop)                10000001    52.399733     0.000005     0.000005     0.000383
+PLUMED: 5 Applying (backward loop)                  10000001     4.606789     0.000000     0.000000     0.000363
+PLUMED: 6 Update                                    10000001   114.902877     0.000011     0.000010     0.263488
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+
+Section 2: Results of free energy calculations
+==============================================
+- Total number of points (in the HILLS file): 10000000
+- Number of points in the unphysical region (N > 10.5): 960558 (9.61%)
+- Number of points in the physical region (N <= 10.5): 9039442 (90.39%)
+- Number of points for reweighting: 2640377
+
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      20     |      4400.62    |          134.831011         |     0.260331     |
+|      50     |      1760.24    |          134.831011         |     0.228744     |
+|     200     |      440.06     |          134.831011         |     0.188126     |
+|     500     |      176.02     |          134.831011         |     0.165633     |
+|     1000    |       88.00     |          134.831011         |     0.163836     |
+|     2000    |       44.00     |          134.831011         |     0.118717     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+=================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.5_avg_0.3.png, fes_results_truncate_0.5_nblocks_multi_avg_0.3.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     16.16 GB     |
+|    average_bias    |      1.92 GB     |
+| read_plumed_output |      2.85 GB     |
++--------------------+------------------+
+- Time elapsed:  12829.92 seconds.
+rm: cannot remove './FES_t_0.5_a_0.4': No such file or directory
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+Section 1: Parameters for data analysis
+=======================================
+- Command line: calculate_free_energy.py -d ./ -n 20 50 200 500 1000 2000 -hh HILLS_2D -t 0.5 -a 0.4
+- Current working directory: ./
+- Files analyzed/used: plumed_sum_bias.dat, HILLS_2D, and COLVAR output by the simulation
+- Number of blocks: [20, 50, 200, 500, 1000, 2000]
+- Number of bootstrap iterations: 200
+- Truncated fraction: 0.5
+- Averaged fraction: 0.4
+- Random seed: None
+- STRIDE in ps: 0.02
+- Simulation temperature: 298.15
+
+====================== Reminder ======================
+Reminder: The time-averaged bias is used for reweighting.
+The input HILLS file for the plumed driver should be the one generated below.
+The output COLVAR file contains the bias averaged over the last 40.0% of the simulation.
+======================================================
+
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+PLUMED: PLUMED is starting
+PLUMED: Version: 2.8.0 (git: 81cd64d7c) compiled on Mar  9 2022 at 16:32:08
+PLUMED: Please cite these papers when using PLUMED [1][2]
+PLUMED: For further information see the PLUMED web page at http://www.plumed.org
+PLUMED: Root: /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/
+PLUMED: For installed feature, see /jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2//src/config/config.txt
+PLUMED: Molecular dynamics engine: driver
+PLUMED: Precision of reals: 8
+PLUMED: Running over 1 node
+PLUMED: Number of threads: 1
+PLUMED: Cache line size: 512
+PLUMED: Number of atoms: 0
+PLUMED: File suffix: 
+PLUMED: FILE: plumed_sum_bias.dat
+PLUMED: Action READ
+PLUMED:   with label n
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value n and storing as n
+PLUMED: Action READ
+PLUMED:   with label lambda
+PLUMED:   with stride 1
+PLUMED:   reading data from file COLVAR
+PLUMED:   reading value lambda and storing as lambda
+PLUMED: Action METAD
+PLUMED:   with label metad
+PLUMED:   with arguments lambda n
+PLUMED:   added component to this action:  metad.bias 
+PLUMED:   Gaussian width  0.010000 0.050000  Gaussian height 0.000000
+PLUMED:   Gaussian deposition pace 50000000
+PLUMED:   Gaussian file HILLS_2D_modified
+PLUMED:   Well-Tempered Bias Factor 150.000000
+PLUMED:   Hills relaxation time (tau) inf
+PLUMED:   KbT 2.477710
+PLUMED:   Grid min 0 0
+PLUMED:   Grid max 39 20
+PLUMED:   Grid bin 39 100
+PLUMED:   Grid uses spline interpolation
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   WARNING: Using a METAD with a Grid Spacing larger than half of the Gaussians width (SIGMA) can produce artifacts
+PLUMED:   Restarting from HILLS_2D_modified:
+PLUMED: WARNING: you are using a HILLS file with Gaussian kernels, PLUMED 2.8 uses stretched Gaussians by default
+PLUMED:       10000000 Gaussians read
+PLUMED:   Bibliography [3][4]
+PLUMED: Action PRINT
+PLUMED:   with label @3
+PLUMED:   with stride 1
+PLUMED:   with arguments lambda n metad.bias
+PLUMED:   on file COLVAR_SUM_BIAS
+PLUMED:   with format  %f
+PLUMED: END FILE: plumed_sum_bias.dat
+PLUMED: Timestep: 1.000000
+PLUMED: KbT has not been set by the MD engine
+PLUMED: It should be set by hand where needed
+PLUMED: Relevant bibliography:
+PLUMED:   [1] The PLUMED consortium, Nat. Methods 16, 670 (2019)
+PLUMED:   [2] Tribello, Bonomi, Branduardi, Camilloni, and Bussi, Comput. Phys. Commun. 185, 604 (2014)
+PLUMED:   [3] Laio and Parrinello, PNAS 99, 12562 (2002)
+PLUMED:   [4] Barducci, Bussi, and Parrinello, Phys. Rev. Lett. 100, 020603 (2008)
+PLUMED: Please read and cite where appropriate!
+PLUMED: Finished setup
+PLUMED:                                               Cycles        Total      Average      Minimum      Maximum
+PLUMED:                                                    1   330.511708   330.511708   330.511708   330.511708
+PLUMED: 1 Prepare dependencies                      10000001    11.002890     0.000001     0.000001     0.000093
+PLUMED: 2 Sharing data                              10000001     0.300332     0.000000     0.000000     0.000057
+PLUMED: 3 Waiting for data                          10000001     0.394163     0.000000     0.000000     0.000056
+PLUMED: 4 Calculating (forward loop)                10000001    52.836489     0.000005     0.000005     0.000385
+PLUMED: 5 Applying (backward loop)                  10000001     4.583630     0.000000     0.000000     0.000116
+PLUMED: 6 Update                                    10000001   116.130158     0.000012     0.000010     0.118220
++++ Loading the PLUMED kernel runtime +++
++++ PLUMED_KERNEL="/jet/home/wehs7661/src/PLUMED/plumed2.8.0/plumed2/src/lib/libplumedKernel.so" +++
+
+Section 2: Results of free energy calculations
+==============================================
+- Total number of points (in the HILLS file): 10000000
+- Number of points in the unphysical region (N > 10.5): 960558 (9.61%)
+- Number of points in the physical region (N <= 10.5): 9039442 (90.39%)
+- Number of points for reweighting: 3520503
+
++-------------+-----------------+-----------------------------+------------------+
+| # of blocks | Block size (ps) | Free energy difference (kT) | Uncertainty (kT) |
++-------------+-----------------+-----------------------------+------------------+
+|      20     |      4400.62    |          137.710824         |     0.716308     |
+|      50     |      1760.24    |          137.710824         |     0.488969     |
+|     200     |      440.06     |          137.710824         |     0.343951     |
+|     500     |      176.02     |          137.710824         |     0.276277     |
+|     1000    |       88.00     |          137.710824         |     0.245408     |
+|     2000    |       44.00     |          137.710824         |     0.192117     |
++-------------+-----------------+-----------------------------+------------------+
+
+Section 3: Information about the analysis process
+=================================================
+- Files output by this code: 
+  fes*dat, HILLS*_modified, COLVAR_SUM_BIAS, df_err_bsize_truncate_0.5_avg_0.4.png, fes_results_truncate_0.5_nblocks_multi_avg_0.4.txt
+- Memory usage
++--------------------+------------------+
+|   Function name    | Max memory usage |
++--------------------+------------------+
+|  block_bootstrap   |     16.16 GB     |
+|    average_bias    |      1.85 GB     |
+| read_plumed_output |      3.13 GB     |
++--------------------+------------------+
+- Time elapsed:  21301.26 seconds.
