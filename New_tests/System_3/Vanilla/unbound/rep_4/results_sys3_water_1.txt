@@ -1,0 +1,11 @@
+
+Data analysis of the file: analysis.dat
+=======================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Vanilla/unbound/rep_4
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i analysis.dat -x Time (ns) -cx ps to ns -y Number of water molecules -fx 2 -n sys3_water_1 -t Simulation 4
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of number of water molecules: 2.586 (RMSF: 0.896, max: 10.206, min: 0.670)
+The maximum of number of water molecules occurs at 0.430 ns.
+The minimum of number of water molecules occurs at 51.046 ns.
+The number of water molecules (2.586) at 134.240 ns is closet to the average.

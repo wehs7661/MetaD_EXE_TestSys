@@ -1,0 +1,10 @@
+
+Data analysis of the file: analysis.dat
+=======================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Vanilla/complex
+- Command line: /jet/home/wehs7661/.local/bin/plot_hist -i analysis.dat -x Number of water molecules in the host -n water_hist
+Assessment of the hsitogram flatness: N_ratio = inf
+The maximum of number of water molecules in the host is 5.289750.
+The minimum of number of water molecules in the host is 0.718844.
+The total number of counts is 100001.
+Number of water molecules in the host between 2.067261 and 2.090116 has the highest count, which is 3065.

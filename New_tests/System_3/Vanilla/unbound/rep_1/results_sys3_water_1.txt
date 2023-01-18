@@ -1,0 +1,33 @@
+
+Data analysis of the file: analysis.dat
+=======================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Vanilla/unbound/rep_1
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i analysis.dat -x Time (ns) -cx ps to ns -y Number of water molecules -fx 2 -n sys3_water_1
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of number of water molecules: 2.759 (RMSF: 0.888, max: 10.445, min: 0.651)
+The maximum of number of water molecules occurs at 14.022 ns.
+The minimum of number of water molecules occurs at 88.958 ns.
+The number of water molecules (2.759) at 130.522 ns is closet to the average.
+
+Data analysis of the file: analysis.dat
+=======================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Vanilla/unbound/rep_1
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i analysis.dat -x Time (ns) -cx ps to ns -y Number of water molecules -fx 2 -n sys3_water_1 -t Simulation 1
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of number of water molecules: 2.759 (RMSF: 0.888, max: 10.445, min: 0.651)
+The maximum of number of water molecules occurs at 14.022 ns.
+The minimum of number of water molecules occurs at 88.958 ns.
+The number of water molecules (2.759) at 130.522 ns is closet to the average.
+
+Data analysis of the file: analysis.dat
+=======================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Vanilla/unbound/rep_1
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i analysis.dat -x Time (ns) -cx ps to ns -y Number of water molecules -fx 2 -n sys3_water_1 -t Simulation 1
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of number of water molecules: 2.759 (RMSF: 0.888, max: 10.445, min: 0.651)
+The maximum of number of water molecules occurs at 14.022 ns.
+The minimum of number of water molecules occurs at 88.958 ns.
+The number of water molecules (2.759) at 130.522 ns is closet to the average.

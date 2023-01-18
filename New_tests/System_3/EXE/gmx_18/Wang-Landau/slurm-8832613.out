@@ -1,0 +1,54 @@
+                       :-) GROMACS - gmx mdrun, 2018 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra    Gerrit Groenhof  
+ Christoph Junghans   Anca Hamuraru    Vincent Hindriksen Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg   Pieter Meulenhoff 
+   Erik Marklund      Teemu Murtola       Szilard Pall       Sander Pronk   
+   Roland Schulz     Alexey Shvetsov     Michael Shirts     Alfons Sijbers  
+   Peter Tieleman    Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2018
+Executable:   /jet/packages/spack/opt/spack/linux-centos8-zen2/gcc-10.2.0/gromacs-2018-bk274rkv4jebfzab4fopweqzyyqq5joc/bin/gmx_mpi
+Data prefix:  /jet/packages/spack/opt/spack/linux-centos8-zen2/gcc-10.2.0/gromacs-2018-bk274rkv4jebfzab4fopweqzyyqq5joc
+Working dir:  /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/EXE/gmx_18/Wang-Landau
+Command line:
+  gmx_mpi mdrun -s sys3.tpr -x sys3_EXE.xtc -c sys3_EXE.gro -g EXE.log -e EXE.edr -cpi state.cpt
+
+No previous checkpoint file present with -cpi option, assuming this is a new run.
+Reading file sys3.tpr, VERSION 2021.4-plumed-2.8.0 (single precision)
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2018
+Source file: src/gromacs/fileio/tpxio.cpp (line 3185)
+MPI rank:    0 (out of 128)
+
+Fatal error:
+reading tpx file (sys3.tpr) version 122 with version 112 program
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at http://www.gromacs.org/Documentation/Errors
+-------------------------------------------------------
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------

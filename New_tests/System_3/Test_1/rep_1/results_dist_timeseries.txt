@@ -1,0 +1,33 @@
+
+Data analysis of the file: analysis.dat
+=======================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_1/rep_1
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i analysis.dat -x Time (ns) -cx ps to ns -y COM distance (nm) -n dist_timeseries -c 3
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of com distance: 0.273 (RMSF: 0.392, max: 1.018, min: 0.002)
+The maximum of com distance occurs at 3.537 ns.
+The minimum of com distance occurs at 43.309 ns.
+The com distance (0.273 nm) at 7.043 ns is closet to the average.
+
+Data analysis of the file: analysis.dat
+=======================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_1/rep_1
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i analysis.dat -x Time (ns) -cx ps to ns -y COM distance (nm) -n dist_timeseries -c 3 -fx 4
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of com distance: 0.273 (RMSF: 0.392, max: 1.018, min: 0.002)
+The maximum of com distance occurs at 14.148 ns.
+The minimum of com distance occurs at 173.236 ns.
+The com distance (0.273 nm) at 28.172 ns is closet to the average.
+
+Data analysis of the file: analysis.dat
+=======================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_1/rep_1
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i analysis.dat -x Time (ns) -cx ps to ns -y COM distance (nm) -n dist_timeseries -c 3 -fx 2
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of com distance: 0.273 (RMSF: 0.392, max: 1.018, min: 0.002)
+The maximum of com distance occurs at 7.074 ns.
+The minimum of com distance occurs at 86.618 ns.
+The com distance (0.273 nm) at 14.086 ns is closet to the average.

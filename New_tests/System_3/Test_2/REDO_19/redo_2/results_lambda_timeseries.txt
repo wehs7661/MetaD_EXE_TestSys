@@ -1,0 +1,11 @@
+
+Data analysis of the file: COLVAR
+=================================
+- Working directory: /ocean/projects/cts160011p/wehs7661/alchemical_MetaD/System_3/Test_2/REDO_19/redo_2_extend
+- Command line: /jet/home/wehs7661/.local/bin/plot_xy -i COLVAR -x Time (ns) -cx ps to ns -y Alchemical state -n lambda_timeseries -c 2
+Analyzing the file ... 
+Plotting and saving figure ...
+The average of alchemical state: 15.532 (RMSF: 0.752, max: 39.000, min: 0.000)
+The maximum of alchemical state occurs at 0.115 ns.
+The minimum of alchemical state occurs at 0.000 ns.
+The alchemical state (16.000) at 0.033 ns is closet to the average.
