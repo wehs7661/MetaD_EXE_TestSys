@@ -1,5 +1,9 @@
 MetaD_EXE_TestSys
 ==============================
+[![DOI](https://img.shields.io/badge/DOI-10.1021%2Facs.jctc.2c01258-success.svg)](https://doi.org/10.1021/acs.jctc.2c01258)
+
+## Update
+This repository has been outdated and is no longer under maintenance. The work has been migrated to the new project repository [alchemical_metadynamics](https://github.com/wehs7661/alchemical_metadynamics). The work has been published in the Journal of Chemical Theory and Computation, titled [Alchemical Metadynamics: Adding Alchemical Variables to Metadynamics to Enhance Sampling in Free energy calculations](https://doi.org/10.1021/acs.jctc.2c01258).
 
 ## Description
 This is a repository for hosting the simulation files of the test systems for the development of MetaD-EXE sampling method. Important directories include:
